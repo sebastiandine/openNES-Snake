@@ -5,3 +5,9 @@
 - First Level as simple background surrounded by a wall
 - Snake's head as a moving sprite
 - Controller-Input-Hanling
+
+##########################################################################
+# V.0.2 Collision Detection and GameOver-Loop                            #
+##########################################################################
+- Collsion detection regarding snake's head and the wall added
+- Gameover/game-restart added in case of collision
