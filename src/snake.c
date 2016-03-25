@@ -27,6 +27,7 @@
 #define WALL_TILE_2  			0x44			//Tile of vertical wall brick
 #define SNAKE_HEAD_TILE_VERT 	0x41
 #define SNAKE_HEAD_TILE_HORZ 	0x42
+#define SNAKE_BODY_TILE			0x40
 #define EMPTY_TILE				0x00
 
 /******************************************************************************
@@ -48,6 +49,14 @@
 static unsigned char map[MAP_WIDTH*MAP_HEIGHT];		//array of the complete game map (tile-based)
 static unsigned char nameRow[MAP_WIDTH];			//Array for fetching nametable in array 'map', row by row
 
+
+static unsigned char body[100];						/* array of snakes body, two elements are a one coordinate set, eg. body[0]
+													   is the x-coordinate of the first body-element and body[1] its y-coordinate
+													 */
+static unsigned char size_counter;
+static unsigned char size_index;					/* index of array 'body' which points to space for the next body-element to add.
+													   Will be increased in +=2-steps so it always points to a free x-coordinate
+													 */
 static unsigned char sprite_offset;
 
 static unsigned char i, j;							//universal indexes for loops
@@ -72,7 +81,6 @@ static unsigned char input;
 const unsigned char* const levelList[LEVELS_ALL*2]={
 level1_nam, level1_pal, game_over_nam, menue_pal
 };
-
 
 /*******************************************************************************
  * 3. Functions, which are calling various screens							   *
@@ -118,6 +126,82 @@ void load_map_data_into_array(void){
 		nametable_fetch+=32;						//set reading position to next row
 	}
 }
+/*
+ * Update snakes body, simulation of snakes movement
+ */
+void update_snake_body(){
+	if(size_index==0){
+		return;
+	}
+	else{
+		if(size_index>2){ 			//more than 1 body-element, two elements per body-element in array
+			for(i=size_index-1;i>1;i-=2){
+				body[i] = body[i-2];
+				body[i-1] = body[i-3];
+
+			}
+		}
+		body[0]=snake_x;
+		body[1]=snake_y;
+		return;
+
+	}
+}
+
+/*
+ * Add new body element at the end of the snake
+ */
+void add_snake_body(){
+	/* Special case, body-maximum is reached */
+	if(size_index>= SNAKE_MAX_SIZE*2) return;
+
+	/* Special case, if first body element will be added */
+	if(size_index==0){
+		if(direction==1){
+			body[size_index] = snake_x;
+			body[size_index+1] = snake_y+8;
+			return;
+		}
+		if(direction==2){
+			body[size_index] = snake_x;
+			body[size_index+1] = snake_y-8;
+			return;
+		}
+		if(direction==3){
+			body[size_index] = snake_x+8;
+			body[size_index+1] = snake_y;
+			return;
+		}
+		if(direction==4){
+			body[size_index] = snake_x-8;
+			body[size_index+1] = snake_y;
+			return;
+		}
+	}
+	/* Normal case, next body element added  */
+	else{
+		if(direction==1){
+			body[size_index] = body[size_index-2];
+			body[size_index+1] = body[size_index-1]+8;
+			return;
+		}
+		if(direction==2){
+			body[size_index] = body[size_index-2];
+			body[size_index+1] = body[size_index-1]-8;
+			return;
+		}
+		if(direction==3){
+			body[size_index] = body[size_index-2]+8;
+			body[size_index+1] = body[size_index-1];
+			return;
+		}
+		if(direction==4){
+			body[size_index] = body[size_index-2]-8;
+			body[size_index+1] = body[size_index-1];
+			return;
+		}
+	}
+}
 
 
 
@@ -130,15 +214,25 @@ void mainloop_game_logic(void){
 		draw_game_over_screen();
 	}
 
+	/*
+	 * Handle snakes growth
+	 */
+	++size_counter;
+	if(size_counter == 120){
+		add_snake_body();
+		size_index+=2;
+		size_counter = 0;
+	}
+
 	/* Update Position
 	 *
 	 */
 	if(++speed_counter==10){
 					switch(direction){
-						case 1: snake_y-=8; snake_head_tile = SNAKE_HEAD_TILE_VERT; snake_head_attribute = 129;  break;
-						case 2: snake_y+=8; snake_head_tile = SNAKE_HEAD_TILE_VERT; snake_head_attribute = 1;    break;
-						case 3: snake_x-=8; snake_head_tile = SNAKE_HEAD_TILE_HORZ; snake_head_attribute = 65;   break;
-						case 4: snake_x+=8; snake_head_tile = SNAKE_HEAD_TILE_HORZ; snake_head_attribute = 1;    break;
+						case 1: update_snake_body(); snake_y-=8; snake_head_tile = SNAKE_HEAD_TILE_VERT; snake_head_attribute = 129;  break;
+						case 2: update_snake_body(); snake_y+=8; snake_head_tile = SNAKE_HEAD_TILE_VERT; snake_head_attribute = 1;    break;
+						case 3: update_snake_body(); snake_x-=8; snake_head_tile = SNAKE_HEAD_TILE_HORZ; snake_head_attribute = 65;   break;
+						case 4: update_snake_body(); snake_x+=8; snake_head_tile = SNAKE_HEAD_TILE_HORZ; snake_head_attribute = 1;    break;
 					}
 				speed_counter = 0;
 	}
@@ -166,6 +260,11 @@ void mainloop_handle_input(void){
 void draw_snake(void){
 	/* Draw snakes head - as a sprite */
 	sprite_offset = oam_spr(snake_x,snake_y,snake_head_tile,snake_head_attribute,0);
+
+	/* Draw snakes body - as sprites*/
+	for(i=0;i<size_index;i+=2){
+		sprite_offset=oam_spr(body[i],body[i+1],0x40,snake_head_attribute,sprite_offset);
+	}
 
 }
 
@@ -203,6 +302,8 @@ void main(void){
 		pause_loop = 0;
 		gameover = 0;
 		restart = 0;
+		size_index = 0;
+		size_counter = 0;
 
 		load_map_data_into_array();						//load namespace data into array-map, for later collision-detection
 		ppu_on_all();									//enable rendering

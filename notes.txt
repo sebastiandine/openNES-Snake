@@ -17,3 +17,8 @@
 ##########################################################################
 - Pause-option added
 - GameOver-screen added
+
+##########################################################################
+# V.0.4 Add simple snake-growth                                          #
+##########################################################################
+- Simple snake-growth added. A body element will be added every 120th frame
