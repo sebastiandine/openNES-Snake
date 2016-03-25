@@ -7,9 +7,10 @@
  * 1.1 Including Nametables and Palettes									  *
  ******************************************************************************/
 #include "level1_nam.h"
+#include "game_over_nam.h"
 #include "level1_pal.h"
 #include "sprites_pal.h"
-
+#include "menue_pal.h"
 
 /******************************************************************************
  * 1.2 Defining overall game-constants										  *
@@ -17,6 +18,7 @@
 #define LEVELS_ALL		5			//Total number of level of the game
 #define MAP_WIDTH 		32			//Tile-based width of the level-map
 #define MAP_HEIGHT		30         	//Tile-based height of the level map
+#define SNAKE_MAX_SIZE	50			//Number of body-Tiles, Snake can have
 
 /******************************************************************************
  * 1.3 Defining tile-constants												  *
@@ -58,21 +60,44 @@ static unsigned char snake_x;
 static unsigned char snake_y;
 
 static unsigned char direction; 					//1=up,2=down,3=left,4=right
+static unsigned char pause;							//1=true, 0=false
+static unsigned char pause_loop;					//identifier to check, if first pause-loop is passed. 1= true, 0=false
 static unsigned char gameover;						//1=true 0=false
+static unsigned char restart;						//1=true 0=false
 static unsigned char input;
 
 
 //list of the levels, include pointer to the packed nametable of the level,
 //and pointer to the associated palette
 const unsigned char* const levelList[LEVELS_ALL*2]={
-level1_nam, level1_pal
+level1_nam, level1_pal, game_over_nam, menue_pal
 };
-
 
 
 /*******************************************************************************
  * 3. Functions, which are calling various screens							   *
  *******************************************************************************/
+void draw_game_over_screen(void){
+	ppu_off();
+	oam_clear();
+	vram_adr(NAMETABLE1_START);							//set vram pointer to Nametable1 starting adress
+	vram_unrle(levelList[2]);							//unpack level nametable and store data in VRAM
+	pal_bg(levelList[3]);								//set color-palette for background
+	ppu_on_bg();
+}
+
+void draw_pause_screen(void){
+	if(!pause_loop){													/* check if pause_loop is reached for the first	*/
+		pause_loop=1;	 	 	 	 	 	 	 	 	 	 	 	 	/* time. If yes, clear in-game-sprites.         */
+		oam_clear();
+	}
+
+	sprite_offset = oam_spr(120, 120, 0x30,1,0); 				//P
+	sprite_offset = oam_spr(128, 120, 0x21,1,sprite_offset); 	//A
+	sprite_offset = oam_spr(136, 120, 0x35,1,sprite_offset); 	//U
+	sprite_offset = oam_spr(144, 120, 0x33,1,sprite_offset); 	//S
+	sprite_offset = oam_spr(152, 120, 0x25,1,sprite_offset); 	//E
+}
 
 /* Read namespace e.g. level-map into array 'map', which is used for further calculations,
  * e.g collision testings.
@@ -94,14 +119,16 @@ void load_map_data_into_array(void){
 	}
 }
 
+
+
 void mainloop_game_logic(void){
 	/*
 	 * Test collision of snake-head sprite with a wall tile
 	 */
 	if(map[MAPARRAY_ADR(snake_x,snake_y)] == WALL_TILE_1 || map[MAPARRAY_ADR(snake_x,snake_y)] == WALL_TILE_2){
 		gameover = 1;
+		draw_game_over_screen();
 	}
-
 
 	/* Update Position
 	 *
@@ -124,15 +151,37 @@ void mainloop_handle_input(void){
 	if((input&PAD_UP) && (direction!=2)) 	direction = 1;
 	if((input&PAD_DOWN) && (direction!=1))  direction = 2;
 
+	if(input&PAD_START){
+		if(!gameover){										/* Ingame, 'Start' is responsible for pausing the game */
+			pause = (pause == 1)? 0 : 1;
+			delay(5);										/* Without a delay, a pause-command is not recognized properly */
+		}
+		else{												/* In case of game over, 'Start' is responsible for restart */
+			gameover = 0;
+			restart = 1;
+		}
+	}
 }
 
 void draw_snake(void){
 	/* Draw snakes head - as a sprite */
 	sprite_offset = oam_spr(snake_x,snake_y,snake_head_tile,snake_head_attribute,0);
+
 }
 
 void mainloop_draw_section(void){
-	draw_snake();
+
+	if(pause){
+		draw_pause_screen();
+	}
+
+	else{
+		if(pause_loop){														/* check if the game was paused previously */
+			pause_loop=0;													/* If yes, clear pause-mode-sprites.       */
+			oam_clear();
+		}
+		draw_snake();
+	}
 }
 
 
@@ -150,19 +199,23 @@ void main(void){
 		snake_x=120;
 		snake_y=120;
 		direction=1;
+		pause = 0;
+		pause_loop = 0;
 		gameover = 0;
+		restart = 0;
 
 		load_map_data_into_array();						//load namespace data into array-map, for later collision-detection
 		ppu_on_all();									//enable rendering
 		
-		while(!gameover){
+		while(!restart){
 
 			/* INPUT */
 			mainloop_handle_input();
 
 			/* UPDATE */
-			mainloop_game_logic();
-
+			if(!pause && !gameover){
+				mainloop_game_logic();
+			}
 
 			/* RENDER */
 			//ppu_wait_frame();							/* wait for the next TV frame */

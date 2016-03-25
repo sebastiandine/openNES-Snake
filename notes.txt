@@ -11,3 +11,9 @@
 ##########################################################################
 - Collsion detection regarding snake's head and the wall added
 - Gameover/game-restart added in case of collision
+
+##########################################################################
+# V.0.3 Pause-mode and GameOver screen                                   #
+##########################################################################
+- Pause-option added
+- GameOver-screen added
