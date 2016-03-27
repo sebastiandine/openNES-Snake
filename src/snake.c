@@ -20,6 +20,11 @@
 #define MAP_HEIGHT		30         	//Tile-based height of the level map
 #define SNAKE_MAX_SIZE	50			//Number of body-Tiles, Snake can have
 
+#define DIR_UP			1			//direction-constants
+#define DIR_DOWN		2
+#define DIR_LEFT		3
+#define DIR_RIGHT		4
+
 /******************************************************************************
  * 1.3 Defining tile-constants												  *
  ******************************************************************************/
@@ -53,6 +58,9 @@ static unsigned char nameRow[MAP_WIDTH];			//Array for fetching nametable in arr
 static unsigned char body[100];						/* array of snakes body, two elements are a one coordinate set, eg. body[0]
 													   is the x-coordinate of the first body-element and body[1] its y-coordinate
 													 */
+static unsigned char body_list[32*3 + 1];			// Array of body-elements which will be used to update VRAM once per frame
+static unsigned char *ul;							// Pointer to array body_list to enable better handling of the list
+
 static unsigned char size_counter;
 static unsigned char size_index;					/* index of array 'body' which points to space for the next body-element to add.
 													   Will be increased in +=2-steps so it always points to a free x-coordinate
@@ -67,6 +75,9 @@ static unsigned char snake_head_tile;
 static unsigned char speed_counter;
 static unsigned char snake_x;
 static unsigned char snake_y;
+
+static unsigned char body_tile_x;					//Test body in bg
+static unsigned char body_tile_y;					//Test body in bg
 
 static unsigned char direction; 					//1=up,2=down,3=left,4=right
 static unsigned char pause;							//1=true, 0=false
@@ -95,8 +106,8 @@ void draw_game_over_screen(void){
 }
 
 void draw_pause_screen(void){
-	if(!pause_loop){													/* check if pause_loop is reached for the first	*/
-		pause_loop=1;	 	 	 	 	 	 	 	 	 	 	 	 	/* time. If yes, clear in-game-sprites.         */
+	if(!pause_loop){									/* check if pause_loop is reached for the first	*/
+		pause_loop=1;	 	 	 	 	 	 	 	 	/* time. If yes, clear in-game-sprites.         */
 		oam_clear();
 	}
 
@@ -157,22 +168,22 @@ void add_snake_body(){
 
 	/* Special case, if first body element will be added */
 	if(size_index==0){
-		if(direction==1){
+		if(direction==DIR_UP){
 			body[size_index] = snake_x;
 			body[size_index+1] = snake_y+8;
 			return;
 		}
-		if(direction==2){
+		if(direction==DIR_DOWN){
 			body[size_index] = snake_x;
 			body[size_index+1] = snake_y-8;
 			return;
 		}
-		if(direction==3){
+		if(direction==DIR_LEFT){
 			body[size_index] = snake_x+8;
 			body[size_index+1] = snake_y;
 			return;
 		}
-		if(direction==4){
+		if(direction==DIR_RIGHT){
 			body[size_index] = snake_x-8;
 			body[size_index+1] = snake_y;
 			return;
@@ -180,22 +191,22 @@ void add_snake_body(){
 	}
 	/* Normal case, next body element added  */
 	else{
-		if(direction==1){
+		if(direction==DIR_UP){
 			body[size_index] = body[size_index-2];
 			body[size_index+1] = body[size_index-1]+8;
 			return;
 		}
-		if(direction==2){
+		if(direction==DIR_DOWN){
 			body[size_index] = body[size_index-2];
 			body[size_index+1] = body[size_index-1]-8;
 			return;
 		}
-		if(direction==3){
+		if(direction==DIR_LEFT){
 			body[size_index] = body[size_index-2]+8;
 			body[size_index+1] = body[size_index-1];
 			return;
 		}
-		if(direction==4){
+		if(direction==DIR_RIGHT){
 			body[size_index] = body[size_index-2]-8;
 			body[size_index+1] = body[size_index-1];
 			return;
@@ -229,21 +240,21 @@ void mainloop_game_logic(void){
 	 */
 	if(++speed_counter==10){
 					switch(direction){
-						case 1: update_snake_body(); snake_y-=8; snake_head_tile = SNAKE_HEAD_TILE_VERT; snake_head_attribute = 129;  break;
-						case 2: update_snake_body(); snake_y+=8; snake_head_tile = SNAKE_HEAD_TILE_VERT; snake_head_attribute = 1;    break;
-						case 3: update_snake_body(); snake_x-=8; snake_head_tile = SNAKE_HEAD_TILE_HORZ; snake_head_attribute = 65;   break;
-						case 4: update_snake_body(); snake_x+=8; snake_head_tile = SNAKE_HEAD_TILE_HORZ; snake_head_attribute = 1;    break;
+						case DIR_UP: update_snake_body(); snake_y-=8; snake_head_tile = SNAKE_HEAD_TILE_VERT; snake_head_attribute = 131;  break;
+						case DIR_DOWN: update_snake_body(); snake_y+=8; snake_head_tile = SNAKE_HEAD_TILE_VERT; snake_head_attribute = 3;    break;
+						case DIR_LEFT: update_snake_body(); snake_x-=8; snake_head_tile = SNAKE_HEAD_TILE_HORZ; snake_head_attribute = 67;   break;
+						case DIR_RIGHT: update_snake_body(); snake_x+=8; snake_head_tile = SNAKE_HEAD_TILE_HORZ; snake_head_attribute = 3;    break;
 					}
 				speed_counter = 0;
 	}
 }
 
 void mainloop_handle_input(void){
-	input = pad_poll(0);									/* Reading controller poll */
-	if((input&PAD_LEFT) && (direction!=4)) 	direction = 3;	/* Snake is not allowed to flip to the opposite direction. */
-	if((input&PAD_RIGHT) && (direction!=3)) direction = 4;
-	if((input&PAD_UP) && (direction!=2)) 	direction = 1;
-	if((input&PAD_DOWN) && (direction!=1))  direction = 2;
+	input = pad_poll(0);													/* Reading controller poll */
+	if((input&PAD_LEFT) && (direction!=DIR_RIGHT)) 	direction = DIR_LEFT;	/* Snake is not allowed to flip to the opposite direction. */
+	if((input&PAD_RIGHT) && (direction!=DIR_LEFT)) 	direction = DIR_RIGHT;
+	if((input&PAD_UP) && (direction!=DIR_UP)) 		direction = DIR_UP;
+	if((input&PAD_DOWN) && (direction!=DIR_DOWN)) 	direction = DIR_DOWN;
 
 	if(input&PAD_START){
 		if(!gameover){										/* Ingame, 'Start' is responsible for pausing the game */
@@ -261,10 +272,39 @@ void draw_snake(void){
 	/* Draw snakes head - as a sprite */
 	sprite_offset = oam_spr(snake_x,snake_y,snake_head_tile,snake_head_attribute,0);
 
-	/* Draw snakes body - as sprites*/
-	for(i=0;i<size_index;i+=2){
+	/*
+	 * Draw snakes body - Sprite-based version.
+	 * Due to the maximum-sprite limitation of the NES, sprites cannot be used to draw
+	 * the snakes body.
+	 */
+	/*for(i=0;i<size_index;i+=2){
 		sprite_offset=oam_spr(body[i],body[i+1],0x40,snake_head_attribute,sprite_offset);
+	}*/
+
+
+	/*
+	 * Draw snakes body - background-tile based version.
+	 */
+	ul = body_list;
+
+	for(i=0; i<size_index; i+=2){
+		body_tile_x = body[i] >> 3;	  // Calculate Tile-based X/Y-coordinates from
+		body_tile_y = body[i+1] >> 3; // Pixel-based X/Y-coordinates
+
+		nametable_fetch = NTADR_A(body_tile_x, body_tile_y);
+		*ul ++ = MSB(nametable_fetch);
+		*ul ++ = LSB(nametable_fetch);
+		if(i == (size_index - 2)){
+			*ul ++ = EMPTY_TILE;
+		}
+		else{
+			*ul ++ = SNAKE_BODY_TILE;
+		}
 	}
+	*ul = NT_UPD_EOF;
+
+
+
 
 }
 
@@ -295,9 +335,12 @@ void main(void){
 		pal_bg(levelList[1]);							//set color-palette for background
 		pal_spr(sprites_pal);							//set color-palette for sprites
 
+		body_list[0]= NT_UPD_EOF;
+		set_vram_update(body_list);						//set array body_list as vram-update-array
+
 		snake_x=120;
 		snake_y=120;
-		direction=1;
+		direction=DIR_UP;
 		pause = 0;
 		pause_loop = 0;
 		gameover = 0;

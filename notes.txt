@@ -22,3 +22,13 @@
 # V.0.4 Add simple snake-growth                                          #
 ##########################################################################
 - Simple snake-growth added. A body element will be added every 120th frame
+
+##########################################################################
+# V.0.5 Put snake's body into background                                 #
+##########################################################################
+- Due to the sprite-scanline limitation of the NES, only 8 sprites can be
+  rendered at once, per scanline. This caused flickering and disabled body-
+  elements of the snake, once it grows beyond 8 body-elements.
+  Therefore the rendering of body-elements is put to the background as 
+  VRAM-updates, to avoid those problems.
+  See full discusion regarding this topic here: http://forums.nesdev.com/viewtopic.php?t=12871 
