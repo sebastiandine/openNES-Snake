@@ -18,7 +18,7 @@
 #define LEVELS_ALL		5			//Total number of level of the game
 #define MAP_WIDTH 		32			//Tile-based width of the level-map
 #define MAP_HEIGHT		30         	//Tile-based height of the level map
-#define SNAKE_MAX_SIZE	50			//Number of body-Tiles, Snake can have
+#define SNAKE_MAX_SIZE	100			//Number of body-Tiles, Snake can have
 
 #define DIR_UP			1			//direction-constants
 #define DIR_DOWN		2
@@ -45,7 +45,9 @@
  ******************************************************************************/
 //Macro for calculating in which tile of the 32*30 tiles the given position
 //is placed
-#define MAPARRAY_ADR(x,y)	((y<<2)|(x>>3))			//optimized with bitshifting, arithmetic pendant is (((y/8)*32)+(x/8))
+#define MAPARRAY_ADR(x,y)	((y<<2)|(x>>3))			/* optimized with bitshifting, arithmetic pendant is (((y/8)*32)+(x/8)).
+													   x and y are assumed to be Sprite-coordinates (not Tile-coordinates) */
+
 
 
 /*******************************************************************************
@@ -55,11 +57,19 @@ static unsigned char map[MAP_WIDTH*MAP_HEIGHT];		//array of the complete game ma
 static unsigned char nameRow[MAP_WIDTH];			//Array for fetching nametable in array 'map', row by row
 
 
-static unsigned char body[100];						/* array of snakes body, two elements are a one coordinate set, eg. body[0]
-													   is the x-coordinate of the first body-element and body[1] its y-coordinate
-													 */
-static unsigned char body_list[32*3 + 1];			// Array of body-elements which will be used to update VRAM once per frame
-static unsigned char *ul;							// Pointer to array body_list to enable better handling of the list
+static unsigned char body_coordinates[SNAKE_MAX_SIZE*2];		// Array of snakes body-coordinates (pixel-based), two elements are a one coordinate set,
+																// eg. body[0] is the x-coordinate of the first body-element and
+																// body[1] its y-coordinate
+
+static unsigned char body_list[2*3 + 1];						/* Array of body-elements which will be used to update VRAM once per frame.
+																   Every 3 entries are describing one body-element. The last element of the
+																   array needs to be the VRAM end-of-file-indicator NT_UPD_EOF.
+
+																   Only two body elements need to be updated once per frame:
+																   - The new first body element needs to be drawn
+																   - The old last body element need to be disabled
+																*/
+static unsigned char *ul;										// Pointer to array body_list to enable better handling of the list
 
 static unsigned char size_counter;
 static unsigned char size_index;					/* index of array 'body' which points to space for the next body-element to add.
@@ -76,8 +86,11 @@ static unsigned char speed_counter;
 static unsigned char snake_x;
 static unsigned char snake_y;
 
-static unsigned char body_tile_x;					//Test body in bg
-static unsigned char body_tile_y;					//Test body in bg
+static unsigned char body_tile_x;					/* variables, which are used to calculate pixel-based coordinates of body- */
+static unsigned char body_tile_y;					/* elements to tile-based coordinates */
+
+static unsigned char last_body_pixel_x;				/* pixel-based coorindated of the last body-element from last frame. */
+static unsigned char last_body_pixel_y;
 
 static unsigned char direction; 					//1=up,2=down,3=left,4=right
 static unsigned char pause;							//1=true, 0=false
@@ -138,77 +151,77 @@ void load_map_data_into_array(void){
 	}
 }
 /*
- * Update snakes body, simulation of snakes movement
+ * Update snakes body_coordinates, simulation of snakes movement
  */
 void update_snake_body(){
 	if(size_index==0){
 		return;
 	}
 	else{
-		if(size_index>2){ 			//more than 1 body-element, two elements per body-element in array
+		if(size_index>2){ 			//more than 1 body-element, two elements per body_coordinates-element in array
 			for(i=size_index-1;i>1;i-=2){
-				body[i] = body[i-2];
-				body[i-1] = body[i-3];
+				body_coordinates[i] = body_coordinates[i-2];
+				body_coordinates[i-1] = body_coordinates[i-3];
 
 			}
 		}
-		body[0]=snake_x;
-		body[1]=snake_y;
+		body_coordinates[0]=snake_x;
+		body_coordinates[1]=snake_y;
 		return;
 
 	}
 }
 
 /*
- * Add new body element at the end of the snake
+ * Add new body_coordinates element at the end of the snake
  */
 void add_snake_body(){
-	/* Special case, body-maximum is reached */
+	/* Special case, body_coordinates-maximum is reached */
 	if(size_index>= SNAKE_MAX_SIZE*2) return;
 
-	/* Special case, if first body element will be added */
+	/* Special case, if first body_coordinates element will be added */
 	if(size_index==0){
 		if(direction==DIR_UP){
-			body[size_index] = snake_x;
-			body[size_index+1] = snake_y+8;
+			body_coordinates[size_index] = snake_x;
+			body_coordinates[size_index+1] = snake_y+8;
 			return;
 		}
 		if(direction==DIR_DOWN){
-			body[size_index] = snake_x;
-			body[size_index+1] = snake_y-8;
+			body_coordinates[size_index] = snake_x;
+			body_coordinates[size_index+1] = snake_y-8;
 			return;
 		}
 		if(direction==DIR_LEFT){
-			body[size_index] = snake_x+8;
-			body[size_index+1] = snake_y;
+			body_coordinates[size_index] = snake_x+8;
+			body_coordinates[size_index+1] = snake_y;
 			return;
 		}
 		if(direction==DIR_RIGHT){
-			body[size_index] = snake_x-8;
-			body[size_index+1] = snake_y;
+			body_coordinates[size_index] = snake_x-8;
+			body_coordinates[size_index+1] = snake_y;
 			return;
 		}
 	}
-	/* Normal case, next body element added  */
+	/* Normal case, next body_coordinates element added  */
 	else{
 		if(direction==DIR_UP){
-			body[size_index] = body[size_index-2];
-			body[size_index+1] = body[size_index-1]+8;
+			body_coordinates[size_index] = body_coordinates[size_index-2];
+			body_coordinates[size_index+1] = body_coordinates[size_index-1]+8;
 			return;
 		}
 		if(direction==DIR_DOWN){
-			body[size_index] = body[size_index-2];
-			body[size_index+1] = body[size_index-1]-8;
+			body_coordinates[size_index] = body_coordinates[size_index-2];
+			body_coordinates[size_index+1] = body_coordinates[size_index-1]-8;
 			return;
 		}
 		if(direction==DIR_LEFT){
-			body[size_index] = body[size_index-2]+8;
-			body[size_index+1] = body[size_index-1];
+			body_coordinates[size_index] = body_coordinates[size_index-2]+8;
+			body_coordinates[size_index+1] = body_coordinates[size_index-1];
 			return;
 		}
 		if(direction==DIR_RIGHT){
-			body[size_index] = body[size_index-2]-8;
-			body[size_index+1] = body[size_index-1];
+			body_coordinates[size_index] = body_coordinates[size_index-2]-8;
+			body_coordinates[size_index+1] = body_coordinates[size_index-1];
 			return;
 		}
 	}
@@ -218,9 +231,10 @@ void add_snake_body(){
 
 void mainloop_game_logic(void){
 	/*
-	 * Test collision of snake-head sprite with a wall tile
+	 * Test collision of snake-head sprite with a wall tile or body tile
 	 */
-	if(map[MAPARRAY_ADR(snake_x,snake_y)] == WALL_TILE_1 || map[MAPARRAY_ADR(snake_x,snake_y)] == WALL_TILE_2){
+	if(map[MAPARRAY_ADR(snake_x,snake_y)] == WALL_TILE_1 || map[MAPARRAY_ADR(snake_x,snake_y)] == WALL_TILE_2
+			|| map[MAPARRAY_ADR(snake_x,snake_y)] == SNAKE_BODY_TILE){
 		gameover = 1;
 		draw_game_over_screen();
 	}
@@ -229,7 +243,7 @@ void mainloop_game_logic(void){
 	 * Handle snakes growth
 	 */
 	++size_counter;
-	if(size_counter == 120){
+	if(size_counter == 120 && (size_index < SNAKE_MAX_SIZE*2)){
 		add_snake_body();
 		size_index+=2;
 		size_counter = 0;
@@ -253,8 +267,8 @@ void mainloop_handle_input(void){
 	input = pad_poll(0);													/* Reading controller poll */
 	if((input&PAD_LEFT) && (direction!=DIR_RIGHT)) 	direction = DIR_LEFT;	/* Snake is not allowed to flip to the opposite direction. */
 	if((input&PAD_RIGHT) && (direction!=DIR_LEFT)) 	direction = DIR_RIGHT;
-	if((input&PAD_UP) && (direction!=DIR_UP)) 		direction = DIR_UP;
-	if((input&PAD_DOWN) && (direction!=DIR_DOWN)) 	direction = DIR_DOWN;
+	if((input&PAD_UP) && (direction!=DIR_DOWN)) 	direction = DIR_UP;
+	if((input&PAD_DOWN) && (direction!=DIR_UP)) 	direction = DIR_DOWN;
 
 	if(input&PAD_START){
 		if(!gameover){										/* Ingame, 'Start' is responsible for pausing the game */
@@ -273,38 +287,49 @@ void draw_snake(void){
 	sprite_offset = oam_spr(snake_x,snake_y,snake_head_tile,snake_head_attribute,0);
 
 	/*
-	 * Draw snakes body - Sprite-based version.
-	 * Due to the maximum-sprite limitation of the NES, sprites cannot be used to draw
-	 * the snakes body.
-	 */
-	/*for(i=0;i<size_index;i+=2){
-		sprite_offset=oam_spr(body[i],body[i+1],0x40,snake_head_attribute,sprite_offset);
-	}*/
-
-
-	/*
-	 * Draw snakes body - background-tile based version.
+	 * Draw snakes body_coordinates - background-tile based version.
+	 * More efficient version: Every frame, not the whole body will be drawn to the screen.
+	 * Only the new first body tile will be drawn and the old last body tile will be disabled.
 	 */
 	ul = body_list;
 
-	for(i=0; i<size_index; i+=2){
-		body_tile_x = body[i] >> 3;	  // Calculate Tile-based X/Y-coordinates from
-		body_tile_y = body[i+1] >> 3; // Pixel-based X/Y-coordinates
+	if(size_index != 0){
+		/* check if any body tile has been drawn before */
+		if(last_body_pixel_x == 0 && last_body_pixel_y == 0){
+			last_body_pixel_x = body_coordinates[size_index-2];
+			last_body_pixel_y = body_coordinates[size_index-1];
+		}
+		/* Disable old last body tile */
+		else{
+			map[MAPARRAY_ADR(last_body_pixel_x,last_body_pixel_y)] = EMPTY_TILE;		/* Update array map, so collision with
+																					   body tiles can be detected
+																					*/
 
+			body_tile_x = last_body_pixel_x >> 3;	  /* Calculate tile-based X/Y-coordinates from */
+			body_tile_y = last_body_pixel_y >> 3; 	 /*  pixel-based X/Y-coordinates */
+
+			nametable_fetch = NTADR_A(body_tile_x, body_tile_y);
+			*ul ++ = MSB(nametable_fetch);
+			*ul ++ = LSB(nametable_fetch);
+			*ul ++ = EMPTY_TILE;
+
+			last_body_pixel_x = body_coordinates[size_index-2];
+			last_body_pixel_y = body_coordinates[size_index-1];
+		}
+
+		/* Draw new first body tile */
+		map[MAPARRAY_ADR(body_coordinates[0],body_coordinates[1])] = SNAKE_BODY_TILE;	/* Update array map, so collision with
+																					       body tiles can be detected
+																						*/
+		body_tile_x = body_coordinates[0] >> 3;	  				 /* Calculate tile-based X/Y-coordinates from */
+		body_tile_y = body_coordinates[1] >> 3; 				 /*  pixel-based X/Y-coordinates */
 		nametable_fetch = NTADR_A(body_tile_x, body_tile_y);
 		*ul ++ = MSB(nametable_fetch);
 		*ul ++ = LSB(nametable_fetch);
-		if(i == (size_index - 2)){
-			*ul ++ = EMPTY_TILE;
-		}
-		else{
-			*ul ++ = SNAKE_BODY_TILE;
-		}
+		*ul ++ = SNAKE_BODY_TILE;
+
+		*ul = NT_UPD_EOF;										/* Add end-of-file indicator to update-list */
 	}
-	*ul = NT_UPD_EOF;
-
-
-
 
 }
 
@@ -347,6 +372,8 @@ void main(void){
 		restart = 0;
 		size_index = 0;
 		size_counter = 0;
+		last_body_pixel_x = 0;
+		last_body_pixel_y = 0;
 
 		load_map_data_into_array();						//load namespace data into array-map, for later collision-detection
 		ppu_on_all();									//enable rendering

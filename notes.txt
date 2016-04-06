@@ -31,4 +31,20 @@
   elements of the snake, once it grows beyond 8 body-elements.
   Therefore the rendering of body-elements is put to the background as 
   VRAM-updates, to avoid those problems.
-  See full discusion regarding this topic here: http://forums.nesdev.com/viewtopic.php?t=12871 
+  See full discusion regarding this topic here: http://forums.nesdev.com/viewtopic.php?t=12871
+
+##########################################################################
+# V.0.6 Better body-rendering routine / body-collision detection         #
+##########################################################################
+- The body-rendering routine, used in V.0.5 drew the whole snakes body once
+  per frame. This was very inefficient since in every frame, only two tiles 
+  where changed.
+  Therefore, an improved body-rendering routine has been developed: Now only
+  the new first body-element will be drawn once per frame and the old last
+  body-element will be disabled. So only two elements will be updated to VRAM
+  once per frame.
+  Due to this improvement, the snake can grow much larger since not the whole
+  body information need to stored within the VRAM update list, which is 
+  supposed to be only 256 bytes. 
+- Collison detection has been extended by a detection of body-elements. 
+  Now the game is also over, once the snake hits itself.
