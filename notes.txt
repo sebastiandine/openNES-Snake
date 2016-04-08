@@ -48,3 +48,11 @@
   supposed to be only 256 bytes. 
 - Collison detection has been extended by a detection of body-elements. 
   Now the game is also over, once the snake hits itself.
+
+##########################################################################
+# V.0.7 Simple item-spawning and item-collision logic                    #
+##########################################################################
+- Simple item-spawning added. The item (spider-sprite) will be drawn to a
+  random place within the game-map. Once the snake's head-sprite collides
+  with the item-sprite, the size of the snake's body will be enlarged by 
+  1 and new coordinates for the item will be calculated.

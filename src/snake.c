@@ -34,6 +34,7 @@
 #define SNAKE_HEAD_TILE_HORZ 	0x42
 #define SNAKE_BODY_TILE			0x40
 #define EMPTY_TILE				0x00
+#define SPIDER_TILE				0x45
 
 /******************************************************************************
  * 1.4 Some hardware-specific settings (memory-organization)				  *
@@ -78,18 +79,22 @@ static unsigned char size_index;					/* index of array 'body' which points to sp
 static unsigned char sprite_offset;
 
 static unsigned char i, j;							//universal indexes for loops
-static unsigned int k;								//universal index for lager numbers
+static unsigned int k, l;								//universal indexes for lager numbers
 static unsigned int nametable_fetch;				//variable for fetching through nametable (int because first nametable starts at $2000)
 static unsigned char snake_head_attribute;			//snake_head sprite attribute
 static unsigned char snake_head_tile;
 static unsigned char speed_counter;
-static unsigned char snake_x;
+
+static unsigned char snake_x;						/* pixel-based coordinates of snake's head sprite */
 static unsigned char snake_y;
+
+static unsigned char item_x;						/* pixel-based coordinates of grow-item */
+static unsigned char item_y;
 
 static unsigned char body_tile_x;					/* variables, which are used to calculate pixel-based coordinates of body- */
 static unsigned char body_tile_y;					/* elements to tile-based coordinates */
 
-static unsigned char last_body_pixel_x;				/* pixel-based coorindated of the last body-element from last frame. */
+static unsigned char last_body_pixel_x;				/* pixel-based coordinates of the last body-element from last frame. */
 static unsigned char last_body_pixel_y;
 
 static unsigned char direction; 					//1=up,2=down,3=left,4=right
@@ -150,6 +155,42 @@ void load_map_data_into_array(void){
 		nametable_fetch+=32;						//set reading position to next row
 	}
 }
+
+/*
+ * Calculate coordinates for an item, which lets the snake grow, once it 'eats' it.
+ * This function stores its calculated values into variables 'item_x' and 'item_y'.
+ */
+void calc_random_item_position(void){
+	while(1){
+		item_y = rand8();
+		i = item_y % 8;											/* Ensure, that coordinate is divisible through 8 */
+		item_y = item_y - i;									/* this makes collision detection much easier */
+
+		if(item_y <= 24 || item_y > 232){						/* First three tile-lines y-coordinate $00-$30 are not part of 	*/
+			continue;											/* of the level map. Also the y-coordinate maximum is 240 	   	*/
+		}														/* therefore 232 is the largest y-coordinate for proper display.*/
+
+		item_x = rand8();										/* Ensure, that coordinate is divisible through 8 */
+		i = item_x % 8;											/* this makes collision detection much easier */
+		item_x = item_x - i;
+		if(item_x > 248 || item_x < 8){							/* x-coordinate can reach from $00-$F9 (0-256), therefore 		*/
+			continue;											/* 248 and 8 are the maximum x-coordinates for proper display.	*/
+		}
+
+
+		if(map[MAPARRAY_ADR(item_x,item_y)] == WALL_TILE_1 	/* check if calculatec cooridantes are in range of aa wall or body tile */
+				|| map[MAPARRAY_ADR(item_x,item_y)] == WALL_TILE_2
+				|| map[MAPARRAY_ADR(item_x,item_y)] == SNAKE_BODY_TILE){
+
+			continue;
+		}
+
+		i = item_y % 8;
+
+		break;
+	}
+}
+
 /*
  * Update snakes body_coordinates, simulation of snakes movement
  */
@@ -239,14 +280,20 @@ void mainloop_game_logic(void){
 		draw_game_over_screen();
 	}
 
-	/*
-	 * Handle snakes growth
+	/* Test collsion of snake-head sprite with an item sprite
+	 *
 	 */
-	++size_counter;
-	if(size_counter == 120 && (size_index < SNAKE_MAX_SIZE*2)){
-		add_snake_body();
-		size_index+=2;
-		size_counter = 0;
+	k = MAPARRAY_ADR(snake_x,snake_y);
+	l = MAPARRAY_ADR(item_x,item_y);
+	if(k == l){
+		 //Handle snakes growth
+		if(size_index < SNAKE_MAX_SIZE*2){
+			add_snake_body();
+			size_index+=2;
+		}
+
+		//Calculate coordiantes of new item coordinate
+		calc_random_item_position();
 	}
 
 	/* Update Position
@@ -333,6 +380,10 @@ void draw_snake(void){
 
 }
 
+void draw_item(void){
+	sprite_offset = oam_spr(item_x,item_y,SPIDER_TILE,0,sprite_offset);
+}
+
 void mainloop_draw_section(void){
 
 	if(pause){
@@ -345,6 +396,7 @@ void mainloop_draw_section(void){
 			oam_clear();
 		}
 		draw_snake();
+		draw_item();
 	}
 }
 
@@ -374,6 +426,8 @@ void main(void){
 		size_counter = 0;
 		last_body_pixel_x = 0;
 		last_body_pixel_y = 0;
+
+		calc_random_item_position();					//calculate initial position of first item
 
 		load_map_data_into_array();						//load namespace data into array-map, for later collision-detection
 		ppu_on_all();									//enable rendering
