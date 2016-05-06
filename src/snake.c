@@ -18,8 +18,8 @@ void main(void){
 		pal_bg(levelList[1]);							//set color-palette for background
 		pal_spr(sprites_pal);							//set color-palette for sprites
 
-		body_list[0]= NT_UPD_EOF;
-		set_vram_update(body_list);						//set array body_list as vram-update-array
+		init_updateList();
+		set_vram_update(update_list);						//set array body_list as vram-update-array
 
 		snake_x=120;
 		snake_y=120;

@@ -67,3 +67,8 @@
   (3) update routines
   (4) render routines
   (5) main orchestration
+
+#########################################################################
+# V.0.9 Score added                                                     #
+#########################################################################
+- The current score has been added to the screen.

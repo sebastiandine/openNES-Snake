@@ -30,6 +30,7 @@
 #define SNAKE_BODY_TILE			0x40
 #define EMPTY_TILE				0x00
 #define SPIDER_TILE				0x45
+#define DIGIT_O_TILE			0x10
 
 /******************************************************************************
  * 1.4 Some hardware-specific settings (memory-organization)				  *
@@ -57,9 +58,14 @@ static unsigned char body_coordinates[SNAKE_MAX_SIZE*2];		// Array of snakes bod
 																// eg. body[0] is the x-coordinate of the first body-element and
 																// body[1] its y-coordinate
 
-static unsigned char body_list[2*3 + 1];						/* Array of body-elements which will be used to update VRAM once per frame.
-																   Every 3 entries are describing one body-element. The last element of the
-																   array needs to be the VRAM end-of-file-indicator NT_UPD_EOF.
+static unsigned char update_list[5*3 + 1];						/* Array of bg-elements which will be used to update VRAM once per frame.
+																   Every 3 entries are describing one bg-element.
+																   - the first 3 elements (9 array-elements) are assigned to
+																     the game score
+																   - the 4. and 5. element are assigned to the first and last
+																     body element of the snake
+																   - the last array-element needs to be the
+																     VRAM end-of-file-indicator NT_UPD_EOF.
 
 																   Only two body elements need to be updated once per frame:
 																   - The new first body element needs to be drawn
