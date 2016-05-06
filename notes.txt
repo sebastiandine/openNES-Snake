@@ -56,3 +56,14 @@
   random place within the game-map. Once the snake's head-sprite collides
   with the item-sprite, the size of the snake's body will be enlarged by 
   1 and new coordinates for the item will be calculated.
+
+##########################################################################
+# V.0.8 Project organization refactoring                                 #
+##########################################################################
+- The sourcecode organization has been refactored. Now there are several       
+  .c files which are splitting the project into the following topics:
+  (1) overall constants and variables
+  (2) input routines
+  (3) update routines
+  (4) render routines
+  (5) main orchestration
