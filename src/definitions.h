@@ -3,6 +3,7 @@
  ******************************************************************************/
 #include "level1_nam.h"
 #include "game_over_nam.h"
+#include "titlescreen_nam.h"
 #include "level1_pal.h"
 #include "sprites_pal.h"
 #include "menue_pal.h"
@@ -102,7 +103,8 @@ static unsigned char direction; 					//1=up,2=down,3=left,4=right
 static unsigned char pause;							//1=true, 0=false
 static unsigned char pause_loop;					//identifier to check, if first pause-loop is passed. 1= true, 0=false
 static unsigned char gameover;						//1=true 0=false
-static unsigned char gameover_loop;					//identifier to check, if first pause-loop is passed. 1= true, 0=false
+static unsigned char gameover_loop;					//identifier to check, if first titlescreen-loop is passed. 1= true, 0=false
+static unsigned char titlescreen;					//1=true 0=false
 static unsigned char restart;						//1=true 0=false
 static unsigned char input;
 
@@ -110,5 +112,5 @@ static unsigned char input;
 //list of the levels, include pointer to the packed nametable of the level,
 //and pointer to the associated palette
 const unsigned char* const levelList[LEVELS_ALL*2]={
-level1_nam, level1_pal, game_over_nam, menue_pal
+level1_nam, level1_pal, game_over_nam, menue_pal, titlescreen_nam
 };

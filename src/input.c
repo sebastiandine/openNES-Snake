@@ -10,6 +10,12 @@ void mainloop_handle_input(void){
 			pause = (pause == 1)? 0 : 1;
 			delay(5);										/* Without a delay, a pause-command is not recognized properly */
 		}
+		if(titlescreen){									/* If titlescreen is visible, the game should start after the
+															   player pressed 'Start'.
+															*/
+			titlescreen = 0;
+			delay(5);
+		}
 		else{												/* In case of game over, 'Start' is responsible for restart */
 			gameover = 0;
 			restart = 1;

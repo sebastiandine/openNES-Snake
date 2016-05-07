@@ -119,6 +119,16 @@ void draw_game_over_screen(void){
 	}
 }
 
+void draw_title_screen(void){
+	ppu_off();
+	oam_clear();
+	vram_adr(NAMETABLE1_START);							//set vram pointer to Nametable1 starting adress
+	vram_unrle(levelList[4]);							//unpack level nametable and store data in VRAM
+	pal_bg(levelList[3]);								//set color-palette for background
+	ppu_on_bg();
+
+}
+
 void draw_pause_screen(void){
 	if(!pause_loop){										/* check whether this is the first time, the pause-letters
 															   should be drawn. If its not the first time, nothing needs to

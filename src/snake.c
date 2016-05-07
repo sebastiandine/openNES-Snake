@@ -9,6 +9,14 @@
 
 void main(void){
 
+	/* draw title screen before main loop */
+	titlescreen = 1;
+	draw_title_screen();
+	while(titlescreen){
+		mainloop_handle_input();
+	}
+
+	/* ingame */
 	while(1){
 		oam_clear();
 		ppu_off();
