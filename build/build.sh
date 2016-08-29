@@ -1,13 +1,15 @@
 ################################################################
 # Variables (might differ from project to project)             #
 ################################################################
-# Default-Project-Layout (might be the same in various projects
-WORKSPACE=/home/sebastian/eclipse-nes-workspace/
-SOURCE_DIR=src/
-BUILD_DIR=build/
-GRAPHICS_DIR=gfx/
-CONFIG_DIR=config/
-NES_LIB_DIR=NESLibrary/
+# Default-Project-Layout (might be the same in various projects)
+WORKSPACE=$(dirname $(readlinkk -f $0))
+WORKSPACE=${WORKSPACE%/*}
+SOURCE_DIR=${WORKSPACE}/src
+BUILD_DIR=${WORKSPACE}/build
+GRAPHICS_DIR=${WORKSPACE}/gfx
+CONFIG_DIR=${WORKSPACE}/config
+NES_LIB_DIR=${WORKSPACE}/NESLibrary
+TEMP_DIR=${BUILD_DIR}/temp
 
 #Individual-Project-Settings
 PROJECT_NAME=NES-Snake			#name of project-directory in $WORKSPACE-directory 
@@ -21,19 +23,18 @@ ASM_RESET_FILE=crt0			#name of 6502-assembler file in $SOURCE_DIR-directory, whi
 ################################################################
 echo "Start compiling NES-Project ${PROJECT_NAME}"
 echo "Creating temporary build-directory on ${WORKSPACE}${BUILD_DIR}temp"
-cd ${WORKSPACE}${PROJECT_NAME}/${BUILD_DIR}
-mkdir temp
-cd temp
+mkdir ${TEMP_DIR}
 
 echo "Copying data into temporary build-directory"
-cp ${WORKSPACE}${PROJECT_NAME}/${NES_LIB_DIR}* ./
-cp ${WORKSPACE}${PROJECT_NAME}/${CONFIG_DIR}* ./
-cp ${WORKSPACE}${PROJECT_NAME}/${GRAPHICS_DIR}* ./
-cp -r ${WORKSPACE}${PROJECT_NAME}/${SOURCE_DIR}* ./
+cp ${NES_LIB_DIR}/* ${TEMP_DIR}
+cp ${CONFIG_DIR}/* ${TEMP_DIR}
+cp ${GRAPHICS_DIR}/* ${TEMP_DIR}
+cp ${SOURCE_DIR}/* ${TEMP_DIR}
 
 ###############################################################
 # Compiling and Linking                                       #
 ###############################################################
+cd ${TEMP_DIR}
 echo "Start compiling and linking"
 echo "Compile ${MAIN_FILE_NAME}.c and referenced files into 6502-Assembler file ${MAIN_FILE_NAME}.s"
 cc65 -Oi ${MAIN_FILE_NAME}.c --add-source
@@ -42,13 +43,13 @@ ca65 ${ASM_RESET_FILE}.s
 echo "Compile ${MAIN_FILE_NAME}.s game 6502-Assembler file ${MAIN_FILE_NAME}.s into NES-bytecode"
 ca65 ${MAIN_FILE_NAME}.s
 echo "Link everything to NES-Game-File"
-ld65 -v -o ../${MAIN_FILE_NAME}.nes -C $NES_ROM_MAP_NAME ${ASM_RESET_FILE}.o ${MAIN_FILE_NAME}.o nes.lib
+ld65 -v -o ../${MAIN_FILE_NAME}.nes -C ${NES_ROM_MAP_NAME} ${ASM_RESET_FILE}.o ${MAIN_FILE_NAME}.o nes.lib
 
 ##############################################################
 # Delete temporary build-directory                           #
 ##############################################################
-echo "Delete temporary build-directroy"
+echo "Delete temporary build-directory"
 cd ..
-rm -rf temp 
+rm -rf ${TEMP_DIR} 
 
-echo "Compiling project ${PROJECT_NAME} has been done. The final .nes-gamefile can be found at ${WORKSPACE}${PROJECT_NAME}/${BUILD_DIR}/${MAIN_FILE_NAME}.nes"
+echo "Compiling project ${PROJECT_NAME} has been done. The final .nes-gamefile can be found at ${BUILD_DIR}/${MAIN_FILE_NAME}.nes"
