@@ -100,14 +100,13 @@ static unsigned char last_body_pixel_x;				/* pixel-based coordinates of the las
 static unsigned char last_body_pixel_y;
 
 static unsigned char direction; 					//1=up,2=down,3=left,4=right
-static unsigned char pause;							//1=true, 0=false
+static unsigned char pause;							//1=pause, 0=no pause
 static unsigned char pause_loop;					//identifier to check, if first pause-loop is passed. 1= true, 0=false
-static unsigned char gameover;						//1=true 0=false
+static unsigned char gameover;						//1=game over 0=no game over
 static unsigned char gameover_loop;					//identifier to check, if first titlescreen-loop is passed. 1= true, 0=false
 static unsigned char titlescreen;					//1=true 0=false
 static unsigned char restart;						//1=true 0=false
 static unsigned char input;
-
 
 //list of the levels, include pointer to the packed nametable of the level,
 //and pointer to the associated palette

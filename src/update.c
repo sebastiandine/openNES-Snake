@@ -134,7 +134,7 @@ void mainloop_update(void){
 	/*
 	 * Test collision of snake-head sprite with a wall tile or body tile
 	 */
-	if(map[MAPARRAY_ADR(snake_x,snake_y)] == WALL_TILE_1 || map[MAPARRAY_ADR(snake_x,snake_y)] == WALL_TILE_2
+	if((map[MAPARRAY_ADR(snake_x,snake_y)] == WALL_TILE_1 || map[MAPARRAY_ADR(snake_x,snake_y)] == WALL_TILE_2)
 			|| map[MAPARRAY_ADR(snake_x,snake_y)] == SNAKE_BODY_TILE){
 		gameover = 1;
 	}

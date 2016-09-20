@@ -1,24 +1,43 @@
-void mainloop_handle_input(void){
-	input = pad_poll(0);													/* Reading controller poll */
-	if((input&PAD_LEFT) && (direction!=DIR_RIGHT)) 	direction = DIR_LEFT;	/* Snake is not allowed to flip to the opposite direction. */
-	if((input&PAD_RIGHT) && (direction!=DIR_LEFT)) 	direction = DIR_RIGHT;
-	if((input&PAD_UP) && (direction!=DIR_DOWN)) 	direction = DIR_UP;
-	if((input&PAD_DOWN) && (direction!=DIR_UP)) 	direction = DIR_DOWN;
 
+void input_btn_start(void){
+
+	if(gameover){
+		gameover = 0;
+		restart = 1;
+		return;
+	}
+
+	if(titlescreen){
+		titlescreen = 0;
+		return;
+	}
+
+	pause = !pause;
+}
+
+void mainloop_handle_input(void){
+	input = pad_trigger(0);		/* Reading controller 1 input */
+
+	if((input&PAD_LEFT) && (direction!=DIR_RIGHT)){
+		direction = DIR_LEFT;
+		return;
+	}
+	if((input&PAD_RIGHT) && (direction!=DIR_LEFT)){
+		direction = DIR_RIGHT;
+		return;
+	}
+	if((input&PAD_UP) && (direction!=DIR_DOWN)){
+		direction = DIR_UP;
+		return;
+	}
+	if((input&PAD_DOWN) && (direction!=DIR_UP)){
+		direction = DIR_DOWN;
+		return;
+	}
 	if(input&PAD_START){
-		if(!gameover){										/* Ingame, Controller-button 'Start' is responsible for pausing the game */
-			pause = (pause == 1)? 0 : 1;
-			delay(5);										/* Without a delay, a pause-command is not recognized properly */
-		}
-		if(titlescreen){									/* If titlescreen is visible, the game should start after the
-															   player pressed 'Start'.
-															*/
-			titlescreen = 0;
-			delay(5);
-		}
-		else{												/* In case of game over, 'Start' is responsible for restart */
-			gameover = 0;
-			restart = 1;
-		}
+		input_btn_start();
+		return;
 	}
 }
+
+
