@@ -25,7 +25,7 @@ void load_map_data_into_array(void){
 void calc_random_item_position(void){
 	while(1){
 		item_y = rand8();
-		i = item_y % 8;											/* Ensure, that coordinate is divisible through 8 */
+		i = item_y &7;											/* Ensure, that coordinate is divisible through 8 */
 		item_y = item_y - i;									/* this makes collision detection much easier */
 
 		if(item_y <= 24 || item_y > 232){						/* First three tile-lines y-coordinate $00-$30 are not part of 	*/
@@ -33,7 +33,7 @@ void calc_random_item_position(void){
 		}														/* therefore 232 is the largest y-coordinate for proper display.*/
 
 		item_x = rand8();										/* Ensure, that coordinate is divisible through 8 */
-		i = item_x % 8;											/* this makes collision detection much easier */
+		i = item_x &7;											/* this makes collision detection much easier */
 		item_x = item_x - i;
 		if(item_x > 248 || item_x < 8){							/* x-coordinate can reach from $00-$F9 (0-256), therefore 		*/
 			continue;											/* 248 and 8 are the maximum x-coordinates for proper display.	*/
@@ -47,7 +47,7 @@ void calc_random_item_position(void){
 			continue;
 		}
 
-		i = item_y % 8;
+		i = item_y &7;
 
 		break;
 	}
@@ -146,7 +146,7 @@ void mainloop_update(void){
 	l = MAPARRAY_ADR(item_x,item_y);
 	if(k == l){
 		 //Handle snakes growth
-		if(size_index < SNAKE_MAX_SIZE*2){
+		if(size_index < (SNAKE_MAX_SIZE <<1)){
 			add_snake_body();
 			size_index+=2;
 		}

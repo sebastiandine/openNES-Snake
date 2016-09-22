@@ -58,9 +58,9 @@ void draw_item(void){
  * Update the score elements. The score is the size of the snake, which is defined by size_index/2.
  */
 void draw_score(void){
-	update_list[2] = DIGIT_O_TILE+(size_index/2)/100;
-    update_list[5] = DIGIT_O_TILE+(size_index/2)/10%10;
-    update_list[8] = DIGIT_O_TILE+(size_index/2)%10;
+	update_list[2] = DIGIT_O_TILE+((size_index >> 1) >> 10);
+    update_list[5] = DIGIT_O_TILE+(((size_index >> 1)/10) %10);
+    update_list[8] = DIGIT_O_TILE+((size_index >> 1) %10);
 }
 
 /**

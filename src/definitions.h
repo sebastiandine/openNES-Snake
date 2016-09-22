@@ -55,7 +55,7 @@ static unsigned char map[MAP_WIDTH*MAP_HEIGHT];		//array of the complete game ma
 static unsigned char nameRow[MAP_WIDTH];			//Array for fetching nametable in array 'map', row by row
 
 
-static unsigned char body_coordinates[SNAKE_MAX_SIZE*2];		// Array of snakes body-coordinates (pixel-based), two elements are a one coordinate set,
+static unsigned char body_coordinates[SNAKE_MAX_SIZE <<1];		// Array of snakes body-coordinates (pixel-based), two elements are a one coordinate set,
 																// eg. body[0] is the x-coordinate of the first body-element and
 																// body[1] its y-coordinate
 
@@ -110,6 +110,6 @@ static unsigned char input;
 
 //list of the levels, include pointer to the packed nametable of the level,
 //and pointer to the associated palette
-const unsigned char* const levelList[LEVELS_ALL*2]={
+const unsigned char* const levelList[LEVELS_ALL <<1]={
 level1_nam, level1_pal, game_over_nam, menue_pal, titlescreen_nam
 };
