@@ -3,7 +3,7 @@ void draw_snake(void){
 	sprite_offset = oam_spr(snake_x,snake_y,snake_head_tile,snake_head_attribute,0);
 
 	/*
-	 * Draw snakes body_coordinates - background-tile based version.
+	 * Draw snakes body_coordinates - as background-tiles.
 	 * More efficient version: Every frame, not the whole body will be drawn to the screen.
 	 * Only the new first body tile will be drawn and the old last body tile will be disabled.
 	 */

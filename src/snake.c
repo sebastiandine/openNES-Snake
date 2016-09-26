@@ -35,7 +35,6 @@ void main(void){
 		gameover_loop = 0;
 		restart = 0;
 		size_index = 0;
-		size_counter = 0;
 		last_body_pixel_x = 0;
 		last_body_pixel_y = 0;
 
