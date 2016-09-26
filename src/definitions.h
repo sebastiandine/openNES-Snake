@@ -2,9 +2,10 @@
  * 1.1 Including Nametables and Palettes									  *
  ******************************************************************************/
 #include "level1_nam.h"
+#include "level2_nam.h"
 #include "game_over_nam.h"
 #include "titlescreen_nam.h"
-#include "level1_pal.h"
+#include "levels_pal.h"
 #include "sprites_pal.h"
 #include "menue_pal.h"
 
@@ -100,6 +101,7 @@ static unsigned char last_body_pixel_x;				/* pixel-based coordinates of the las
 static unsigned char last_body_pixel_y;
 
 static unsigned char direction; 					//1=up,2=down,3=left,4=right
+static unsigned char current_level;					//indicates the current level
 static unsigned char pause;							//1=pause, 0=no pause
 static unsigned char pause_loop;					//identifier to check, if first pause-loop is passed. 1= true, 0=false
 static unsigned char gameover;						//1=game over 0=no game over
@@ -108,8 +110,10 @@ static unsigned char titlescreen;					//1=true 0=false
 static unsigned char restart;						//1=true 0=false
 static unsigned char input;
 
-//list of the levels, include pointer to the packed nametable of the level,
+//list of the levels, include pointer to the packed nametable of the levels and menues,
 //and pointer to the associated palette
-const unsigned char* const levelList[LEVELS_ALL <<1]={
-level1_nam, level1_pal, game_over_nam, menue_pal, titlescreen_nam
+const unsigned char* const levelList[LEVELS_ALL+2+2]={
+	level1_nam, level2_nam,
+	game_over_nam, titlescreen_nam,
+	levels_pal, menue_pal
 };

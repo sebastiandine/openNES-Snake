@@ -113,7 +113,7 @@ void draw_game_over_screen(void){
 		oam_clear();
 		vram_adr(NAMETABLE1_START);							//set vram pointer to Nametable1 starting adress
 		vram_unrle(levelList[2]);							//unpack level nametable and store data in VRAM
-		pal_bg(levelList[3]);								//set color-palette for background
+		pal_bg(levelList[5]);								//set color-palette for background
 		center_score_when_gameover();
 		ppu_on_bg();
 	}
@@ -123,8 +123,8 @@ void draw_title_screen(void){
 	ppu_off();
 	oam_clear();
 	vram_adr(NAMETABLE1_START);							//set vram pointer to Nametable1 starting adress
-	vram_unrle(levelList[4]);							//unpack level nametable and store data in VRAM
-	pal_bg(levelList[3]);								//set color-palette for background
+	vram_unrle(levelList[3]);							//unpack level nametable and store data in VRAM
+	pal_bg(levelList[5]);								//set color-palette for background
 	ppu_on_bg();
 
 }
@@ -135,7 +135,7 @@ void draw_pause_screen(void){
 															   be done. If the pause-letters would be drawn each frame,
 															   this might generate flickering.
 															*/
-		pause_loop=1;
+		pause_loop = 1;
 		oam_clear();
 
 		sprite_offset = oam_spr(120, 120, 0x30,1,0); 				//P
@@ -146,24 +146,40 @@ void draw_pause_screen(void){
 	}
 }
 
+void draw_level_screen(void){
+
+	if(current_level == 0){
+		vram_unrle(levelList[0]);						//unpack level nametable and store data in VRAM
+		pal_bg(levelList[4]);							//set color-palette for background
+		return;
+	}
+	if(current_level == 1){
+		vram_unrle(levelList[1]);						//unpack level nametable and store data in VRAM
+		pal_bg(levelList[4]);							//set color-palette for background
+		return;
+	}
+
+
+}
 void mainloop_render(void){
 
 	if(pause){
 		draw_pause_screen();
+		return;
 	}
 	if(gameover){
 		draw_game_over_screen();
+		return;
 	}
 
-	if(!pause && !gameover){
-		/* check if game is returning from pause */
-		if(pause_loop){
-			pause_loop=0;
-			oam_clear(); //clear 'PAUSE'-sprites
-		}
-		/* default render-rountine */
-		draw_score();
-		draw_snake();
-		draw_item();
+	/* check if game is returning from pause */
+	if(pause_loop){
+		pause_loop = 0;
+		oam_clear(); //clear 'PAUSE'-sprites
 	}
+	/* default render-rountine */
+	draw_score();
+	draw_snake();
+	draw_item();
+
 }

@@ -3,6 +3,7 @@ void input_btn_start(void){
 
 	if(gameover){
 		gameover = 0;
+		current_level = 0;
 		restart = 1;
 		return;
 	}
@@ -13,6 +14,7 @@ void input_btn_start(void){
 	}
 
 	pause = !pause;
+
 }
 
 void mainloop_handle_input(void){

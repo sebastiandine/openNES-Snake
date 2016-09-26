@@ -9,6 +9,12 @@
 
 void main(void){
 
+	/* init level no. This needs to be done before any ingame actions,
+	 * because it would be reset to 0, everytime the player reaches the
+	 * next level.
+	 */
+	current_level = 0;
+
 	/* draw title screen before main loop */
 	titlescreen = 1;
 	draw_title_screen();
@@ -18,17 +24,8 @@ void main(void){
 
 	/* ingame */
 	while(1){
-		oam_clear();
-		ppu_off();
 
-		vram_adr(NAMETABLE1_START);						//set vram pointer to Nametable1 starting adress
-		vram_unrle(levelList[0]);						//unpack level nametable and store data in VRAM
-		pal_bg(levelList[1]);							//set color-palette for background
-		pal_spr(sprites_pal);							//set color-palette for sprites
-
-		init_updateList();
-		set_vram_update(update_list);						//set array body_list as vram-update-array
-
+		/* init variables */
 		snake_x=120;
 		snake_y=120;
 		direction=DIR_UP;
@@ -42,19 +39,41 @@ void main(void){
 		last_body_pixel_x = 0;
 		last_body_pixel_y = 0;
 
+		/* draw screen */
+		oam_clear();
+		ppu_off();										//Disable rendering
+
+		vram_adr(NAMETABLE1_START);						//set vram pointer to Nametable1 starting adress
+
+		draw_level_screen();
+
+		pal_spr(sprites_pal);							//set color-palette for sprites
+
+		init_updateList();
+		set_vram_update(update_list);					//set array body_list as vram-update-array
+
 		calc_random_item_position();					//calculate initial position of first item
 
 		load_map_data_into_array();						//load namespace data into array-map, for later collision-detection
+
 		ppu_on_all();									//enable rendering
-		
+
+		delay(50);
+
+		/* game mainloop */
 		while(!restart){
 
 			/* INPUT */
 			mainloop_handle_input();
 
 			/* UPDATE */
-			if(!pause && !gameover){
+			if(!pause){
 				mainloop_update();
+
+				if(((size_index /2) >= 10) && (current_level < LEVELS_ALL)){
+					++current_level;
+					break;
+				}
 			}
 
 			/* RENDER */
