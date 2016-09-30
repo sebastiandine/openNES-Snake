@@ -75,12 +75,13 @@ void update_snake_body(){
 	}
 }
 
+
 /*
  * Add new body_coordinates element at the end of the snake
  */
-void add_snake_body(){
+void add_snake_body_element(){
 	/* Special case, body_coordinates-maximum is reached */
-	if(size_index>= SNAKE_MAX_SIZE*2) return;
+	if(size_index >= (SNAKE_MAX_SIZE <<1)) return;
 
 	/* Special case, if first body_coordinates element will be added */
 	if(size_index==0){
@@ -130,30 +131,58 @@ void add_snake_body(){
 	}
 }
 
-void mainloop_update(void){
-	/*
-	 * Test collision of snake-head sprite with a wall tile or body tile
-	 */
-	if((map[MAPARRAY_ADR(snake_x,snake_y)] == WALL_TILE_1 || map[MAPARRAY_ADR(snake_x,snake_y)] == WALL_TILE_2)
-			|| map[MAPARRAY_ADR(snake_x,snake_y)] == SNAKE_BODY_TILE){
+/**
+ * Collision detection of snakes' head-sprite with wall-tiles.
+ */
+void check_collision_wall(void){
+	if(map[MAPARRAY_ADR(snake_x,snake_y)] == WALL_TILE_1 ||
+			map[MAPARRAY_ADR(snake_x,snake_y)] == WALL_TILE_2){
+
 		gameover = 1;
 	}
+}
 
-	/* Test collsion of snake-head sprite with an item sprite
-	 *
-	 */
+/**
+ * Collision detecation of snakes' head-sprite with body-tiles.
+ */
+void check_collision_body(void){
+	if(map[MAPARRAY_ADR(snake_x,snake_y)] == SNAKE_BODY_TILE){
+
+		gameover = 1;
+	}
+}
+
+/**
+ * Collision detection of snakes' head-sprite with an item-sprite.
+ */
+void check_collision_item(void){
 	k = MAPARRAY_ADR(snake_x,snake_y);
 	l = MAPARRAY_ADR(item_x,item_y);
+
 	if(k == l){
 		 //Handle snakes growth
 		if(size_index < (SNAKE_MAX_SIZE <<1)){
-			add_snake_body();
+			add_snake_body_element();
 			size_index+=2;
 		}
 
 		//Calculate coordiantes of new item coordinate
 		calc_random_item_position();
 	}
+}
+
+
+void mainloop_update(void){
+	/*
+	 * Game-over collision detection
+	 */
+	check_collision_wall();
+	check_collision_body();
+
+	/*
+	 * Growth collision detection
+	 */
+	check_collision_item();
 
 	/* Update Position
 	 *
