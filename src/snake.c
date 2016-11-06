@@ -68,15 +68,10 @@ void main(void){
 			/* UPDATE */
 			if(!pause){
 				mainloop_update();
-
-				if(((size_index /2) >= 10) && (current_level < LEVELS_ALL)){
-					++current_level;
-					break;
-				}
+				if(check_next_level()) break;
 			}
 
 			/* RENDER */
-			//ppu_wait_frame();							/* wait for the next TV frame */
 			mainloop_render();
 			ppu_wait_nmi();
 

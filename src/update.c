@@ -171,6 +171,19 @@ void check_collision_item(void){
 	}
 }
 
+/**
+ * Check, if the requirements for the next level are met.
+ * 1 = true, 0 = false
+ */
+unsigned char check_next_level(void){
+	if(size_index > 2){
+		if((size_index >= 10) && (current_level < LEVELS_ALL)){
+			++current_level;
+			return 1;
+		}
+	}
+	return 0;
+}
 
 void mainloop_update(void){
 	/*

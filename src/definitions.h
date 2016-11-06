@@ -83,7 +83,7 @@ static unsigned char body_tile_x;								// variables, which are used to calcula
 																// coordinates of body-elements to tile-based coordinates
 static unsigned char body_tile_y;
 
-static unsigned char last_body_pixel_x;				// pixel-based coordinates of the last body-element from last frame.
+static unsigned char last_body_pixel_x;							// pixel-based coordinates of the last body-element from last frame.
 static unsigned char last_body_pixel_y;
 
 
