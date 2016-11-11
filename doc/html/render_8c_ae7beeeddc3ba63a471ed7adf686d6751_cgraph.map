@@ -1,0 +1,4 @@
+<map id="draw_pause_screen" name="draw_pause_screen">
+<area shape="rect" id="node2" href="$neslib_8h.html#af0e0aec75a3a9210d71775340297a652" title="oam_clear" alt="" coords="191,5,273,32"/>
+<area shape="rect" id="node3" href="$neslib_8h.html#a6c0a83ae05e30af1643fbaf224ab8d74" title="oam_spr" alt="" coords="196,56,268,83"/>
+</map>

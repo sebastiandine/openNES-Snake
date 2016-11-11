@@ -1,0 +1,5 @@
+<map id="center_score_when_gameover" name="center_score_when_gameover">
+<area shape="rect" id="node2" href="$render_8c.html#a9b14b8e82140fb3a218656d05ff72bc1" title="draw_game_over_screen" alt="" coords="249,5,413,32"/>
+<area shape="rect" id="node3" href="$render_8c.html#aedd9dc656adabee0aaa1887fdc431544" title="mainloop_render" alt="" coords="461,5,579,32"/>
+<area shape="rect" id="node4" href="$snake_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="Main game loop. " alt="" coords="627,5,677,32"/>
+</map>

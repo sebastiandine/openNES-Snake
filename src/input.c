@@ -1,4 +1,19 @@
+/**
+*	@file input.c
+*
+*	@brief This file contains functions for input handling from a controller.
+*
+*	@author Sebastian Dine
+*
+*/
 
+/**
+*	This function contains the logic for the START button according to different
+*	scenarios e.g. title screen, ingame, gameover.
+*
+*	@author Sebastian Dine
+*
+*/
 void input_btn_start(void){
 
 	if(gameover){
@@ -16,6 +31,14 @@ void input_btn_start(void){
 
 }
 
+/**
+*	This function provides the main input handling functionalities for an 
+*	controller on port 1.
+*	It contains logic for input of the following buttons: UP, DOWN, LEFT, RIGHT, START.
+*
+*	@author Sebastian Dine
+*
+*/
 void mainloop_handle_input(void){
 	input = pad_trigger(0);		/* Reading controller 1 input */
 

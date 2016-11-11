@@ -1,0 +1,4 @@
+<map id="draw_level_screen" name="draw_level_screen">
+<area shape="rect" id="node2" href="$neslib_8h.html#a1adb35bc2bdf712c0b1b8223b72b1cb2" title="vram_unrle" alt="" coords="180,5,264,32"/>
+<area shape="rect" id="node3" href="$neslib_8h.html#a1f3f11758d2d0135f9451147e02f9f8f" title="pal_bg" alt="" coords="192,56,252,83"/>
+</map>

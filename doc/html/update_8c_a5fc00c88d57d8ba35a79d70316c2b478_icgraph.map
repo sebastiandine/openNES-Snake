@@ -1,0 +1,4 @@
+<map id="check_collision_body" name="check_collision_body">
+<area shape="rect" id="node2" href="$update_8c.html#a31c8504e7fe9671dbda52ba62a382b1f" title="mainloop_update" alt="" coords="200,5,320,32"/>
+<area shape="rect" id="node3" href="$snake_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="Main game loop. " alt="" coords="368,5,419,32"/>
+</map>

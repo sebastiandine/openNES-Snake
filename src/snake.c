@@ -1,3 +1,9 @@
+/**
+ * 	@file snake.c
+ * 	@brief Maingame file, containing the main game loop.
+ * 	@author Sebastian Dine.
+ */
+
 /******************************************************************************
  * 1. PREPROCESSOR-INTRUCTIONS												  *
  ******************************************************************************/
@@ -7,6 +13,10 @@
 #include "update.c"
 #include "render.c"
 
+/**
+ * @brief Main game loop.
+ * @author Sebastian Dine
+ */
 void main(void){
 
 	/* init level no. This needs to be done before any ingame actions,

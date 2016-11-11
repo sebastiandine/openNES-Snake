@@ -1,3 +1,18 @@
+/**
+*	@file render.c
+*
+*	@brief This file contains all functionality to draw onto the screen, eighter as sprites or as background tiles.
+*
+*	@author Sebastian Dine
+*
+*/
+
+/**
+*	This function draws the whole snake. The head will be drawn as a sprite, the body elements as background tiles.
+*
+*	@author Sebastian Dine
+*
+*/
 void draw_snake(void){
 	/* Draw snakes head - as a sprite */
 	sprite_offset = oam_spr(snake_x,snake_y,snake_head_tile,snake_head_attribute,0);
@@ -50,21 +65,35 @@ void draw_snake(void){
 	}
 }
 
+/**
+*	This function draws an element as a sprite to the screen.
+*
+*	@author Sebastian Dine
+*
+*/
 void draw_item(void){
 	sprite_offset = oam_spr(item_x,item_y,SPIDER_TILE,0,sprite_offset);
 }
 
 /**
- * Update the score elements. The score is the size of the snake, which is defined by size_index/2.
+ *	This function draws the current score as background tiles to the screen.
+ *
+ *	@author Sebastian Dine
+ *
  */
 void draw_score(void){
+	/* The score is defined by global field size_index divided by 2 (size_index/2). */
 	update_list[2] = DIGIT_O_TILE+((size_index >> 1) >> 10);
     update_list[5] = DIGIT_O_TILE+(((size_index >> 1)/10) %10);
     update_list[8] = DIGIT_O_TILE+((size_index >> 1) %10);
 }
 
 /**
- * Initialize the update-list with score-elements (zero-digits) and the EOF-indicator.
+ *	This function initializes the (background tile) update-list with score-elements (zero-digits) 
+ *	and the EOF-indicator.
+ *
+ *	@author Sebastian Dine
+ *
  */
 void init_updateList(void){
 	update_list[0] = MSB(0x2027);   /* tile-address is calculated through addition of tile-number
@@ -80,13 +109,16 @@ void init_updateList(void){
 	update_list[7] = LSB(0x2029);
 	update_list[8] = DIGIT_O_TILE;
 
-	update_list[9] = NT_UPD_EOF;
+	update_list[9] = NT_UPD_EOF;	/* EOF-indicator */
 
 }
 
 /**
- * Move the score digits to the center of the screen, in order to fit into the
- * gameover-screen.
+ *	This function moves the rendering of the score from the upper left corner to
+ *	the center of the screen.
+ *
+ *	@author Sebastian Dine	
+ *
  */
 void center_score_when_gameover(void){
 	update_list[0] = MSB(0x2150);
@@ -101,7 +133,13 @@ void center_score_when_gameover(void){
 	update_list[9] = NT_UPD_EOF;
 }
 
-
+/**
+*
+*	This function draws the gameover screen.
+*
+*	@author Sebastian Dine
+*
+*/
 void draw_game_over_screen(void){
 	if(!gameover_loop){										/* check whether this is the first time, the gameover-screen
 															   should be looped. If its not the first time, nothing needs to
@@ -119,6 +157,13 @@ void draw_game_over_screen(void){
 	}
 }
 
+/**
+*
+*	This function draws the title screen.
+*
+*	@author Sebastian Dine
+*
+*/
 void draw_title_screen(void){
 	ppu_off();
 	oam_clear();
@@ -129,6 +174,14 @@ void draw_title_screen(void){
 
 }
 
+/**
+*
+*	This function draws the letters PAUSE as sprites to the center of the screen,
+*	if the game is paused.
+*
+*	@author Sebastian Dine
+*
+*/
 void draw_pause_screen(void){
 	if(!pause_loop){										/* check whether this is the first time, the pause-letters
 															   should be drawn. If its not the first time, nothing needs to
@@ -146,6 +199,13 @@ void draw_pause_screen(void){
 	}
 }
 
+/**
+*
+*	This function draws the background of the current level to the screen.
+*
+*	@author Sebastian Dine
+*
+*/
 void draw_level_screen(void){
 
 	if(current_level == 0){
@@ -161,6 +221,14 @@ void draw_level_screen(void){
 
 
 }
+
+/**
+*	This function provides the coordination of all render routines according to the current 
+*	status of the game, once per frame.
+*
+*	@author	Sebastian Dine
+*
+*/
 void mainloop_render(void){
 
 	if(pause){

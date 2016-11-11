@@ -1,5 +1,11 @@
-/* Nametable as C .header File */
-/* Created with NES Screen Tool 2.04 (Option Nametable -> Save nametable and attributes -> RLE packed as C header (.h) */
+/**
+ * @file titlescreen_nam.h
+ * @brief This header file contains the nametable (background) of the titlescreen.
+ * Created with NES Screen Tool 2.04 (Option Nametable -> Save nametable and attributes -> RLE packed as C header (.h).
+ *
+ * @author Sebastian Dine
+ *
+ */
 const unsigned char titlescreen_nam[253]={
 0x01,0x43,0x01,0x3f,0x44,0x44,0x00,0x01,0x1b,0x44,0x01,0x03,0x00,0x01,0x1b,0x44,
 0x01,0x03,0x00,0x01,0x1b,0x44,0x01,0x03,0x00,0x01,0x06,0x50,0x51,0x52,0x53,0x54,

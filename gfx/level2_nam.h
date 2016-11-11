@@ -1,6 +1,11 @@
-/* Nametable as C .header File */
-/* Created with NES Screen Tool 2.04 (Option Nametable -> Save nametable and attributes -> RLE packed as C header (.h) */
-
+/**
+ * @file level2_nam.h
+ * @brief This header file contains the nametable (background) of level map 2.
+ * Created with NES Screen Tool 2.04 (Option Nametable -> Save nametable and attributes -> RLE packed as C header (.h).
+ *
+ * @author Sebastian Dine
+ *
+ */
 const unsigned char level2_nam[264]={
 0x01,0x00,0x01,0x20,0x33,0x23,0x2f,0x32,0x25,0x1a,0x00,0x01,0x38,0x43,0x01,0x3d,
 0x44,0x44,0x43,0x43,0x00,0x01,0x0c,0x44,0x43,0x44,0x00,0x01,0x0b,0x43,0x01,0x03,

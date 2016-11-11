@@ -1,0 +1,9 @@
+<map id="draw_game_over_screen" name="draw_game_over_screen">
+<area shape="rect" id="node2" href="$neslib_8h.html#ae647495b7a80abff740f5e6169935faf" title="ppu_off" alt="" coords="284,5,347,32"/>
+<area shape="rect" id="node3" href="$neslib_8h.html#af0e0aec75a3a9210d71775340297a652" title="oam_clear" alt="" coords="274,56,357,83"/>
+<area shape="rect" id="node4" href="$neslib_8h.html#a8460c4c927241500a3a09c245ceeea52" title="vram_adr" alt="" coords="278,107,353,133"/>
+<area shape="rect" id="node5" href="$neslib_8h.html#a1adb35bc2bdf712c0b1b8223b72b1cb2" title="vram_unrle" alt="" coords="273,157,357,184"/>
+<area shape="rect" id="node6" href="$neslib_8h.html#a1f3f11758d2d0135f9451147e02f9f8f" title="pal_bg" alt="" coords="285,208,345,235"/>
+<area shape="rect" id="node7" href="$render_8c.html#aed4a93d083114e3b2160bc3adef848f5" title="center_score_when_gameover" alt="" coords="217,259,413,285"/>
+<area shape="rect" id="node8" href="$neslib_8h.html#ac75389467f7f5846f6bb433f658841f2" title="ppu_on_bg" alt="" coords="273,309,358,336"/>
+</map>

@@ -1,4 +1,10 @@
-//pallette for sprites
+/**
+ * @file sprites_pal.h
+ * @brief This header file contains the color palette for sprites.
+ *
+ * @author Sebastian Dine
+ *
+ */
 const unsigned char sprites_pal[16]={
 		0x0f,0x17,0x27,0x37,
 		0x0f,0x11,0x21,0x31,

@@ -1,0 +1,7 @@
+<map id="vram_unrle" name="vram_unrle">
+<area shape="rect" id="node2" href="$render_8c.html#a9b14b8e82140fb3a218656d05ff72bc1" title="draw_game_over_screen" alt="" coords="137,5,301,32"/>
+<area shape="rect" id="node5" href="$render_8c.html#a1b09050d2bea05fec0b30f6e452a2ff7" title="draw_title_screen" alt="" coords="349,56,472,83"/>
+<area shape="rect" id="node6" href="$render_8c.html#a0842d4314b6de6efca64c0ad01002712" title="draw_level_screen" alt="" coords="156,107,283,133"/>
+<area shape="rect" id="node3" href="$render_8c.html#aedd9dc656adabee0aaa1887fdc431544" title="mainloop_render" alt="" coords="352,5,469,32"/>
+<area shape="rect" id="node4" href="$snake_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="Main game loop. " alt="" coords="520,56,571,83"/>
+</map>
