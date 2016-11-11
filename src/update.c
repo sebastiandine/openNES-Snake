@@ -7,30 +7,6 @@
 *
 */
 
- /**
- *	This file reads the namespace into global array 'map', which is used for further calculations,
- *	e.g. collision detection.
- *
- *	@author Sebastian Dine
- *
- */
-void load_map_data_into_array(void){
-	k = 0;
-	nametable_fetch = NAMETABLE1_START;
-	ppu_off();										//disable rendering so that function 'vram_read' works
-
-	for(i = 0; i < MAP_HEIGHT; i++){
-		vram_adr(nametable_fetch);
-		vram_read(nameRow, 32);
-		for(j = 0;j<MAP_WIDTH; j++) {
-			map[k] = nameRow[j];
-			k++;
-
-		}
-		nametable_fetch+=32;						//set reading position to next row
-	}
-}
-
 /**
 *	This function calculates the coordinates of an grow-item. 
 *	It stores the calculated coordinates into global fields 'item_x' and 'item_y'.
@@ -215,7 +191,7 @@ unsigned char check_collision_item(void){
  */
 unsigned char check_next_level(void){
 	if(size_index > 2){
-		if((size_index >= 10) && (current_level < LEVELS_ALL)){
+		if((size_index >= max_score) && (current_level < LEVELS_ALL)){
 			++current_level;
 			return 1;
 		}

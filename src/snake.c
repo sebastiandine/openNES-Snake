@@ -9,6 +9,7 @@
  ******************************************************************************/
 #include "neslib.h"
 #include "definitions.h"
+#include "init.c"
 #include "input.c"
 #include "update.c"
 #include "render.c"
@@ -36,8 +37,7 @@ void main(void){
 	while(1){
 
 		/* init variables */
-		snake_x=120;
-		snake_y=120;
+		init_level_params();
 		direction=DIR_UP;
 		pause = 0;
 		pause_loop = 0;

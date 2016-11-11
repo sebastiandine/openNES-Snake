@@ -6,7 +6,6 @@ var update_8c =
     [ "check_collision_item", "update_8c.html#a10b8789c8aedb4abbcf3d3c98ed723e7", null ],
     [ "check_collision_wall", "update_8c.html#a4a602dbc65a1829ae32ec9328241d016", null ],
     [ "check_next_level", "update_8c.html#a2ea36e0f75f408285b5d3a5bc8287b4f", null ],
-    [ "load_map_data_into_array", "update_8c.html#a0d12efc5b710644e3c76ceafe1b4f903", null ],
     [ "mainloop_update", "update_8c.html#a31c8504e7fe9671dbda52ba62a382b1f", null ],
     [ "update_snake_body", "update_8c.html#a9441f5df7c591a90d7cc8bda74209bef", null ]
 ];

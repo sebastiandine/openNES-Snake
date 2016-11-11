@@ -13,6 +13,7 @@ var searchData=
   ['mask_5fedge_5fspr',['MASK_EDGE_SPR',['../neslib_8h.html#a8c9b3c6480798161e902a20934a94f3b',1,'neslib.h']]],
   ['mask_5fspr',['MASK_SPR',['../neslib_8h.html#a61e19c8e001a2f730345f8b82ba8f1b6',1,'neslib.h']]],
   ['max',['MAX',['../neslib_8h.html#a555ef4d6248609dd62d8b042a4f87581',1,'neslib.h']]],
+  ['max_5fscore',['max_score',['../definitions_8h.html#a4c4b635fa72f98af449ca934c32c7b38',1,'definitions.h']]],
   ['memcpy',['memcpy',['../neslib_8h.html#af821a6df3371ace281787bc921b3e1f9',1,'neslib.h']]],
   ['memfill',['memfill',['../neslib_8h.html#a2e0070c87bd0f9fed3713a170f6387f3',1,'neslib.h']]],
   ['menue_5fpal',['menue_pal',['../menue__pal_8h.html#a600954b5bbf9585ff21dfe398314f60d',1,'menue_pal.h']]],

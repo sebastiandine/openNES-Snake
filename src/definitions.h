@@ -51,6 +51,16 @@
 /** @} */
 
 /****************************************************************************
+ * Defining level specific constants 										*
+ ****************************************************************************/
+#define LVL1_START_X	120		// Attention: Make sure, that coordinates are divisble through 8,
+#define LVL1_START_Y	120		// this makes collision detection much more easy.
+#define LVL1_MAX_SCORE	4		// Attention: Make sure, that the max score is divisble through 2.
+#define LVL2_START_X	56
+#define LVL2_START_Y	120
+#define LVL2_MAX_SCORE	8
+
+/****************************************************************************
  * Defining tile-constants												  	*
  ****************************************************************************/
 /** 
@@ -216,6 +226,8 @@ static unsigned char item_y;
 */
 /** Global variable, indicating the current level. */
 static unsigned char current_level;
+/** Global variable, indicating the maximum score of the current level. */
+static unsigned char max_score;
 /** Global variable, indicating the pause mode (1= pause, 0= no pause). */
 static unsigned char pause;
 /** Identifier to check, if first pause-loop is passed (1= true, 0= false). */
