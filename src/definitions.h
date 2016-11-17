@@ -134,16 +134,24 @@ static unsigned int nametable_fetch;							//int because first nametable starts 
 *	eg. body[0] is the x-coordinate of the first body-element and body[1] its y-coordinate.
 */
 static unsigned char body_coordinates[SNAKE_MAX_SIZE <<1];
+
+
+#pragma bss-name (push,"ZEROPAGE")	/* Start putting variables into zeropage */
+
 /** Index for array 'body_coordinates' which points to the space for the next body-element
 *	to add. It will be increased in +=2-steps so it always points to a free x-coordinate.
 */
 static unsigned char size_index;
 
+static unsigned char speed_counter;
+
+#pragma bss-name (pop)	/* End putting variables into zeropage */
+
 /** Global variable for holding attributes of the head sprite of the snake*/
 static unsigned char snake_head_attribute;
 
 static unsigned char snake_head_tile;
-static unsigned char speed_counter;
+
 
 /** Global variable, indicating to which direction the snake is moving.
  *  1=up,2=down,3=left,4=right.
@@ -157,6 +165,8 @@ static unsigned char direction;
 static unsigned char snake_x;
 static unsigned char snake_y;
 /** @} */
+
+#pragma bss-name (push,"ZEROPAGE")	/* Start putting variables into zeropage */
 
 /**
 * @name Global variables, which are used to calculate pixel based coordinates (of body elements) to tile based coordinates.
@@ -174,26 +184,30 @@ static unsigned char last_body_pixel_x;
 static unsigned char last_body_pixel_y;
 /** @} */
 
+#pragma bss-name (pop)	/* End putting variables into zeropage */
+
 /** @} */
 
 /** 
 * @name Global variables, used to modify the background ingame
 *	@{ 
 */
-static unsigned char update_list[5*3 + 1];						// Array of bg-elements which will be used to update VRAM once per frame.
-																// Every 3 entries are describing one bg-element.
-																// - the first 3 elements (9 array-elements) are assigned to
-																//   the game score
-																// - the 4. and 5. element are assigned to the first and last
-																//   body element of the snake
-																// - the last array-element needs to be the
-																//   VRAM end-of-file-indicator NT_UPD_EOF.
-																//
-																// Only two body elements need to be updated once per frame:
-																// - The new first body element needs to be drawn
-																// - The old last body element need to be disabled
 
-static unsigned char *ul;										// Pointer to array 'update_list' to enable better handling of the list
+/**
+ * Array of bg-elements which will be used to update VRAM once per frame.
+ * Every 3 entries are describing one bg-element.
+ * - the first 3 elements (9 array-elements) are assigned to the game score
+ * - the 4. and 5. element are assigned to the first and last body element of the snake
+ * - the last array-element needs to be the VRAM end-of-file-indicator NT_UPD_EOF.
+ *
+ * Only two body elements need to be updated once per frame:
+ * - The new first body element needs to be drawn
+ * - The old last body element need to be disabled
+ */
+static unsigned char update_list[5*3 + 1];
+
+/** Pointer to array 'update_list' to enable better handling of the list */
+static unsigned char *ul;
 /** @} */
 
 /** 
@@ -203,6 +217,8 @@ static unsigned char *ul;										// Pointer to array 'update_list' to enable b
 static unsigned char sprite_offset;
 /** @} */
 
+#pragma bss-name (push,"ZEROPAGE")	/* Start putting variables into zeropage */
+
 /** 
 * @name Global variables, used for universal purpose e.g loops
 * @{
@@ -210,6 +226,8 @@ static unsigned char sprite_offset;
 static unsigned char i, j;										// universal indexes for loops
 static unsigned int k, l;										// universal indexes for lager numbers
 /** @} */
+
+#pragma bss-name (pop)	/* End putting variables into zeropage */
 
 /** 
 * @name Global variables, used to interact with items
@@ -224,24 +242,31 @@ static unsigned char item_y;
 * @name Global variables, used for game-states, menues, input
 * @{
 */
+#pragma bss-name (push,"ZEROPAGE")	/* Start putting variables into zeropage */
+
 /** Global variable, indicating the current level. */
 static unsigned char current_level;
 /** Global variable, indicating the maximum score of the current level. */
 static unsigned char max_score;
 /** Global variable, indicating the pause mode (1= pause, 0= no pause). */
 static unsigned char pause;
-/** Identifier to check, if first pause-loop is passed (1= true, 0= false). */
-static unsigned char pause_loop;
 /** Global variable, indicating the game over mode (1= game over 0= no game over). */
 static unsigned char gameover;
+/** Global variable, holding the controller input of the current frame */
+static unsigned char input;
+
+#pragma bss-name (pop)	/* End putting variables into zeropage */
+
+
+/** Identifier to check, if first pause-loop is passed (1= true, 0= false). */
+static unsigned char pause_loop;
 /** identifier to check, if first gameover loop is passed (1= true, 0= false). */
 static unsigned char gameover_loop;
 /** Global variable, indicating the titlescreen mode (1=titlescreen 0= no titlescreen). */
 static unsigned char titlescreen;
 /** Global variable, for handling the restart input */
 static unsigned char restart;
-/** Global variable, holding the controller input of the current frame */
-static unsigned char input;
+
 /** @} */
 
 /** 
