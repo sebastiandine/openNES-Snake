@@ -1,0 +1,110 @@
+\hypertarget{structsnake__struct}{}\section{snake\+\_\+struct Struct Reference}
+\label{structsnake__struct}\index{snake\+\_\+struct@{snake\+\_\+struct}}
+
+
+This structure contains all elements required to interact and display the snake.  
+
+
+
+
+{\ttfamily \#include $<$structures.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char \hyperlink{structsnake__struct_a908b761eeaa385c331d29721c74fbd56}{size\+\_\+index}
+\item 
+unsigned char \hyperlink{structsnake__struct_a5b4861c8a096bac3fcc718c702265fb2}{speed\+\_\+counter}
+\item 
+unsigned char \hyperlink{structsnake__struct_aab0070520b89a005e175de518bbf8d76}{moving\+\_\+direction}
+\item 
+unsigned char \hyperlink{structsnake__struct_afebbff4a86a6b768aa89eb81da9b0611}{head\+\_\+sprite}
+\item 
+unsigned char \hyperlink{structsnake__struct_aee3e536edc6d71b7578c751509573500}{head\+\_\+sprite\+\_\+attribute}
+\item 
+unsigned char \hyperlink{structsnake__struct_aded972bf189fa5a28e09cf0a71f59e6e}{head\+\_\+sprite\+\_\+x}
+\item 
+unsigned char \hyperlink{structsnake__struct_af868f2fa25f812bc8d05bce98fdc964b}{head\+\_\+sprite\+\_\+y}
+\item 
+unsigned char \hyperlink{structsnake__struct_a412e4ee1c9bc5e1128912fecb8f3f74a}{last\+\_\+body\+\_\+element\+\_\+x}
+\item 
+unsigned char \hyperlink{structsnake__struct_a058ae4f8fa7ee37be988277b1a231a6f}{last\+\_\+body\+\_\+element\+\_\+y}
+\item 
+unsigned char \hyperlink{structsnake__struct_a951e67290252c2a8d5ed463ce30d2743}{body\+\_\+element\+\_\+coordinates} \mbox{[}\hyperlink{macros_8h_a6fb1d4c78b46a621cb8344c51adcdc02}{S\+N\+A\+K\+E\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE}$<$$<$ 1\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This structure contains all elements required to interact and display the snake. 
+
+\begin{DoxyAuthor}{Author}
+Sebastian Dine 
+\end{DoxyAuthor}
+
+
+\subsection{Field Documentation}
+\hypertarget{structsnake__struct_a951e67290252c2a8d5ed463ce30d2743}{}\label{structsnake__struct_a951e67290252c2a8d5ed463ce30d2743} 
+\index{snake\+\_\+struct@{snake\+\_\+struct}!body\+\_\+element\+\_\+coordinates@{body\+\_\+element\+\_\+coordinates}}
+\index{body\+\_\+element\+\_\+coordinates@{body\+\_\+element\+\_\+coordinates}!snake\+\_\+struct@{snake\+\_\+struct}}
+\subsubsection{\texorpdfstring{body\+\_\+element\+\_\+coordinates}{body\_element\_coordinates}}
+{\footnotesize\ttfamily unsigned char body\+\_\+element\+\_\+coordinates\mbox{[}\hyperlink{macros_8h_a6fb1d4c78b46a621cb8344c51adcdc02}{S\+N\+A\+K\+E\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE}$<$$<$ 1\mbox{]}}
+
+Array of snakes body-\/coordinates (pixel-\/based), two elements are a coordinate set, eg. body\mbox{[}0\mbox{]} is the x-\/coordinate of the first body-\/element and body\mbox{[}1\mbox{]} its y-\/coordinate. \hypertarget{structsnake__struct_afebbff4a86a6b768aa89eb81da9b0611}{}\label{structsnake__struct_afebbff4a86a6b768aa89eb81da9b0611} 
+\index{snake\+\_\+struct@{snake\+\_\+struct}!head\+\_\+sprite@{head\+\_\+sprite}}
+\index{head\+\_\+sprite@{head\+\_\+sprite}!snake\+\_\+struct@{snake\+\_\+struct}}
+\subsubsection{\texorpdfstring{head\+\_\+sprite}{head\_sprite}}
+{\footnotesize\ttfamily unsigned char head\+\_\+sprite}
+
+tbd. \hypertarget{structsnake__struct_aee3e536edc6d71b7578c751509573500}{}\label{structsnake__struct_aee3e536edc6d71b7578c751509573500} 
+\index{snake\+\_\+struct@{snake\+\_\+struct}!head\+\_\+sprite\+\_\+attribute@{head\+\_\+sprite\+\_\+attribute}}
+\index{head\+\_\+sprite\+\_\+attribute@{head\+\_\+sprite\+\_\+attribute}!snake\+\_\+struct@{snake\+\_\+struct}}
+\subsubsection{\texorpdfstring{head\+\_\+sprite\+\_\+attribute}{head\_sprite\_attribute}}
+{\footnotesize\ttfamily unsigned char head\+\_\+sprite\+\_\+attribute}
+
+Variable for holding attributes of the head sprite of the snake. \hypertarget{structsnake__struct_aded972bf189fa5a28e09cf0a71f59e6e}{}\label{structsnake__struct_aded972bf189fa5a28e09cf0a71f59e6e} 
+\index{snake\+\_\+struct@{snake\+\_\+struct}!head\+\_\+sprite\+\_\+x@{head\+\_\+sprite\+\_\+x}}
+\index{head\+\_\+sprite\+\_\+x@{head\+\_\+sprite\+\_\+x}!snake\+\_\+struct@{snake\+\_\+struct}}
+\subsubsection{\texorpdfstring{head\+\_\+sprite\+\_\+x}{head\_sprite\_x}}
+{\footnotesize\ttfamily unsigned char head\+\_\+sprite\+\_\+x}
+
+Pixel based X-\/coordinate of snake\textquotesingle{}s head sprite. \hypertarget{structsnake__struct_af868f2fa25f812bc8d05bce98fdc964b}{}\label{structsnake__struct_af868f2fa25f812bc8d05bce98fdc964b} 
+\index{snake\+\_\+struct@{snake\+\_\+struct}!head\+\_\+sprite\+\_\+y@{head\+\_\+sprite\+\_\+y}}
+\index{head\+\_\+sprite\+\_\+y@{head\+\_\+sprite\+\_\+y}!snake\+\_\+struct@{snake\+\_\+struct}}
+\subsubsection{\texorpdfstring{head\+\_\+sprite\+\_\+y}{head\_sprite\_y}}
+{\footnotesize\ttfamily unsigned char head\+\_\+sprite\+\_\+y}
+
+Pixel based Y-\/coordinate of snake\textquotesingle{}s head sprite. \hypertarget{structsnake__struct_a412e4ee1c9bc5e1128912fecb8f3f74a}{}\label{structsnake__struct_a412e4ee1c9bc5e1128912fecb8f3f74a} 
+\index{snake\+\_\+struct@{snake\+\_\+struct}!last\+\_\+body\+\_\+element\+\_\+x@{last\+\_\+body\+\_\+element\+\_\+x}}
+\index{last\+\_\+body\+\_\+element\+\_\+x@{last\+\_\+body\+\_\+element\+\_\+x}!snake\+\_\+struct@{snake\+\_\+struct}}
+\subsubsection{\texorpdfstring{last\+\_\+body\+\_\+element\+\_\+x}{last\_body\_element\_x}}
+{\footnotesize\ttfamily unsigned char last\+\_\+body\+\_\+element\+\_\+x}
+
+Pixel based X-\/coordinate of the last body element from last frame. \hypertarget{structsnake__struct_a058ae4f8fa7ee37be988277b1a231a6f}{}\label{structsnake__struct_a058ae4f8fa7ee37be988277b1a231a6f} 
+\index{snake\+\_\+struct@{snake\+\_\+struct}!last\+\_\+body\+\_\+element\+\_\+y@{last\+\_\+body\+\_\+element\+\_\+y}}
+\index{last\+\_\+body\+\_\+element\+\_\+y@{last\+\_\+body\+\_\+element\+\_\+y}!snake\+\_\+struct@{snake\+\_\+struct}}
+\subsubsection{\texorpdfstring{last\+\_\+body\+\_\+element\+\_\+y}{last\_body\_element\_y}}
+{\footnotesize\ttfamily unsigned char last\+\_\+body\+\_\+element\+\_\+y}
+
+Pixel based Y-\/coordinate of the last body element from last frame. \hypertarget{structsnake__struct_aab0070520b89a005e175de518bbf8d76}{}\label{structsnake__struct_aab0070520b89a005e175de518bbf8d76} 
+\index{snake\+\_\+struct@{snake\+\_\+struct}!moving\+\_\+direction@{moving\+\_\+direction}}
+\index{moving\+\_\+direction@{moving\+\_\+direction}!snake\+\_\+struct@{snake\+\_\+struct}}
+\subsubsection{\texorpdfstring{moving\+\_\+direction}{moving\_direction}}
+{\footnotesize\ttfamily unsigned char moving\+\_\+direction}
+
+Indicator to which direction the snake is moving. 1=up,2=down,3=left,4=right. \hypertarget{structsnake__struct_a908b761eeaa385c331d29721c74fbd56}{}\label{structsnake__struct_a908b761eeaa385c331d29721c74fbd56} 
+\index{snake\+\_\+struct@{snake\+\_\+struct}!size\+\_\+index@{size\+\_\+index}}
+\index{size\+\_\+index@{size\+\_\+index}!snake\+\_\+struct@{snake\+\_\+struct}}
+\subsubsection{\texorpdfstring{size\+\_\+index}{size\_index}}
+{\footnotesize\ttfamily unsigned char size\+\_\+index}
+
+Index for array \textquotesingle{}body\+\_\+element\+\_\+ coordinates\textquotesingle{} which points to the space for the next body-\/element to add. It will be increased in +=2-\/steps so it always points to a free x-\/coordinate. \hypertarget{structsnake__struct_a5b4861c8a096bac3fcc718c702265fb2}{}\label{structsnake__struct_a5b4861c8a096bac3fcc718c702265fb2} 
+\index{snake\+\_\+struct@{snake\+\_\+struct}!speed\+\_\+counter@{speed\+\_\+counter}}
+\index{speed\+\_\+counter@{speed\+\_\+counter}!snake\+\_\+struct@{snake\+\_\+struct}}
+\subsubsection{\texorpdfstring{speed\+\_\+counter}{speed\_counter}}
+{\footnotesize\ttfamily unsigned char speed\+\_\+counter}
+
+tbd. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Administrator/\+Documents/\+Git\+Hub/\+N\+E\+S-\/\+Snake/src/\hyperlink{structures_8h}{structures.\+h}\end{DoxyCompactItemize}

@@ -37,15 +37,15 @@ void load_map_data_into_array(void){
 void init_level_params(void){
 
 	if(current_level == 0){
-		snake_x = LVL1_START_X;
-		snake_y = LVL1_START_Y;
+		snake.head_sprite_x = LVL1_START_X;
+		snake.head_sprite_y = LVL1_START_Y;
 		max_score = LVL1_MAX_SCORE << 1;		//max score needs to be multiplied by 2, because
 												//it will be checked by snake_size
 		return;
 	}
 	if(current_level == 1){
-		snake_x = LVL2_START_X;
-		snake_y = LVL2_START_Y;
+		snake.head_sprite_x = LVL2_START_X;
+		snake.head_sprite_y = LVL2_START_Y;
 		max_score = LVL2_MAX_SCORE << 1;
 		return;
 	}

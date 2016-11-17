@@ -4,15 +4,35 @@
  * 	@author Sebastian Dine.
  */
 
-/******************************************************************************
- * 1. PREPROCESSOR-INTRUCTIONS												  *
- ******************************************************************************/
+/****************************************************************************
+ * 1. PREPROCESSOR-INTRUCTIONS (Attention: Do not change the order!)		*
+ ****************************************************************************/
+/* Including Nametables */
+#include "level1_nam.h"
+#include "level2_nam.h"
+#include "game_over_nam.h"
+#include "titlescreen_nam.h"
+
+/* Including Palettes */
+#include "levels_pal.h"
+#include "sprites_pal.h"
+#include "menue_pal.h"
+
+/* Including Headers */
 #include "neslib.h"
-#include "definitions.h"
+#include "macros.h"
+#include "structures.h"
+#include "globals.h"
+
+/* Including Sources */
 #include "init.c"
 #include "input.c"
 #include "update.c"
 #include "render.c"
+
+
+
+
 
 /**
  * @brief Main game loop.
@@ -38,15 +58,15 @@ void main(void){
 
 		/* init variables */
 		init_level_params();
-		direction=DIR_UP;
+		snake.moving_direction=DIR_UP;
 		pause = 0;
 		pause_loop = 0;
 		gameover = 0;
 		gameover_loop = 0;
 		restart = 0;
-		size_index = 0;
-		last_body_pixel_x = 0;
-		last_body_pixel_y = 0;
+		snake.size_index = 0;
+		snake.last_body_element_x = 0;
+		snake.last_body_element_y = 0;
 
 		/* draw screen */
 		oam_clear();

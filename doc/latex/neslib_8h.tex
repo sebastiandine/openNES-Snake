@@ -1,0 +1,759 @@
+\hypertarget{neslib_8h}{}\section{C\+:/\+Users/\+Administrator/\+Documents/\+Git\+Hub/\+N\+E\+S-\/\+Snake/\+N\+E\+S\+Library/neslib.h File Reference}
+\label{neslib_8h}\index{C\+:/\+Users/\+Administrator/\+Documents/\+Git\+Hub/\+N\+E\+S-\/\+Snake/\+N\+E\+S\+Library/neslib.\+h@{C\+:/\+Users/\+Administrator/\+Documents/\+Git\+Hub/\+N\+E\+S-\/\+Snake/\+N\+E\+S\+Library/neslib.\+h}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{neslib_8h_a0189b1aa39b1b7d091f82918202b1be7}{P\+A\+D\+\_\+A}~0x01
+\item 
+\#define \hyperlink{neslib_8h_ac4aa17858ec1e696517821e720d4d28a}{P\+A\+D\+\_\+B}~0x02
+\item 
+\#define \hyperlink{neslib_8h_a174bc9e18932fc1833fdb291d28268d0}{P\+A\+D\+\_\+\+S\+E\+L\+E\+CT}~0x04
+\item 
+\#define \hyperlink{neslib_8h_a1754f0c837e05e32d0850bb1f427c336}{P\+A\+D\+\_\+\+S\+T\+A\+RT}~0x08
+\item 
+\#define \hyperlink{neslib_8h_acdb66227c1cd67fa1c5a98548c75b504}{P\+A\+D\+\_\+\+UP}~0x10
+\item 
+\#define \hyperlink{neslib_8h_a69326cdea2530a1bb929dd121a852010}{P\+A\+D\+\_\+\+D\+O\+WN}~0x20
+\item 
+\#define \hyperlink{neslib_8h_adaf081f3dd52e90153df31490f68f96d}{P\+A\+D\+\_\+\+L\+E\+FT}~0x40
+\item 
+\#define \hyperlink{neslib_8h_a6fd5dddc97219412ab1c4483ce144aef}{P\+A\+D\+\_\+\+R\+I\+G\+HT}~0x80
+\item 
+\#define \hyperlink{neslib_8h_aa368525a9913fbbdd4473d26bfea6ebd}{O\+A\+M\+\_\+\+F\+L\+I\+P\+\_\+V}~0x80
+\item 
+\#define \hyperlink{neslib_8h_a6028ababdbf2c60ed24c16cb7a934aeb}{O\+A\+M\+\_\+\+F\+L\+I\+P\+\_\+H}~0x40
+\item 
+\#define \hyperlink{neslib_8h_a868f23b40d49901f1aea1b9b1fac610d}{O\+A\+M\+\_\+\+B\+E\+H\+I\+ND}~0x20
+\item 
+\#define \hyperlink{neslib_8h_a555ef4d6248609dd62d8b042a4f87581}{M\+AX}(x1,  x2)~((x1)$<$(x2)?(x2)\+:(x1))
+\item 
+\#define \hyperlink{neslib_8h_ae91b68324b23275c2e6c535d455f616b}{M\+IN}(x1,  x2)~((x1)$<$(x2)?(x1)\+:(x2))
+\item 
+\#define \hyperlink{neslib_8h_a61e19c8e001a2f730345f8b82ba8f1b6}{M\+A\+S\+K\+\_\+\+S\+PR}~0x10
+\item 
+\#define \hyperlink{neslib_8h_a6a343f591166c993bddcf4b6f0cea8b5}{M\+A\+S\+K\+\_\+\+BG}~0x08
+\item 
+\#define \hyperlink{neslib_8h_a8c9b3c6480798161e902a20934a94f3b}{M\+A\+S\+K\+\_\+\+E\+D\+G\+E\+\_\+\+S\+PR}~0x04
+\item 
+\#define \hyperlink{neslib_8h_a26a5061466e5e11330181f8faa37370c}{M\+A\+S\+K\+\_\+\+E\+D\+G\+E\+\_\+\+BG}~0x02
+\item 
+\#define \hyperlink{neslib_8h_a81c1d6fe8919a09f4a355c251a332715}{N\+A\+M\+E\+T\+A\+B\+L\+E\+\_\+A}~0x2000
+\item 
+\#define \hyperlink{neslib_8h_ac71d4d5fc6a07304ac2a64747a9f3d73}{N\+A\+M\+E\+T\+A\+B\+L\+E\+\_\+B}~0x2400
+\item 
+\#define \hyperlink{neslib_8h_a3ed449e63c8d69dab9a0481721b21e9d}{N\+A\+M\+E\+T\+A\+B\+L\+E\+\_\+C}~0x2800
+\item 
+\#define \hyperlink{neslib_8h_ae5877646ac9641de6c42017eab0607a4}{N\+A\+M\+E\+T\+A\+B\+L\+E\+\_\+D}~0x2c00
+\item 
+\#define \hyperlink{neslib_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}~0
+\item 
+\#define \hyperlink{neslib_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{T\+R\+UE}~1
+\item 
+\#define \hyperlink{neslib_8h_aa93f0eb578d23995850d61f7d61c55c1}{F\+A\+L\+SE}~0
+\item 
+\#define \hyperlink{neslib_8h_aed183f89f579e7eaf49c61545ec08476}{N\+T\+\_\+\+U\+P\+D\+\_\+\+H\+O\+RZ}~0x40
+\item 
+\#define \hyperlink{neslib_8h_a3043d0764490aa63032e2e2df9ffcbe3}{N\+T\+\_\+\+U\+P\+D\+\_\+\+V\+E\+RT}~0x80
+\item 
+\#define \hyperlink{neslib_8h_a9a2c91ad89067cb61ee56bd09e517e0e}{N\+T\+\_\+\+U\+P\+D\+\_\+\+E\+OF}~0xff
+\item 
+\#define \hyperlink{neslib_8h_a2a9fc71b2e8c3dcb859d2315e6a11469}{N\+T\+A\+D\+R\+\_\+A}(x,  y)~(\hyperlink{neslib_8h_a81c1d6fe8919a09f4a355c251a332715}{N\+A\+M\+E\+T\+A\+B\+L\+E\+\_\+A}$\vert$(((y)$<$$<$5)$\vert$(x)))
+\item 
+\#define \hyperlink{neslib_8h_a8fcf185330f7c2e572818a1e5febad75}{N\+T\+A\+D\+R\+\_\+B}(x,  y)~(\hyperlink{neslib_8h_ac71d4d5fc6a07304ac2a64747a9f3d73}{N\+A\+M\+E\+T\+A\+B\+L\+E\+\_\+B}$\vert$(((y)$<$$<$5)$\vert$(x)))
+\item 
+\#define \hyperlink{neslib_8h_aa7ba5198a6e7c4f205cf16030b019a6a}{N\+T\+A\+D\+R\+\_\+C}(x,  y)~(\hyperlink{neslib_8h_a3ed449e63c8d69dab9a0481721b21e9d}{N\+A\+M\+E\+T\+A\+B\+L\+E\+\_\+C}$\vert$(((y)$<$$<$5)$\vert$(x)))
+\item 
+\#define \hyperlink{neslib_8h_ae32427629efc63c0b169f558df8a44b3}{N\+T\+A\+D\+R\+\_\+D}(x,  y)~(\hyperlink{neslib_8h_ae5877646ac9641de6c42017eab0607a4}{N\+A\+M\+E\+T\+A\+B\+L\+E\+\_\+D}$\vert$(((y)$<$$<$5)$\vert$(x)))
+\item 
+\#define \hyperlink{neslib_8h_aeb61a4e8fff2f4624a632a3189cbd3a0}{M\+SB}(x)~(((x)$>$$>$8))
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_a8e6764b139f7b8482ca6f05cbe1cc55d}{pal\+\_\+all} (const char $\ast$data)
+\item 
+void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_a1f3f11758d2d0135f9451147e02f9f8f}{pal\+\_\+bg} (const char $\ast$data)
+\item 
+void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_a37b1ea3a9f615bf873ff1a9a7cb908e1}{pal\+\_\+spr} (const char $\ast$data)
+\item 
+void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_a2078d955183f42fc22631b945dd97076}{pal\+\_\+col} (unsigned char index, unsigned char color)
+\item 
+void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_a94e96158db770e71b4d0df7243db92ce}{pal\+\_\+clear} (void)
+\item 
+void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_a70af15380632618eeb4a79dd69d00f9b}{pal\+\_\+bright} (unsigned char bright)
+\item 
+void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_a7d44d6e56989665ec6defb9a8506fe1b}{pal\+\_\+spr\+\_\+bright} (unsigned char bright)
+\item 
+void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_a9afa9017620492c47098497a628acd6a}{pal\+\_\+bg\+\_\+bright} (unsigned char bright)
+\item 
+void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_ac88eae7b7797eb87915966d9084eef03}{ppu\+\_\+wait\+\_\+nmi} (void)
+\item 
+void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_af709dcf41df583b1cf97d17d2a999763}{ppu\+\_\+wait\+\_\+frame} (void)
+\item 
+void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_ae647495b7a80abff740f5e6169935faf}{ppu\+\_\+off} (void)
+\item 
+void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_a67f5c6d5ee71fb0a59eb15526bc2cc84}{ppu\+\_\+on\+\_\+all} (void)
+\item 
+void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_ac75389467f7f5846f6bb433f658841f2}{ppu\+\_\+on\+\_\+bg} (void)
+\item 
+void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_aa3698cdae6c85c5e070cf969be67f18b}{ppu\+\_\+on\+\_\+spr} (void)
+\item 
+void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_a210fdcdbafbb3eeb6df78df473b82c72}{ppu\+\_\+mask} (unsigned char mask)
+\item 
+unsigned char \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_ae02360a1a75a6888528a3d8b91fd2e05}{ppu\+\_\+system} (void)
+\item 
+void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_af0e0aec75a3a9210d71775340297a652}{oam\+\_\+clear} (void)
+\item 
+void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_ae3b393a128f547af14c5fc3f90b02998}{oam\+\_\+size} (unsigned char size)
+\item 
+unsigned char \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_a6c0a83ae05e30af1643fbaf224ab8d74}{oam\+\_\+spr} (unsigned char x, unsigned char y, unsigned char chrnum, unsigned char attr, unsigned char sprid)
+\item 
+unsigned char \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_a7e209d6621f62aa5e9bab1ba0d326eeb}{oam\+\_\+meta\+\_\+spr} (unsigned char x, unsigned char y, unsigned char sprid, const unsigned char $\ast$data)
+\item 
+void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_a5c88de00f4254f8afbf16a988cac23d5}{oam\+\_\+hide\+\_\+rest} (unsigned char sprid)
+\item 
+void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_a4f8b0a8894cd7d8e7e2d4e9d190798b8}{music\+\_\+play} (unsigned char song)
+\item 
+void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_a1b9728244575ca5850ce93a6a581bef9}{music\+\_\+stop} (void)
+\item 
+void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_a7dc4007b9fa4154314ef56261351fa1b}{music\+\_\+pause} (unsigned char \hyperlink{globals_8h_af005a22a9f7e1dbfe61f0c4380f5ce83}{pause})
+\item 
+void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_aeb2c4e716b2b6e9d31315ad4cec98623}{sfx\+\_\+play} (unsigned char sound, unsigned char channel)
+\item 
+void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_aa446441cfacd18a332670718337e5115}{sample\+\_\+play} (unsigned char sample)
+\item 
+unsigned char \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_ab3f58e98c2fdca9410fa342e1528a53c}{pad\+\_\+poll} (unsigned char pad)
+\item 
+unsigned char \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_a73584a5b3af1517cb04f14c6118b5b0d}{pad\+\_\+trigger} (unsigned char pad)
+\item 
+unsigned char \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_afdf5e93a522d447d124a0d73d9c91fd4}{pad\+\_\+state} (unsigned char pad)
+\item 
+void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_a6dd1d8cbcb8005da1006cd8cb870c03e}{scroll} (unsigned int x, unsigned int y)
+\item 
+void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_a684e5302447c159136256469bd224c69}{split} (unsigned int x, unsigned int y)
+\item 
+void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_a59a9053b838b92a918c4167395a013d6}{bank\+\_\+spr} (unsigned char n)
+\item 
+void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_a19b7fc360b43b0dd867425c9dad2dd0b}{bank\+\_\+bg} (unsigned char n)
+\item 
+unsigned char \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_a8fe1185fb429a4f9a0b82f9cd2c703e5}{rand8} (void)
+\item 
+unsigned int \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_a9882b1229885d6248b559b19897317ad}{rand16} (void)
+\item 
+void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_a4552535575cb708a9cd65053d31f1520}{set\+\_\+rand} (unsigned int seed)
+\item 
+void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_a025e06c022d08b2fa828e8e4597004c7}{set\+\_\+vram\+\_\+update} (unsigned char $\ast$buf)
+\item 
+void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_a45b36ec1ac2e151ae56f3b1bc5dae73a}{flush\+\_\+vram\+\_\+update} (unsigned char $\ast$buf)
+\item 
+void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_a8460c4c927241500a3a09c245ceeea52}{vram\+\_\+adr} (unsigned int adr)
+\item 
+void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_a630a334d9ed2a4331a3b1168c7ffb466}{vram\+\_\+put} (unsigned char n)
+\item 
+void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_a09eb5b41661ff3330648be48a85ff6d2}{vram\+\_\+fill} (unsigned char n, unsigned int len)
+\item 
+void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_ab567af57e7f8bf8bcfd403dd0e4a0e12}{vram\+\_\+inc} (unsigned char n)
+\item 
+void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_af14b2510268b3c13d9bd60837167bb09}{vram\+\_\+read} (unsigned char $\ast$dst, unsigned int size)
+\item 
+void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_af9982eb3cc548fcda10d53c8b29e4370}{vram\+\_\+write} (unsigned char $\ast$src, unsigned int size)
+\item 
+void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_a1adb35bc2bdf712c0b1b8223b72b1cb2}{vram\+\_\+unrle} (const unsigned char $\ast$data)
+\item 
+void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_af821a6df3371ace281787bc921b3e1f9}{memcpy} (void $\ast$dst, void $\ast$src, unsigned int len)
+\item 
+void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_a2e0070c87bd0f9fed3713a170f6387f3}{memfill} (void $\ast$dst, unsigned char value, unsigned int len)
+\item 
+void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ \hyperlink{neslib_8h_a602d2b5e32479e0a80ad0d4dba8baf11}{delay} (unsigned char frames)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{neslib_8h_aa93f0eb578d23995850d61f7d61c55c1}{}\label{neslib_8h_aa93f0eb578d23995850d61f7d61c55c1} 
+\index{neslib.\+h@{neslib.\+h}!F\+A\+L\+SE@{F\+A\+L\+SE}}
+\index{F\+A\+L\+SE@{F\+A\+L\+SE}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{F\+A\+L\+SE}{FALSE}}
+{\footnotesize\ttfamily \#define F\+A\+L\+SE~0}
+
+\hypertarget{neslib_8h_a6a343f591166c993bddcf4b6f0cea8b5}{}\label{neslib_8h_a6a343f591166c993bddcf4b6f0cea8b5} 
+\index{neslib.\+h@{neslib.\+h}!M\+A\+S\+K\+\_\+\+BG@{M\+A\+S\+K\+\_\+\+BG}}
+\index{M\+A\+S\+K\+\_\+\+BG@{M\+A\+S\+K\+\_\+\+BG}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+S\+K\+\_\+\+BG}{MASK\_BG}}
+{\footnotesize\ttfamily \#define M\+A\+S\+K\+\_\+\+BG~0x08}
+
+\hypertarget{neslib_8h_a26a5061466e5e11330181f8faa37370c}{}\label{neslib_8h_a26a5061466e5e11330181f8faa37370c} 
+\index{neslib.\+h@{neslib.\+h}!M\+A\+S\+K\+\_\+\+E\+D\+G\+E\+\_\+\+BG@{M\+A\+S\+K\+\_\+\+E\+D\+G\+E\+\_\+\+BG}}
+\index{M\+A\+S\+K\+\_\+\+E\+D\+G\+E\+\_\+\+BG@{M\+A\+S\+K\+\_\+\+E\+D\+G\+E\+\_\+\+BG}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+S\+K\+\_\+\+E\+D\+G\+E\+\_\+\+BG}{MASK\_EDGE\_BG}}
+{\footnotesize\ttfamily \#define M\+A\+S\+K\+\_\+\+E\+D\+G\+E\+\_\+\+BG~0x02}
+
+\hypertarget{neslib_8h_a8c9b3c6480798161e902a20934a94f3b}{}\label{neslib_8h_a8c9b3c6480798161e902a20934a94f3b} 
+\index{neslib.\+h@{neslib.\+h}!M\+A\+S\+K\+\_\+\+E\+D\+G\+E\+\_\+\+S\+PR@{M\+A\+S\+K\+\_\+\+E\+D\+G\+E\+\_\+\+S\+PR}}
+\index{M\+A\+S\+K\+\_\+\+E\+D\+G\+E\+\_\+\+S\+PR@{M\+A\+S\+K\+\_\+\+E\+D\+G\+E\+\_\+\+S\+PR}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+S\+K\+\_\+\+E\+D\+G\+E\+\_\+\+S\+PR}{MASK\_EDGE\_SPR}}
+{\footnotesize\ttfamily \#define M\+A\+S\+K\+\_\+\+E\+D\+G\+E\+\_\+\+S\+PR~0x04}
+
+\hypertarget{neslib_8h_a61e19c8e001a2f730345f8b82ba8f1b6}{}\label{neslib_8h_a61e19c8e001a2f730345f8b82ba8f1b6} 
+\index{neslib.\+h@{neslib.\+h}!M\+A\+S\+K\+\_\+\+S\+PR@{M\+A\+S\+K\+\_\+\+S\+PR}}
+\index{M\+A\+S\+K\+\_\+\+S\+PR@{M\+A\+S\+K\+\_\+\+S\+PR}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+S\+K\+\_\+\+S\+PR}{MASK\_SPR}}
+{\footnotesize\ttfamily \#define M\+A\+S\+K\+\_\+\+S\+PR~0x10}
+
+\hypertarget{neslib_8h_a555ef4d6248609dd62d8b042a4f87581}{}\label{neslib_8h_a555ef4d6248609dd62d8b042a4f87581} 
+\index{neslib.\+h@{neslib.\+h}!M\+AX@{M\+AX}}
+\index{M\+AX@{M\+AX}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{M\+AX}{MAX}}
+{\footnotesize\ttfamily \#define M\+AX(\begin{DoxyParamCaption}\item[{}]{x1,  }\item[{}]{x2 }\end{DoxyParamCaption})~((x1)$<$(x2)?(x2)\+:(x1))}
+
+\hypertarget{neslib_8h_ae91b68324b23275c2e6c535d455f616b}{}\label{neslib_8h_ae91b68324b23275c2e6c535d455f616b} 
+\index{neslib.\+h@{neslib.\+h}!M\+IN@{M\+IN}}
+\index{M\+IN@{M\+IN}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{M\+IN}{MIN}}
+{\footnotesize\ttfamily \#define M\+IN(\begin{DoxyParamCaption}\item[{}]{x1,  }\item[{}]{x2 }\end{DoxyParamCaption})~((x1)$<$(x2)?(x1)\+:(x2))}
+
+\hypertarget{neslib_8h_aeb61a4e8fff2f4624a632a3189cbd3a0}{}\label{neslib_8h_aeb61a4e8fff2f4624a632a3189cbd3a0} 
+\index{neslib.\+h@{neslib.\+h}!M\+SB@{M\+SB}}
+\index{M\+SB@{M\+SB}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{M\+SB}{MSB}}
+{\footnotesize\ttfamily \#define M\+SB(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((x)$>$$>$8))}
+
+\hypertarget{neslib_8h_a81c1d6fe8919a09f4a355c251a332715}{}\label{neslib_8h_a81c1d6fe8919a09f4a355c251a332715} 
+\index{neslib.\+h@{neslib.\+h}!N\+A\+M\+E\+T\+A\+B\+L\+E\+\_\+A@{N\+A\+M\+E\+T\+A\+B\+L\+E\+\_\+A}}
+\index{N\+A\+M\+E\+T\+A\+B\+L\+E\+\_\+A@{N\+A\+M\+E\+T\+A\+B\+L\+E\+\_\+A}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{N\+A\+M\+E\+T\+A\+B\+L\+E\+\_\+A}{NAMETABLE\_A}}
+{\footnotesize\ttfamily \#define N\+A\+M\+E\+T\+A\+B\+L\+E\+\_\+A~0x2000}
+
+\hypertarget{neslib_8h_ac71d4d5fc6a07304ac2a64747a9f3d73}{}\label{neslib_8h_ac71d4d5fc6a07304ac2a64747a9f3d73} 
+\index{neslib.\+h@{neslib.\+h}!N\+A\+M\+E\+T\+A\+B\+L\+E\+\_\+B@{N\+A\+M\+E\+T\+A\+B\+L\+E\+\_\+B}}
+\index{N\+A\+M\+E\+T\+A\+B\+L\+E\+\_\+B@{N\+A\+M\+E\+T\+A\+B\+L\+E\+\_\+B}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{N\+A\+M\+E\+T\+A\+B\+L\+E\+\_\+B}{NAMETABLE\_B}}
+{\footnotesize\ttfamily \#define N\+A\+M\+E\+T\+A\+B\+L\+E\+\_\+B~0x2400}
+
+\hypertarget{neslib_8h_a3ed449e63c8d69dab9a0481721b21e9d}{}\label{neslib_8h_a3ed449e63c8d69dab9a0481721b21e9d} 
+\index{neslib.\+h@{neslib.\+h}!N\+A\+M\+E\+T\+A\+B\+L\+E\+\_\+C@{N\+A\+M\+E\+T\+A\+B\+L\+E\+\_\+C}}
+\index{N\+A\+M\+E\+T\+A\+B\+L\+E\+\_\+C@{N\+A\+M\+E\+T\+A\+B\+L\+E\+\_\+C}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{N\+A\+M\+E\+T\+A\+B\+L\+E\+\_\+C}{NAMETABLE\_C}}
+{\footnotesize\ttfamily \#define N\+A\+M\+E\+T\+A\+B\+L\+E\+\_\+C~0x2800}
+
+\hypertarget{neslib_8h_ae5877646ac9641de6c42017eab0607a4}{}\label{neslib_8h_ae5877646ac9641de6c42017eab0607a4} 
+\index{neslib.\+h@{neslib.\+h}!N\+A\+M\+E\+T\+A\+B\+L\+E\+\_\+D@{N\+A\+M\+E\+T\+A\+B\+L\+E\+\_\+D}}
+\index{N\+A\+M\+E\+T\+A\+B\+L\+E\+\_\+D@{N\+A\+M\+E\+T\+A\+B\+L\+E\+\_\+D}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{N\+A\+M\+E\+T\+A\+B\+L\+E\+\_\+D}{NAMETABLE\_D}}
+{\footnotesize\ttfamily \#define N\+A\+M\+E\+T\+A\+B\+L\+E\+\_\+D~0x2c00}
+
+\hypertarget{neslib_8h_a9a2c91ad89067cb61ee56bd09e517e0e}{}\label{neslib_8h_a9a2c91ad89067cb61ee56bd09e517e0e} 
+\index{neslib.\+h@{neslib.\+h}!N\+T\+\_\+\+U\+P\+D\+\_\+\+E\+OF@{N\+T\+\_\+\+U\+P\+D\+\_\+\+E\+OF}}
+\index{N\+T\+\_\+\+U\+P\+D\+\_\+\+E\+OF@{N\+T\+\_\+\+U\+P\+D\+\_\+\+E\+OF}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+\_\+\+U\+P\+D\+\_\+\+E\+OF}{NT\_UPD\_EOF}}
+{\footnotesize\ttfamily \#define N\+T\+\_\+\+U\+P\+D\+\_\+\+E\+OF~0xff}
+
+\hypertarget{neslib_8h_aed183f89f579e7eaf49c61545ec08476}{}\label{neslib_8h_aed183f89f579e7eaf49c61545ec08476} 
+\index{neslib.\+h@{neslib.\+h}!N\+T\+\_\+\+U\+P\+D\+\_\+\+H\+O\+RZ@{N\+T\+\_\+\+U\+P\+D\+\_\+\+H\+O\+RZ}}
+\index{N\+T\+\_\+\+U\+P\+D\+\_\+\+H\+O\+RZ@{N\+T\+\_\+\+U\+P\+D\+\_\+\+H\+O\+RZ}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+\_\+\+U\+P\+D\+\_\+\+H\+O\+RZ}{NT\_UPD\_HORZ}}
+{\footnotesize\ttfamily \#define N\+T\+\_\+\+U\+P\+D\+\_\+\+H\+O\+RZ~0x40}
+
+\hypertarget{neslib_8h_a3043d0764490aa63032e2e2df9ffcbe3}{}\label{neslib_8h_a3043d0764490aa63032e2e2df9ffcbe3} 
+\index{neslib.\+h@{neslib.\+h}!N\+T\+\_\+\+U\+P\+D\+\_\+\+V\+E\+RT@{N\+T\+\_\+\+U\+P\+D\+\_\+\+V\+E\+RT}}
+\index{N\+T\+\_\+\+U\+P\+D\+\_\+\+V\+E\+RT@{N\+T\+\_\+\+U\+P\+D\+\_\+\+V\+E\+RT}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+\_\+\+U\+P\+D\+\_\+\+V\+E\+RT}{NT\_UPD\_VERT}}
+{\footnotesize\ttfamily \#define N\+T\+\_\+\+U\+P\+D\+\_\+\+V\+E\+RT~0x80}
+
+\hypertarget{neslib_8h_a2a9fc71b2e8c3dcb859d2315e6a11469}{}\label{neslib_8h_a2a9fc71b2e8c3dcb859d2315e6a11469} 
+\index{neslib.\+h@{neslib.\+h}!N\+T\+A\+D\+R\+\_\+A@{N\+T\+A\+D\+R\+\_\+A}}
+\index{N\+T\+A\+D\+R\+\_\+A@{N\+T\+A\+D\+R\+\_\+A}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+A\+D\+R\+\_\+A}{NTADR\_A}}
+{\footnotesize\ttfamily \#define N\+T\+A\+D\+R\+\_\+A(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})~(\hyperlink{neslib_8h_a81c1d6fe8919a09f4a355c251a332715}{N\+A\+M\+E\+T\+A\+B\+L\+E\+\_\+A}$\vert$(((y)$<$$<$5)$\vert$(x)))}
+
+\hypertarget{neslib_8h_a8fcf185330f7c2e572818a1e5febad75}{}\label{neslib_8h_a8fcf185330f7c2e572818a1e5febad75} 
+\index{neslib.\+h@{neslib.\+h}!N\+T\+A\+D\+R\+\_\+B@{N\+T\+A\+D\+R\+\_\+B}}
+\index{N\+T\+A\+D\+R\+\_\+B@{N\+T\+A\+D\+R\+\_\+B}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+A\+D\+R\+\_\+B}{NTADR\_B}}
+{\footnotesize\ttfamily \#define N\+T\+A\+D\+R\+\_\+B(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})~(\hyperlink{neslib_8h_ac71d4d5fc6a07304ac2a64747a9f3d73}{N\+A\+M\+E\+T\+A\+B\+L\+E\+\_\+B}$\vert$(((y)$<$$<$5)$\vert$(x)))}
+
+\hypertarget{neslib_8h_aa7ba5198a6e7c4f205cf16030b019a6a}{}\label{neslib_8h_aa7ba5198a6e7c4f205cf16030b019a6a} 
+\index{neslib.\+h@{neslib.\+h}!N\+T\+A\+D\+R\+\_\+C@{N\+T\+A\+D\+R\+\_\+C}}
+\index{N\+T\+A\+D\+R\+\_\+C@{N\+T\+A\+D\+R\+\_\+C}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+A\+D\+R\+\_\+C}{NTADR\_C}}
+{\footnotesize\ttfamily \#define N\+T\+A\+D\+R\+\_\+C(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})~(\hyperlink{neslib_8h_a3ed449e63c8d69dab9a0481721b21e9d}{N\+A\+M\+E\+T\+A\+B\+L\+E\+\_\+C}$\vert$(((y)$<$$<$5)$\vert$(x)))}
+
+\hypertarget{neslib_8h_ae32427629efc63c0b169f558df8a44b3}{}\label{neslib_8h_ae32427629efc63c0b169f558df8a44b3} 
+\index{neslib.\+h@{neslib.\+h}!N\+T\+A\+D\+R\+\_\+D@{N\+T\+A\+D\+R\+\_\+D}}
+\index{N\+T\+A\+D\+R\+\_\+D@{N\+T\+A\+D\+R\+\_\+D}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{N\+T\+A\+D\+R\+\_\+D}{NTADR\_D}}
+{\footnotesize\ttfamily \#define N\+T\+A\+D\+R\+\_\+D(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})~(\hyperlink{neslib_8h_ae5877646ac9641de6c42017eab0607a4}{N\+A\+M\+E\+T\+A\+B\+L\+E\+\_\+D}$\vert$(((y)$<$$<$5)$\vert$(x)))}
+
+\hypertarget{neslib_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{}\label{neslib_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4} 
+\index{neslib.\+h@{neslib.\+h}!N\+U\+LL@{N\+U\+LL}}
+\index{N\+U\+LL@{N\+U\+LL}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{N\+U\+LL}{NULL}}
+{\footnotesize\ttfamily \#define N\+U\+LL~0}
+
+\hypertarget{neslib_8h_a868f23b40d49901f1aea1b9b1fac610d}{}\label{neslib_8h_a868f23b40d49901f1aea1b9b1fac610d} 
+\index{neslib.\+h@{neslib.\+h}!O\+A\+M\+\_\+\+B\+E\+H\+I\+ND@{O\+A\+M\+\_\+\+B\+E\+H\+I\+ND}}
+\index{O\+A\+M\+\_\+\+B\+E\+H\+I\+ND@{O\+A\+M\+\_\+\+B\+E\+H\+I\+ND}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{O\+A\+M\+\_\+\+B\+E\+H\+I\+ND}{OAM\_BEHIND}}
+{\footnotesize\ttfamily \#define O\+A\+M\+\_\+\+B\+E\+H\+I\+ND~0x20}
+
+\hypertarget{neslib_8h_a6028ababdbf2c60ed24c16cb7a934aeb}{}\label{neslib_8h_a6028ababdbf2c60ed24c16cb7a934aeb} 
+\index{neslib.\+h@{neslib.\+h}!O\+A\+M\+\_\+\+F\+L\+I\+P\+\_\+H@{O\+A\+M\+\_\+\+F\+L\+I\+P\+\_\+H}}
+\index{O\+A\+M\+\_\+\+F\+L\+I\+P\+\_\+H@{O\+A\+M\+\_\+\+F\+L\+I\+P\+\_\+H}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{O\+A\+M\+\_\+\+F\+L\+I\+P\+\_\+H}{OAM\_FLIP\_H}}
+{\footnotesize\ttfamily \#define O\+A\+M\+\_\+\+F\+L\+I\+P\+\_\+H~0x40}
+
+\hypertarget{neslib_8h_aa368525a9913fbbdd4473d26bfea6ebd}{}\label{neslib_8h_aa368525a9913fbbdd4473d26bfea6ebd} 
+\index{neslib.\+h@{neslib.\+h}!O\+A\+M\+\_\+\+F\+L\+I\+P\+\_\+V@{O\+A\+M\+\_\+\+F\+L\+I\+P\+\_\+V}}
+\index{O\+A\+M\+\_\+\+F\+L\+I\+P\+\_\+V@{O\+A\+M\+\_\+\+F\+L\+I\+P\+\_\+V}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{O\+A\+M\+\_\+\+F\+L\+I\+P\+\_\+V}{OAM\_FLIP\_V}}
+{\footnotesize\ttfamily \#define O\+A\+M\+\_\+\+F\+L\+I\+P\+\_\+V~0x80}
+
+\hypertarget{neslib_8h_a0189b1aa39b1b7d091f82918202b1be7}{}\label{neslib_8h_a0189b1aa39b1b7d091f82918202b1be7} 
+\index{neslib.\+h@{neslib.\+h}!P\+A\+D\+\_\+A@{P\+A\+D\+\_\+A}}
+\index{P\+A\+D\+\_\+A@{P\+A\+D\+\_\+A}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{P\+A\+D\+\_\+A}{PAD\_A}}
+{\footnotesize\ttfamily \#define P\+A\+D\+\_\+A~0x01}
+
+\hypertarget{neslib_8h_ac4aa17858ec1e696517821e720d4d28a}{}\label{neslib_8h_ac4aa17858ec1e696517821e720d4d28a} 
+\index{neslib.\+h@{neslib.\+h}!P\+A\+D\+\_\+B@{P\+A\+D\+\_\+B}}
+\index{P\+A\+D\+\_\+B@{P\+A\+D\+\_\+B}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{P\+A\+D\+\_\+B}{PAD\_B}}
+{\footnotesize\ttfamily \#define P\+A\+D\+\_\+B~0x02}
+
+\hypertarget{neslib_8h_a69326cdea2530a1bb929dd121a852010}{}\label{neslib_8h_a69326cdea2530a1bb929dd121a852010} 
+\index{neslib.\+h@{neslib.\+h}!P\+A\+D\+\_\+\+D\+O\+WN@{P\+A\+D\+\_\+\+D\+O\+WN}}
+\index{P\+A\+D\+\_\+\+D\+O\+WN@{P\+A\+D\+\_\+\+D\+O\+WN}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{P\+A\+D\+\_\+\+D\+O\+WN}{PAD\_DOWN}}
+{\footnotesize\ttfamily \#define P\+A\+D\+\_\+\+D\+O\+WN~0x20}
+
+\hypertarget{neslib_8h_adaf081f3dd52e90153df31490f68f96d}{}\label{neslib_8h_adaf081f3dd52e90153df31490f68f96d} 
+\index{neslib.\+h@{neslib.\+h}!P\+A\+D\+\_\+\+L\+E\+FT@{P\+A\+D\+\_\+\+L\+E\+FT}}
+\index{P\+A\+D\+\_\+\+L\+E\+FT@{P\+A\+D\+\_\+\+L\+E\+FT}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{P\+A\+D\+\_\+\+L\+E\+FT}{PAD\_LEFT}}
+{\footnotesize\ttfamily \#define P\+A\+D\+\_\+\+L\+E\+FT~0x40}
+
+\hypertarget{neslib_8h_a6fd5dddc97219412ab1c4483ce144aef}{}\label{neslib_8h_a6fd5dddc97219412ab1c4483ce144aef} 
+\index{neslib.\+h@{neslib.\+h}!P\+A\+D\+\_\+\+R\+I\+G\+HT@{P\+A\+D\+\_\+\+R\+I\+G\+HT}}
+\index{P\+A\+D\+\_\+\+R\+I\+G\+HT@{P\+A\+D\+\_\+\+R\+I\+G\+HT}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{P\+A\+D\+\_\+\+R\+I\+G\+HT}{PAD\_RIGHT}}
+{\footnotesize\ttfamily \#define P\+A\+D\+\_\+\+R\+I\+G\+HT~0x80}
+
+\hypertarget{neslib_8h_a174bc9e18932fc1833fdb291d28268d0}{}\label{neslib_8h_a174bc9e18932fc1833fdb291d28268d0} 
+\index{neslib.\+h@{neslib.\+h}!P\+A\+D\+\_\+\+S\+E\+L\+E\+CT@{P\+A\+D\+\_\+\+S\+E\+L\+E\+CT}}
+\index{P\+A\+D\+\_\+\+S\+E\+L\+E\+CT@{P\+A\+D\+\_\+\+S\+E\+L\+E\+CT}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{P\+A\+D\+\_\+\+S\+E\+L\+E\+CT}{PAD\_SELECT}}
+{\footnotesize\ttfamily \#define P\+A\+D\+\_\+\+S\+E\+L\+E\+CT~0x04}
+
+\hypertarget{neslib_8h_a1754f0c837e05e32d0850bb1f427c336}{}\label{neslib_8h_a1754f0c837e05e32d0850bb1f427c336} 
+\index{neslib.\+h@{neslib.\+h}!P\+A\+D\+\_\+\+S\+T\+A\+RT@{P\+A\+D\+\_\+\+S\+T\+A\+RT}}
+\index{P\+A\+D\+\_\+\+S\+T\+A\+RT@{P\+A\+D\+\_\+\+S\+T\+A\+RT}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{P\+A\+D\+\_\+\+S\+T\+A\+RT}{PAD\_START}}
+{\footnotesize\ttfamily \#define P\+A\+D\+\_\+\+S\+T\+A\+RT~0x08}
+
+\hypertarget{neslib_8h_acdb66227c1cd67fa1c5a98548c75b504}{}\label{neslib_8h_acdb66227c1cd67fa1c5a98548c75b504} 
+\index{neslib.\+h@{neslib.\+h}!P\+A\+D\+\_\+\+UP@{P\+A\+D\+\_\+\+UP}}
+\index{P\+A\+D\+\_\+\+UP@{P\+A\+D\+\_\+\+UP}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{P\+A\+D\+\_\+\+UP}{PAD\_UP}}
+{\footnotesize\ttfamily \#define P\+A\+D\+\_\+\+UP~0x10}
+
+\hypertarget{neslib_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{}\label{neslib_8h_aa8cecfc5c5c054d2875c03e77b7be15d} 
+\index{neslib.\+h@{neslib.\+h}!T\+R\+UE@{T\+R\+UE}}
+\index{T\+R\+UE@{T\+R\+UE}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{T\+R\+UE}{TRUE}}
+{\footnotesize\ttfamily \#define T\+R\+UE~1}
+
+
+
+\subsection{Function Documentation}
+\hypertarget{neslib_8h_a19b7fc360b43b0dd867425c9dad2dd0b}{}\label{neslib_8h_a19b7fc360b43b0dd867425c9dad2dd0b} 
+\index{neslib.\+h@{neslib.\+h}!bank\+\_\+bg@{bank\+\_\+bg}}
+\index{bank\+\_\+bg@{bank\+\_\+bg}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{bank\+\_\+bg()}{bank\_bg()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ bank\+\_\+bg (\begin{DoxyParamCaption}\item[{unsigned char}]{n }\end{DoxyParamCaption})}
+
+\hypertarget{neslib_8h_a59a9053b838b92a918c4167395a013d6}{}\label{neslib_8h_a59a9053b838b92a918c4167395a013d6} 
+\index{neslib.\+h@{neslib.\+h}!bank\+\_\+spr@{bank\+\_\+spr}}
+\index{bank\+\_\+spr@{bank\+\_\+spr}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{bank\+\_\+spr()}{bank\_spr()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ bank\+\_\+spr (\begin{DoxyParamCaption}\item[{unsigned char}]{n }\end{DoxyParamCaption})}
+
+\hypertarget{neslib_8h_a602d2b5e32479e0a80ad0d4dba8baf11}{}\label{neslib_8h_a602d2b5e32479e0a80ad0d4dba8baf11} 
+\index{neslib.\+h@{neslib.\+h}!delay@{delay}}
+\index{delay@{delay}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{delay()}{delay()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ delay (\begin{DoxyParamCaption}\item[{unsigned char}]{frames }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{neslib_8h_a602d2b5e32479e0a80ad0d4dba8baf11_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{neslib_8h_a45b36ec1ac2e151ae56f3b1bc5dae73a}{}\label{neslib_8h_a45b36ec1ac2e151ae56f3b1bc5dae73a} 
+\index{neslib.\+h@{neslib.\+h}!flush\+\_\+vram\+\_\+update@{flush\+\_\+vram\+\_\+update}}
+\index{flush\+\_\+vram\+\_\+update@{flush\+\_\+vram\+\_\+update}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{flush\+\_\+vram\+\_\+update()}{flush\_vram\_update()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ flush\+\_\+vram\+\_\+update (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buf }\end{DoxyParamCaption})}
+
+\hypertarget{neslib_8h_af821a6df3371ace281787bc921b3e1f9}{}\label{neslib_8h_af821a6df3371ace281787bc921b3e1f9} 
+\index{neslib.\+h@{neslib.\+h}!memcpy@{memcpy}}
+\index{memcpy@{memcpy}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{memcpy()}{memcpy()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ memcpy (\begin{DoxyParamCaption}\item[{void $\ast$}]{dst,  }\item[{void $\ast$}]{src,  }\item[{unsigned int}]{len }\end{DoxyParamCaption})}
+
+\hypertarget{neslib_8h_a2e0070c87bd0f9fed3713a170f6387f3}{}\label{neslib_8h_a2e0070c87bd0f9fed3713a170f6387f3} 
+\index{neslib.\+h@{neslib.\+h}!memfill@{memfill}}
+\index{memfill@{memfill}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{memfill()}{memfill()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ memfill (\begin{DoxyParamCaption}\item[{void $\ast$}]{dst,  }\item[{unsigned char}]{value,  }\item[{unsigned int}]{len }\end{DoxyParamCaption})}
+
+\hypertarget{neslib_8h_a7dc4007b9fa4154314ef56261351fa1b}{}\label{neslib_8h_a7dc4007b9fa4154314ef56261351fa1b} 
+\index{neslib.\+h@{neslib.\+h}!music\+\_\+pause@{music\+\_\+pause}}
+\index{music\+\_\+pause@{music\+\_\+pause}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{music\+\_\+pause()}{music\_pause()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ music\+\_\+pause (\begin{DoxyParamCaption}\item[{unsigned char}]{pause }\end{DoxyParamCaption})}
+
+\hypertarget{neslib_8h_a4f8b0a8894cd7d8e7e2d4e9d190798b8}{}\label{neslib_8h_a4f8b0a8894cd7d8e7e2d4e9d190798b8} 
+\index{neslib.\+h@{neslib.\+h}!music\+\_\+play@{music\+\_\+play}}
+\index{music\+\_\+play@{music\+\_\+play}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{music\+\_\+play()}{music\_play()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ music\+\_\+play (\begin{DoxyParamCaption}\item[{unsigned char}]{song }\end{DoxyParamCaption})}
+
+\hypertarget{neslib_8h_a1b9728244575ca5850ce93a6a581bef9}{}\label{neslib_8h_a1b9728244575ca5850ce93a6a581bef9} 
+\index{neslib.\+h@{neslib.\+h}!music\+\_\+stop@{music\+\_\+stop}}
+\index{music\+\_\+stop@{music\+\_\+stop}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{music\+\_\+stop()}{music\_stop()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ music\+\_\+stop (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\hypertarget{neslib_8h_af0e0aec75a3a9210d71775340297a652}{}\label{neslib_8h_af0e0aec75a3a9210d71775340297a652} 
+\index{neslib.\+h@{neslib.\+h}!oam\+\_\+clear@{oam\+\_\+clear}}
+\index{oam\+\_\+clear@{oam\+\_\+clear}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{oam\+\_\+clear()}{oam\_clear()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ oam\+\_\+clear (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{neslib_8h_af0e0aec75a3a9210d71775340297a652_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{neslib_8h_a5c88de00f4254f8afbf16a988cac23d5}{}\label{neslib_8h_a5c88de00f4254f8afbf16a988cac23d5} 
+\index{neslib.\+h@{neslib.\+h}!oam\+\_\+hide\+\_\+rest@{oam\+\_\+hide\+\_\+rest}}
+\index{oam\+\_\+hide\+\_\+rest@{oam\+\_\+hide\+\_\+rest}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{oam\+\_\+hide\+\_\+rest()}{oam\_hide\_rest()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ oam\+\_\+hide\+\_\+rest (\begin{DoxyParamCaption}\item[{unsigned char}]{sprid }\end{DoxyParamCaption})}
+
+\hypertarget{neslib_8h_a7e209d6621f62aa5e9bab1ba0d326eeb}{}\label{neslib_8h_a7e209d6621f62aa5e9bab1ba0d326eeb} 
+\index{neslib.\+h@{neslib.\+h}!oam\+\_\+meta\+\_\+spr@{oam\+\_\+meta\+\_\+spr}}
+\index{oam\+\_\+meta\+\_\+spr@{oam\+\_\+meta\+\_\+spr}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{oam\+\_\+meta\+\_\+spr()}{oam\_meta\_spr()}}
+{\footnotesize\ttfamily unsigned char \+\_\+\+\_\+fastcall\+\_\+\+\_\+ oam\+\_\+meta\+\_\+spr (\begin{DoxyParamCaption}\item[{unsigned char}]{x,  }\item[{unsigned char}]{y,  }\item[{unsigned char}]{sprid,  }\item[{const unsigned char $\ast$}]{data }\end{DoxyParamCaption})}
+
+\hypertarget{neslib_8h_ae3b393a128f547af14c5fc3f90b02998}{}\label{neslib_8h_ae3b393a128f547af14c5fc3f90b02998} 
+\index{neslib.\+h@{neslib.\+h}!oam\+\_\+size@{oam\+\_\+size}}
+\index{oam\+\_\+size@{oam\+\_\+size}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{oam\+\_\+size()}{oam\_size()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ oam\+\_\+size (\begin{DoxyParamCaption}\item[{unsigned char}]{size }\end{DoxyParamCaption})}
+
+\hypertarget{neslib_8h_a6c0a83ae05e30af1643fbaf224ab8d74}{}\label{neslib_8h_a6c0a83ae05e30af1643fbaf224ab8d74} 
+\index{neslib.\+h@{neslib.\+h}!oam\+\_\+spr@{oam\+\_\+spr}}
+\index{oam\+\_\+spr@{oam\+\_\+spr}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{oam\+\_\+spr()}{oam\_spr()}}
+{\footnotesize\ttfamily unsigned char \+\_\+\+\_\+fastcall\+\_\+\+\_\+ oam\+\_\+spr (\begin{DoxyParamCaption}\item[{unsigned char}]{x,  }\item[{unsigned char}]{y,  }\item[{unsigned char}]{chrnum,  }\item[{unsigned char}]{attr,  }\item[{unsigned char}]{sprid }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{neslib_8h_a6c0a83ae05e30af1643fbaf224ab8d74_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{neslib_8h_ab3f58e98c2fdca9410fa342e1528a53c}{}\label{neslib_8h_ab3f58e98c2fdca9410fa342e1528a53c} 
+\index{neslib.\+h@{neslib.\+h}!pad\+\_\+poll@{pad\+\_\+poll}}
+\index{pad\+\_\+poll@{pad\+\_\+poll}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{pad\+\_\+poll()}{pad\_poll()}}
+{\footnotesize\ttfamily unsigned char \+\_\+\+\_\+fastcall\+\_\+\+\_\+ pad\+\_\+poll (\begin{DoxyParamCaption}\item[{unsigned char}]{pad }\end{DoxyParamCaption})}
+
+\hypertarget{neslib_8h_afdf5e93a522d447d124a0d73d9c91fd4}{}\label{neslib_8h_afdf5e93a522d447d124a0d73d9c91fd4} 
+\index{neslib.\+h@{neslib.\+h}!pad\+\_\+state@{pad\+\_\+state}}
+\index{pad\+\_\+state@{pad\+\_\+state}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{pad\+\_\+state()}{pad\_state()}}
+{\footnotesize\ttfamily unsigned char \+\_\+\+\_\+fastcall\+\_\+\+\_\+ pad\+\_\+state (\begin{DoxyParamCaption}\item[{unsigned char}]{pad }\end{DoxyParamCaption})}
+
+\hypertarget{neslib_8h_a73584a5b3af1517cb04f14c6118b5b0d}{}\label{neslib_8h_a73584a5b3af1517cb04f14c6118b5b0d} 
+\index{neslib.\+h@{neslib.\+h}!pad\+\_\+trigger@{pad\+\_\+trigger}}
+\index{pad\+\_\+trigger@{pad\+\_\+trigger}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{pad\+\_\+trigger()}{pad\_trigger()}}
+{\footnotesize\ttfamily unsigned char \+\_\+\+\_\+fastcall\+\_\+\+\_\+ pad\+\_\+trigger (\begin{DoxyParamCaption}\item[{unsigned char}]{pad }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{neslib_8h_a73584a5b3af1517cb04f14c6118b5b0d_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{neslib_8h_a8e6764b139f7b8482ca6f05cbe1cc55d}{}\label{neslib_8h_a8e6764b139f7b8482ca6f05cbe1cc55d} 
+\index{neslib.\+h@{neslib.\+h}!pal\+\_\+all@{pal\+\_\+all}}
+\index{pal\+\_\+all@{pal\+\_\+all}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{pal\+\_\+all()}{pal\_all()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ pal\+\_\+all (\begin{DoxyParamCaption}\item[{const char $\ast$}]{data }\end{DoxyParamCaption})}
+
+\hypertarget{neslib_8h_a1f3f11758d2d0135f9451147e02f9f8f}{}\label{neslib_8h_a1f3f11758d2d0135f9451147e02f9f8f} 
+\index{neslib.\+h@{neslib.\+h}!pal\+\_\+bg@{pal\+\_\+bg}}
+\index{pal\+\_\+bg@{pal\+\_\+bg}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{pal\+\_\+bg()}{pal\_bg()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ pal\+\_\+bg (\begin{DoxyParamCaption}\item[{const char $\ast$}]{data }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{neslib_8h_a1f3f11758d2d0135f9451147e02f9f8f_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{neslib_8h_a9afa9017620492c47098497a628acd6a}{}\label{neslib_8h_a9afa9017620492c47098497a628acd6a} 
+\index{neslib.\+h@{neslib.\+h}!pal\+\_\+bg\+\_\+bright@{pal\+\_\+bg\+\_\+bright}}
+\index{pal\+\_\+bg\+\_\+bright@{pal\+\_\+bg\+\_\+bright}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{pal\+\_\+bg\+\_\+bright()}{pal\_bg\_bright()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ pal\+\_\+bg\+\_\+bright (\begin{DoxyParamCaption}\item[{unsigned char}]{bright }\end{DoxyParamCaption})}
+
+\hypertarget{neslib_8h_a70af15380632618eeb4a79dd69d00f9b}{}\label{neslib_8h_a70af15380632618eeb4a79dd69d00f9b} 
+\index{neslib.\+h@{neslib.\+h}!pal\+\_\+bright@{pal\+\_\+bright}}
+\index{pal\+\_\+bright@{pal\+\_\+bright}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{pal\+\_\+bright()}{pal\_bright()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ pal\+\_\+bright (\begin{DoxyParamCaption}\item[{unsigned char}]{bright }\end{DoxyParamCaption})}
+
+\hypertarget{neslib_8h_a94e96158db770e71b4d0df7243db92ce}{}\label{neslib_8h_a94e96158db770e71b4d0df7243db92ce} 
+\index{neslib.\+h@{neslib.\+h}!pal\+\_\+clear@{pal\+\_\+clear}}
+\index{pal\+\_\+clear@{pal\+\_\+clear}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{pal\+\_\+clear()}{pal\_clear()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ pal\+\_\+clear (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\hypertarget{neslib_8h_a2078d955183f42fc22631b945dd97076}{}\label{neslib_8h_a2078d955183f42fc22631b945dd97076} 
+\index{neslib.\+h@{neslib.\+h}!pal\+\_\+col@{pal\+\_\+col}}
+\index{pal\+\_\+col@{pal\+\_\+col}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{pal\+\_\+col()}{pal\_col()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ pal\+\_\+col (\begin{DoxyParamCaption}\item[{unsigned char}]{index,  }\item[{unsigned char}]{color }\end{DoxyParamCaption})}
+
+\hypertarget{neslib_8h_a37b1ea3a9f615bf873ff1a9a7cb908e1}{}\label{neslib_8h_a37b1ea3a9f615bf873ff1a9a7cb908e1} 
+\index{neslib.\+h@{neslib.\+h}!pal\+\_\+spr@{pal\+\_\+spr}}
+\index{pal\+\_\+spr@{pal\+\_\+spr}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{pal\+\_\+spr()}{pal\_spr()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ pal\+\_\+spr (\begin{DoxyParamCaption}\item[{const char $\ast$}]{data }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{neslib_8h_a37b1ea3a9f615bf873ff1a9a7cb908e1_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{neslib_8h_a7d44d6e56989665ec6defb9a8506fe1b}{}\label{neslib_8h_a7d44d6e56989665ec6defb9a8506fe1b} 
+\index{neslib.\+h@{neslib.\+h}!pal\+\_\+spr\+\_\+bright@{pal\+\_\+spr\+\_\+bright}}
+\index{pal\+\_\+spr\+\_\+bright@{pal\+\_\+spr\+\_\+bright}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{pal\+\_\+spr\+\_\+bright()}{pal\_spr\_bright()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ pal\+\_\+spr\+\_\+bright (\begin{DoxyParamCaption}\item[{unsigned char}]{bright }\end{DoxyParamCaption})}
+
+\hypertarget{neslib_8h_a210fdcdbafbb3eeb6df78df473b82c72}{}\label{neslib_8h_a210fdcdbafbb3eeb6df78df473b82c72} 
+\index{neslib.\+h@{neslib.\+h}!ppu\+\_\+mask@{ppu\+\_\+mask}}
+\index{ppu\+\_\+mask@{ppu\+\_\+mask}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{ppu\+\_\+mask()}{ppu\_mask()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ ppu\+\_\+mask (\begin{DoxyParamCaption}\item[{unsigned char}]{mask }\end{DoxyParamCaption})}
+
+\hypertarget{neslib_8h_ae647495b7a80abff740f5e6169935faf}{}\label{neslib_8h_ae647495b7a80abff740f5e6169935faf} 
+\index{neslib.\+h@{neslib.\+h}!ppu\+\_\+off@{ppu\+\_\+off}}
+\index{ppu\+\_\+off@{ppu\+\_\+off}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{ppu\+\_\+off()}{ppu\_off()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ ppu\+\_\+off (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{neslib_8h_ae647495b7a80abff740f5e6169935faf_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{neslib_8h_a67f5c6d5ee71fb0a59eb15526bc2cc84}{}\label{neslib_8h_a67f5c6d5ee71fb0a59eb15526bc2cc84} 
+\index{neslib.\+h@{neslib.\+h}!ppu\+\_\+on\+\_\+all@{ppu\+\_\+on\+\_\+all}}
+\index{ppu\+\_\+on\+\_\+all@{ppu\+\_\+on\+\_\+all}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{ppu\+\_\+on\+\_\+all()}{ppu\_on\_all()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ ppu\+\_\+on\+\_\+all (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{neslib_8h_a67f5c6d5ee71fb0a59eb15526bc2cc84_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{neslib_8h_ac75389467f7f5846f6bb433f658841f2}{}\label{neslib_8h_ac75389467f7f5846f6bb433f658841f2} 
+\index{neslib.\+h@{neslib.\+h}!ppu\+\_\+on\+\_\+bg@{ppu\+\_\+on\+\_\+bg}}
+\index{ppu\+\_\+on\+\_\+bg@{ppu\+\_\+on\+\_\+bg}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{ppu\+\_\+on\+\_\+bg()}{ppu\_on\_bg()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ ppu\+\_\+on\+\_\+bg (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{neslib_8h_ac75389467f7f5846f6bb433f658841f2_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{neslib_8h_aa3698cdae6c85c5e070cf969be67f18b}{}\label{neslib_8h_aa3698cdae6c85c5e070cf969be67f18b} 
+\index{neslib.\+h@{neslib.\+h}!ppu\+\_\+on\+\_\+spr@{ppu\+\_\+on\+\_\+spr}}
+\index{ppu\+\_\+on\+\_\+spr@{ppu\+\_\+on\+\_\+spr}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{ppu\+\_\+on\+\_\+spr()}{ppu\_on\_spr()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ ppu\+\_\+on\+\_\+spr (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\hypertarget{neslib_8h_ae02360a1a75a6888528a3d8b91fd2e05}{}\label{neslib_8h_ae02360a1a75a6888528a3d8b91fd2e05} 
+\index{neslib.\+h@{neslib.\+h}!ppu\+\_\+system@{ppu\+\_\+system}}
+\index{ppu\+\_\+system@{ppu\+\_\+system}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{ppu\+\_\+system()}{ppu\_system()}}
+{\footnotesize\ttfamily unsigned char \+\_\+\+\_\+fastcall\+\_\+\+\_\+ ppu\+\_\+system (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\hypertarget{neslib_8h_af709dcf41df583b1cf97d17d2a999763}{}\label{neslib_8h_af709dcf41df583b1cf97d17d2a999763} 
+\index{neslib.\+h@{neslib.\+h}!ppu\+\_\+wait\+\_\+frame@{ppu\+\_\+wait\+\_\+frame}}
+\index{ppu\+\_\+wait\+\_\+frame@{ppu\+\_\+wait\+\_\+frame}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{ppu\+\_\+wait\+\_\+frame()}{ppu\_wait\_frame()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ ppu\+\_\+wait\+\_\+frame (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\hypertarget{neslib_8h_ac88eae7b7797eb87915966d9084eef03}{}\label{neslib_8h_ac88eae7b7797eb87915966d9084eef03} 
+\index{neslib.\+h@{neslib.\+h}!ppu\+\_\+wait\+\_\+nmi@{ppu\+\_\+wait\+\_\+nmi}}
+\index{ppu\+\_\+wait\+\_\+nmi@{ppu\+\_\+wait\+\_\+nmi}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{ppu\+\_\+wait\+\_\+nmi()}{ppu\_wait\_nmi()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ ppu\+\_\+wait\+\_\+nmi (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{neslib_8h_ac88eae7b7797eb87915966d9084eef03_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{neslib_8h_a9882b1229885d6248b559b19897317ad}{}\label{neslib_8h_a9882b1229885d6248b559b19897317ad} 
+\index{neslib.\+h@{neslib.\+h}!rand16@{rand16}}
+\index{rand16@{rand16}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{rand16()}{rand16()}}
+{\footnotesize\ttfamily unsigned int \+\_\+\+\_\+fastcall\+\_\+\+\_\+ rand16 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\hypertarget{neslib_8h_a8fe1185fb429a4f9a0b82f9cd2c703e5}{}\label{neslib_8h_a8fe1185fb429a4f9a0b82f9cd2c703e5} 
+\index{neslib.\+h@{neslib.\+h}!rand8@{rand8}}
+\index{rand8@{rand8}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{rand8()}{rand8()}}
+{\footnotesize\ttfamily unsigned char \+\_\+\+\_\+fastcall\+\_\+\+\_\+ rand8 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{neslib_8h_a8fe1185fb429a4f9a0b82f9cd2c703e5_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{neslib_8h_aa446441cfacd18a332670718337e5115}{}\label{neslib_8h_aa446441cfacd18a332670718337e5115} 
+\index{neslib.\+h@{neslib.\+h}!sample\+\_\+play@{sample\+\_\+play}}
+\index{sample\+\_\+play@{sample\+\_\+play}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{sample\+\_\+play()}{sample\_play()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ sample\+\_\+play (\begin{DoxyParamCaption}\item[{unsigned char}]{sample }\end{DoxyParamCaption})}
+
+\hypertarget{neslib_8h_a6dd1d8cbcb8005da1006cd8cb870c03e}{}\label{neslib_8h_a6dd1d8cbcb8005da1006cd8cb870c03e} 
+\index{neslib.\+h@{neslib.\+h}!scroll@{scroll}}
+\index{scroll@{scroll}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{scroll()}{scroll()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ scroll (\begin{DoxyParamCaption}\item[{unsigned int}]{x,  }\item[{unsigned int}]{y }\end{DoxyParamCaption})}
+
+\hypertarget{neslib_8h_a4552535575cb708a9cd65053d31f1520}{}\label{neslib_8h_a4552535575cb708a9cd65053d31f1520} 
+\index{neslib.\+h@{neslib.\+h}!set\+\_\+rand@{set\+\_\+rand}}
+\index{set\+\_\+rand@{set\+\_\+rand}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{set\+\_\+rand()}{set\_rand()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ set\+\_\+rand (\begin{DoxyParamCaption}\item[{unsigned int}]{seed }\end{DoxyParamCaption})}
+
+\hypertarget{neslib_8h_a025e06c022d08b2fa828e8e4597004c7}{}\label{neslib_8h_a025e06c022d08b2fa828e8e4597004c7} 
+\index{neslib.\+h@{neslib.\+h}!set\+\_\+vram\+\_\+update@{set\+\_\+vram\+\_\+update}}
+\index{set\+\_\+vram\+\_\+update@{set\+\_\+vram\+\_\+update}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{set\+\_\+vram\+\_\+update()}{set\_vram\_update()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ set\+\_\+vram\+\_\+update (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buf }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{neslib_8h_a025e06c022d08b2fa828e8e4597004c7_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{neslib_8h_aeb2c4e716b2b6e9d31315ad4cec98623}{}\label{neslib_8h_aeb2c4e716b2b6e9d31315ad4cec98623} 
+\index{neslib.\+h@{neslib.\+h}!sfx\+\_\+play@{sfx\+\_\+play}}
+\index{sfx\+\_\+play@{sfx\+\_\+play}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{sfx\+\_\+play()}{sfx\_play()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ sfx\+\_\+play (\begin{DoxyParamCaption}\item[{unsigned char}]{sound,  }\item[{unsigned char}]{channel }\end{DoxyParamCaption})}
+
+\hypertarget{neslib_8h_a684e5302447c159136256469bd224c69}{}\label{neslib_8h_a684e5302447c159136256469bd224c69} 
+\index{neslib.\+h@{neslib.\+h}!split@{split}}
+\index{split@{split}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{split()}{split()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ split (\begin{DoxyParamCaption}\item[{unsigned int}]{x,  }\item[{unsigned int}]{y }\end{DoxyParamCaption})}
+
+\hypertarget{neslib_8h_a8460c4c927241500a3a09c245ceeea52}{}\label{neslib_8h_a8460c4c927241500a3a09c245ceeea52} 
+\index{neslib.\+h@{neslib.\+h}!vram\+\_\+adr@{vram\+\_\+adr}}
+\index{vram\+\_\+adr@{vram\+\_\+adr}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{vram\+\_\+adr()}{vram\_adr()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ vram\+\_\+adr (\begin{DoxyParamCaption}\item[{unsigned int}]{adr }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{neslib_8h_a8460c4c927241500a3a09c245ceeea52_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{neslib_8h_a09eb5b41661ff3330648be48a85ff6d2}{}\label{neslib_8h_a09eb5b41661ff3330648be48a85ff6d2} 
+\index{neslib.\+h@{neslib.\+h}!vram\+\_\+fill@{vram\+\_\+fill}}
+\index{vram\+\_\+fill@{vram\+\_\+fill}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{vram\+\_\+fill()}{vram\_fill()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ vram\+\_\+fill (\begin{DoxyParamCaption}\item[{unsigned char}]{n,  }\item[{unsigned int}]{len }\end{DoxyParamCaption})}
+
+\hypertarget{neslib_8h_ab567af57e7f8bf8bcfd403dd0e4a0e12}{}\label{neslib_8h_ab567af57e7f8bf8bcfd403dd0e4a0e12} 
+\index{neslib.\+h@{neslib.\+h}!vram\+\_\+inc@{vram\+\_\+inc}}
+\index{vram\+\_\+inc@{vram\+\_\+inc}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{vram\+\_\+inc()}{vram\_inc()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ vram\+\_\+inc (\begin{DoxyParamCaption}\item[{unsigned char}]{n }\end{DoxyParamCaption})}
+
+\hypertarget{neslib_8h_a630a334d9ed2a4331a3b1168c7ffb466}{}\label{neslib_8h_a630a334d9ed2a4331a3b1168c7ffb466} 
+\index{neslib.\+h@{neslib.\+h}!vram\+\_\+put@{vram\+\_\+put}}
+\index{vram\+\_\+put@{vram\+\_\+put}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{vram\+\_\+put()}{vram\_put()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ vram\+\_\+put (\begin{DoxyParamCaption}\item[{unsigned char}]{n }\end{DoxyParamCaption})}
+
+\hypertarget{neslib_8h_af14b2510268b3c13d9bd60837167bb09}{}\label{neslib_8h_af14b2510268b3c13d9bd60837167bb09} 
+\index{neslib.\+h@{neslib.\+h}!vram\+\_\+read@{vram\+\_\+read}}
+\index{vram\+\_\+read@{vram\+\_\+read}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{vram\+\_\+read()}{vram\_read()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ vram\+\_\+read (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{dst,  }\item[{unsigned int}]{size }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{neslib_8h_af14b2510268b3c13d9bd60837167bb09_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{neslib_8h_a1adb35bc2bdf712c0b1b8223b72b1cb2}{}\label{neslib_8h_a1adb35bc2bdf712c0b1b8223b72b1cb2} 
+\index{neslib.\+h@{neslib.\+h}!vram\+\_\+unrle@{vram\+\_\+unrle}}
+\index{vram\+\_\+unrle@{vram\+\_\+unrle}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{vram\+\_\+unrle()}{vram\_unrle()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ vram\+\_\+unrle (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$}]{data }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{neslib_8h_a1adb35bc2bdf712c0b1b8223b72b1cb2_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{neslib_8h_af9982eb3cc548fcda10d53c8b29e4370}{}\label{neslib_8h_af9982eb3cc548fcda10d53c8b29e4370} 
+\index{neslib.\+h@{neslib.\+h}!vram\+\_\+write@{vram\+\_\+write}}
+\index{vram\+\_\+write@{vram\+\_\+write}!neslib.\+h@{neslib.\+h}}
+\subsubsection{\texorpdfstring{vram\+\_\+write()}{vram\_write()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+fastcall\+\_\+\+\_\+ vram\+\_\+write (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{src,  }\item[{unsigned int}]{size }\end{DoxyParamCaption})}
+

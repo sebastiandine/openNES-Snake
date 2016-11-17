@@ -1,24 +1,9 @@
 var searchData=
 [
-  ['sample_5fplay',['sample_play',['../neslib_8h.html#aa446441cfacd18a332670718337e5115',1,'neslib.h']]],
-  ['scroll',['scroll',['../neslib_8h.html#a6dd1d8cbcb8005da1006cd8cb870c03e',1,'neslib.h']]],
-  ['set_5frand',['set_rand',['../neslib_8h.html#a4552535575cb708a9cd65053d31f1520',1,'neslib.h']]],
-  ['set_5fvram_5fupdate',['set_vram_update',['../neslib_8h.html#a025e06c022d08b2fa828e8e4597004c7',1,'neslib.h']]],
-  ['sfx_5fplay',['sfx_play',['../neslib_8h.html#aeb2c4e716b2b6e9d31315ad4cec98623',1,'neslib.h']]],
-  ['size_5findex',['size_index',['../definitions_8h.html#a908b761eeaa385c331d29721c74fbd56',1,'definitions.h']]],
-  ['snake_2ec',['snake.c',['../snake_8c.html',1,'']]],
-  ['snake_5fbody_5ftile',['SNAKE_BODY_TILE',['../definitions_8h.html#a976a73369145472da9fa5abf13385dba',1,'definitions.h']]],
-  ['snake_5fhead_5fattribute',['snake_head_attribute',['../definitions_8h.html#a92fd3ed4954da523c46602490b1d97d8',1,'definitions.h']]],
-  ['snake_5fhead_5ftile',['snake_head_tile',['../definitions_8h.html#a72c8d02fe48d1f4f4f4c5a879b0b46a8',1,'definitions.h']]],
-  ['snake_5fhead_5ftile_5fhorz',['SNAKE_HEAD_TILE_HORZ',['../definitions_8h.html#a2f6c959fa13e7bd598f3dc86c456effe',1,'definitions.h']]],
-  ['snake_5fhead_5ftile_5fvert',['SNAKE_HEAD_TILE_VERT',['../definitions_8h.html#a7c4639b62d666878579c932ff2106237',1,'definitions.h']]],
-  ['snake_5fmax_5fsize',['SNAKE_MAX_SIZE',['../definitions_8h.html#a6fb1d4c78b46a621cb8344c51adcdc02',1,'definitions.h']]],
-  ['snake_5fx',['snake_x',['../definitions_8h.html#a01808759ac988a820871934cebfc0c47',1,'definitions.h']]],
-  ['snake_5fy',['snake_y',['../definitions_8h.html#a2051f0d16f53da5fe9f6f787dc6adc8c',1,'definitions.h']]],
-  ['speed_5fcounter',['speed_counter',['../definitions_8h.html#a5b4861c8a096bac3fcc718c702265fb2',1,'definitions.h']]],
-  ['spider_5ftile',['SPIDER_TILE',['../definitions_8h.html#a843d1ce9c1733c8deb7f4bf88d66c0f4',1,'definitions.h']]],
-  ['split',['split',['../neslib_8h.html#a684e5302447c159136256469bd224c69',1,'neslib.h']]],
-  ['sprite_5foffset',['sprite_offset',['../definitions_8h.html#a4ffc86f06d1c7507f0a9079421ef75da',1,'definitions.h']]],
-  ['sprites_5fpal',['sprites_pal',['../sprites__pal_8h.html#a9abd856e8bb1b7fc34eec2a17b9165fd',1,'sprites_pal.h']]],
-  ['sprites_5fpal_2eh',['sprites_pal.h',['../sprites__pal_8h.html',1,'']]]
+  ['readme',['README',['../md__c_1__users__administrator__documents__git_hub__n_e_s-_snake__r_e_a_d_m_e.html',1,'']]],
+  ['rand16',['rand16',['../neslib_8h.html#a9882b1229885d6248b559b19897317ad',1,'neslib.h']]],
+  ['rand8',['rand8',['../neslib_8h.html#a8fe1185fb429a4f9a0b82f9cd2c703e5',1,'neslib.h']]],
+  ['readme_2emd',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
+  ['render_2ec',['render.c',['../render_8c.html',1,'']]],
+  ['restart',['restart',['../globals_8h.html#aaad902cba22507e143238f5671e8d234',1,'globals.h']]]
 ];

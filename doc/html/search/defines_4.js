@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['map_5fheight',['MAP_HEIGHT',['../definitions_8h.html#a529d5ebb449edf31d9835d13f4fb9f89',1,'definitions.h']]],
-  ['map_5fwidth',['MAP_WIDTH',['../definitions_8h.html#aa037a6d6a4f04d51c7ec1c9ee9054e76',1,'definitions.h']]],
-  ['maparray_5fadr',['MAPARRAY_ADR',['../definitions_8h.html#a705ec7deb75ce089210eaf94aa8d2b1b',1,'definitions.h']]],
+  ['map_5fheight',['MAP_HEIGHT',['../macros_8h.html#a529d5ebb449edf31d9835d13f4fb9f89',1,'macros.h']]],
+  ['map_5fwidth',['MAP_WIDTH',['../macros_8h.html#aa037a6d6a4f04d51c7ec1c9ee9054e76',1,'macros.h']]],
+  ['maparray_5fadr',['MAPARRAY_ADR',['../macros_8h.html#a705ec7deb75ce089210eaf94aa8d2b1b',1,'macros.h']]],
   ['mask_5fbg',['MASK_BG',['../neslib_8h.html#a6a343f591166c993bddcf4b6f0cea8b5',1,'neslib.h']]],
   ['mask_5fedge_5fbg',['MASK_EDGE_BG',['../neslib_8h.html#a26a5061466e5e11330181f8faa37370c',1,'neslib.h']]],
   ['mask_5fedge_5fspr',['MASK_EDGE_SPR',['../neslib_8h.html#a8c9b3c6480798161e902a20934a94f3b',1,'neslib.h']]],

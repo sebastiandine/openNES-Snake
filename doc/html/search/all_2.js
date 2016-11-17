@@ -6,5 +6,5 @@ var searchData=
   ['check_5fcollision_5fitem',['check_collision_item',['../update_8c.html#a10b8789c8aedb4abbcf3d3c98ed723e7',1,'update.c']]],
   ['check_5fcollision_5fwall',['check_collision_wall',['../update_8c.html#a4a602dbc65a1829ae32ec9328241d016',1,'update.c']]],
   ['check_5fnext_5flevel',['check_next_level',['../update_8c.html#a2ea36e0f75f408285b5d3a5bc8287b4f',1,'update.c']]],
-  ['current_5flevel',['current_level',['../definitions_8h.html#a4ca25633b87b17b67b540bc6eb28ecdd',1,'definitions.h']]]
+  ['current_5flevel',['current_level',['../globals_8h.html#a4ca25633b87b17b67b540bc6eb28ecdd',1,'globals.h']]]
 ];

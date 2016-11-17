@@ -1,9 +1,23 @@
 var searchData=
 [
-  ['test_5fnam',['test_nam',['../test__nam_8h.html#aa186951e3170721cab3dcc69129d4314',1,'test_nam.h']]],
-  ['test_5fnam_2eh',['test_nam.h',['../test__nam_8h.html',1,'']]],
-  ['titlescreen',['titlescreen',['../definitions_8h.html#a050924f3d98ed7e3871436955ef669bd',1,'definitions.h']]],
-  ['titlescreen_5fnam',['titlescreen_nam',['../titlescreen__nam_8h.html#a06862ae3bc1cd77a6d3a6b5372bcf89e',1,'titlescreen_nam.h']]],
-  ['titlescreen_5fnam_2eh',['titlescreen_nam.h',['../titlescreen__nam_8h.html',1,'']]],
-  ['true',['TRUE',['../neslib_8h.html#aa8cecfc5c5c054d2875c03e77b7be15d',1,'neslib.h']]]
+  ['sample_5fplay',['sample_play',['../neslib_8h.html#aa446441cfacd18a332670718337e5115',1,'neslib.h']]],
+  ['scroll',['scroll',['../neslib_8h.html#a6dd1d8cbcb8005da1006cd8cb870c03e',1,'neslib.h']]],
+  ['set_5frand',['set_rand',['../neslib_8h.html#a4552535575cb708a9cd65053d31f1520',1,'neslib.h']]],
+  ['set_5fvram_5fupdate',['set_vram_update',['../neslib_8h.html#a025e06c022d08b2fa828e8e4597004c7',1,'neslib.h']]],
+  ['sfx_5fplay',['sfx_play',['../neslib_8h.html#aeb2c4e716b2b6e9d31315ad4cec98623',1,'neslib.h']]],
+  ['size_5findex',['size_index',['../structsnake__struct.html#a908b761eeaa385c331d29721c74fbd56',1,'snake_struct']]],
+  ['snake',['snake',['../globals_8h.html#a9f760ea90d6dd23f945f328da2387297',1,'globals.h']]],
+  ['snake_2ec',['snake.c',['../snake_8c.html',1,'']]],
+  ['snake_5fbody_5ftile',['SNAKE_BODY_TILE',['../macros_8h.html#a976a73369145472da9fa5abf13385dba',1,'macros.h']]],
+  ['snake_5fhead_5ftile_5fhorz',['SNAKE_HEAD_TILE_HORZ',['../macros_8h.html#a2f6c959fa13e7bd598f3dc86c456effe',1,'macros.h']]],
+  ['snake_5fhead_5ftile_5fvert',['SNAKE_HEAD_TILE_VERT',['../macros_8h.html#a7c4639b62d666878579c932ff2106237',1,'macros.h']]],
+  ['snake_5fmax_5fsize',['SNAKE_MAX_SIZE',['../macros_8h.html#a6fb1d4c78b46a621cb8344c51adcdc02',1,'macros.h']]],
+  ['snake_5fstruct',['snake_struct',['../structsnake__struct.html',1,'']]],
+  ['speed_5fcounter',['speed_counter',['../structsnake__struct.html#a5b4861c8a096bac3fcc718c702265fb2',1,'snake_struct']]],
+  ['spider_5ftile',['SPIDER_TILE',['../macros_8h.html#a843d1ce9c1733c8deb7f4bf88d66c0f4',1,'macros.h']]],
+  ['split',['split',['../neslib_8h.html#a684e5302447c159136256469bd224c69',1,'neslib.h']]],
+  ['sprite_5foffset',['sprite_offset',['../globals_8h.html#a4ffc86f06d1c7507f0a9079421ef75da',1,'globals.h']]],
+  ['sprites_5fpal',['sprites_pal',['../sprites__pal_8h.html#a9abd856e8bb1b7fc34eec2a17b9165fd',1,'sprites_pal.h']]],
+  ['sprites_5fpal_2eh',['sprites_pal.h',['../sprites__pal_8h.html',1,'']]],
+  ['structures_2eh',['structures.h',['../structures_8h.html',1,'']]]
 ];

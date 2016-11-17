@@ -1,0 +1,270 @@
+\hypertarget{render_8c}{}\section{C\+:/\+Users/\+Administrator/\+Documents/\+Git\+Hub/\+N\+E\+S-\/\+Snake/src/render.c File Reference}
+\label{render_8c}\index{C\+:/\+Users/\+Administrator/\+Documents/\+Git\+Hub/\+N\+E\+S-\/\+Snake/src/render.\+c@{C\+:/\+Users/\+Administrator/\+Documents/\+Git\+Hub/\+N\+E\+S-\/\+Snake/src/render.\+c}}
+
+
+This file contains all functionality to draw onto the screen, eighter as sprites or as background tiles.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{render_8c_a115543b4c8b33eab539f43151ff51db3}{draw\+\_\+snake} (void)
+\item 
+void \hyperlink{render_8c_a2d33405474ba721e0d294333beb2db08}{draw\+\_\+item} (void)
+\item 
+void \hyperlink{render_8c_a38d38ff447a57a6f4406de8193e1a390}{draw\+\_\+score} (void)
+\item 
+void \hyperlink{render_8c_aad91df7562212fbe50ec49e27ef5af3a}{init\+\_\+update\+List} (void)
+\item 
+void \hyperlink{render_8c_aed4a93d083114e3b2160bc3adef848f5}{center\+\_\+score\+\_\+when\+\_\+gameover} (void)
+\item 
+void \hyperlink{render_8c_a9b14b8e82140fb3a218656d05ff72bc1}{draw\+\_\+game\+\_\+over\+\_\+screen} (void)
+\item 
+void \hyperlink{render_8c_a1b09050d2bea05fec0b30f6e452a2ff7}{draw\+\_\+title\+\_\+screen} (void)
+\item 
+void \hyperlink{render_8c_ae7beeeddc3ba63a471ed7adf686d6751}{draw\+\_\+pause\+\_\+screen} (void)
+\item 
+void \hyperlink{render_8c_a0842d4314b6de6efca64c0ad01002712}{draw\+\_\+level\+\_\+screen} (void)
+\item 
+void \hyperlink{render_8c_aedd9dc656adabee0aaa1887fdc431544}{mainloop\+\_\+render} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains all functionality to draw onto the screen, eighter as sprites or as background tiles. 
+
+\begin{DoxyAuthor}{Author}
+Sebastian Dine 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{render_8c_aed4a93d083114e3b2160bc3adef848f5}{}\label{render_8c_aed4a93d083114e3b2160bc3adef848f5} 
+\index{render.\+c@{render.\+c}!center\+\_\+score\+\_\+when\+\_\+gameover@{center\+\_\+score\+\_\+when\+\_\+gameover}}
+\index{center\+\_\+score\+\_\+when\+\_\+gameover@{center\+\_\+score\+\_\+when\+\_\+gameover}!render.\+c@{render.\+c}}
+\subsubsection{\texorpdfstring{center\+\_\+score\+\_\+when\+\_\+gameover()}{center\_score\_when\_gameover()}}
+{\footnotesize\ttfamily void center\+\_\+score\+\_\+when\+\_\+gameover (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This function moves the rendering of the score from the upper left corner to the center of the screen.
+
+\begin{DoxyAuthor}{Author}
+Sebastian Dine 
+\end{DoxyAuthor}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{render_8c_aed4a93d083114e3b2160bc3adef848f5_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{render_8c_a9b14b8e82140fb3a218656d05ff72bc1}{}\label{render_8c_a9b14b8e82140fb3a218656d05ff72bc1} 
+\index{render.\+c@{render.\+c}!draw\+\_\+game\+\_\+over\+\_\+screen@{draw\+\_\+game\+\_\+over\+\_\+screen}}
+\index{draw\+\_\+game\+\_\+over\+\_\+screen@{draw\+\_\+game\+\_\+over\+\_\+screen}!render.\+c@{render.\+c}}
+\subsubsection{\texorpdfstring{draw\+\_\+game\+\_\+over\+\_\+screen()}{draw\_game\_over\_screen()}}
+{\footnotesize\ttfamily void draw\+\_\+game\+\_\+over\+\_\+screen (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This function draws the gameover screen.
+
+\begin{DoxyAuthor}{Author}
+Sebastian Dine 
+\end{DoxyAuthor}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{render_8c_a9b14b8e82140fb3a218656d05ff72bc1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{render_8c_a9b14b8e82140fb3a218656d05ff72bc1_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{render_8c_a2d33405474ba721e0d294333beb2db08}{}\label{render_8c_a2d33405474ba721e0d294333beb2db08} 
+\index{render.\+c@{render.\+c}!draw\+\_\+item@{draw\+\_\+item}}
+\index{draw\+\_\+item@{draw\+\_\+item}!render.\+c@{render.\+c}}
+\subsubsection{\texorpdfstring{draw\+\_\+item()}{draw\_item()}}
+{\footnotesize\ttfamily void draw\+\_\+item (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This function draws an element as a sprite to the screen.
+
+\begin{DoxyAuthor}{Author}
+Sebastian Dine 
+\end{DoxyAuthor}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{render_8c_a2d33405474ba721e0d294333beb2db08_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{render_8c_a2d33405474ba721e0d294333beb2db08_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{render_8c_a0842d4314b6de6efca64c0ad01002712}{}\label{render_8c_a0842d4314b6de6efca64c0ad01002712} 
+\index{render.\+c@{render.\+c}!draw\+\_\+level\+\_\+screen@{draw\+\_\+level\+\_\+screen}}
+\index{draw\+\_\+level\+\_\+screen@{draw\+\_\+level\+\_\+screen}!render.\+c@{render.\+c}}
+\subsubsection{\texorpdfstring{draw\+\_\+level\+\_\+screen()}{draw\_level\_screen()}}
+{\footnotesize\ttfamily void draw\+\_\+level\+\_\+screen (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This function draws the background of the current level to the screen.
+
+\begin{DoxyAuthor}{Author}
+Sebastian Dine 
+\end{DoxyAuthor}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{render_8c_a0842d4314b6de6efca64c0ad01002712_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{render_8c_a0842d4314b6de6efca64c0ad01002712_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{render_8c_ae7beeeddc3ba63a471ed7adf686d6751}{}\label{render_8c_ae7beeeddc3ba63a471ed7adf686d6751} 
+\index{render.\+c@{render.\+c}!draw\+\_\+pause\+\_\+screen@{draw\+\_\+pause\+\_\+screen}}
+\index{draw\+\_\+pause\+\_\+screen@{draw\+\_\+pause\+\_\+screen}!render.\+c@{render.\+c}}
+\subsubsection{\texorpdfstring{draw\+\_\+pause\+\_\+screen()}{draw\_pause\_screen()}}
+{\footnotesize\ttfamily void draw\+\_\+pause\+\_\+screen (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This function draws the letters P\+A\+U\+SE as sprites to the center of the screen, if the game is paused.
+
+\begin{DoxyAuthor}{Author}
+Sebastian Dine 
+\end{DoxyAuthor}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{render_8c_ae7beeeddc3ba63a471ed7adf686d6751_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{render_8c_ae7beeeddc3ba63a471ed7adf686d6751_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{render_8c_a38d38ff447a57a6f4406de8193e1a390}{}\label{render_8c_a38d38ff447a57a6f4406de8193e1a390} 
+\index{render.\+c@{render.\+c}!draw\+\_\+score@{draw\+\_\+score}}
+\index{draw\+\_\+score@{draw\+\_\+score}!render.\+c@{render.\+c}}
+\subsubsection{\texorpdfstring{draw\+\_\+score()}{draw\_score()}}
+{\footnotesize\ttfamily void draw\+\_\+score (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This function draws the current score as background tiles to the screen.
+
+\begin{DoxyAuthor}{Author}
+Sebastian Dine 
+\end{DoxyAuthor}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{render_8c_a38d38ff447a57a6f4406de8193e1a390_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{render_8c_a115543b4c8b33eab539f43151ff51db3}{}\label{render_8c_a115543b4c8b33eab539f43151ff51db3} 
+\index{render.\+c@{render.\+c}!draw\+\_\+snake@{draw\+\_\+snake}}
+\index{draw\+\_\+snake@{draw\+\_\+snake}!render.\+c@{render.\+c}}
+\subsubsection{\texorpdfstring{draw\+\_\+snake()}{draw\_snake()}}
+{\footnotesize\ttfamily void draw\+\_\+snake (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This function draws the whole snake. The head will be drawn as a sprite, the body elements as background tiles.
+
+\begin{DoxyAuthor}{Author}
+Sebastian Dine 
+\end{DoxyAuthor}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{render_8c_a115543b4c8b33eab539f43151ff51db3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{render_8c_a115543b4c8b33eab539f43151ff51db3_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{render_8c_a1b09050d2bea05fec0b30f6e452a2ff7}{}\label{render_8c_a1b09050d2bea05fec0b30f6e452a2ff7} 
+\index{render.\+c@{render.\+c}!draw\+\_\+title\+\_\+screen@{draw\+\_\+title\+\_\+screen}}
+\index{draw\+\_\+title\+\_\+screen@{draw\+\_\+title\+\_\+screen}!render.\+c@{render.\+c}}
+\subsubsection{\texorpdfstring{draw\+\_\+title\+\_\+screen()}{draw\_title\_screen()}}
+{\footnotesize\ttfamily void draw\+\_\+title\+\_\+screen (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This function draws the title screen.
+
+\begin{DoxyAuthor}{Author}
+Sebastian Dine 
+\end{DoxyAuthor}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{render_8c_a1b09050d2bea05fec0b30f6e452a2ff7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{render_8c_a1b09050d2bea05fec0b30f6e452a2ff7_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{render_8c_aad91df7562212fbe50ec49e27ef5af3a}{}\label{render_8c_aad91df7562212fbe50ec49e27ef5af3a} 
+\index{render.\+c@{render.\+c}!init\+\_\+update\+List@{init\+\_\+update\+List}}
+\index{init\+\_\+update\+List@{init\+\_\+update\+List}!render.\+c@{render.\+c}}
+\subsubsection{\texorpdfstring{init\+\_\+update\+List()}{init\_updateList()}}
+{\footnotesize\ttfamily void init\+\_\+update\+List (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This function initializes the (background tile) update-\/list with score-\/elements (zero-\/digits) and the E\+O\+F-\/indicator.
+
+\begin{DoxyAuthor}{Author}
+Sebastian Dine 
+\end{DoxyAuthor}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{render_8c_aad91df7562212fbe50ec49e27ef5af3a_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{render_8c_aedd9dc656adabee0aaa1887fdc431544}{}\label{render_8c_aedd9dc656adabee0aaa1887fdc431544} 
+\index{render.\+c@{render.\+c}!mainloop\+\_\+render@{mainloop\+\_\+render}}
+\index{mainloop\+\_\+render@{mainloop\+\_\+render}!render.\+c@{render.\+c}}
+\subsubsection{\texorpdfstring{mainloop\+\_\+render()}{mainloop\_render()}}
+{\footnotesize\ttfamily void mainloop\+\_\+render (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This function provides the coordination of all render routines according to the current status of the game, once per frame.
+
+\begin{DoxyAuthor}{Author}
+Sebastian Dine 
+\end{DoxyAuthor}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{render_8c_aedd9dc656adabee0aaa1887fdc431544_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{render_8c_aedd9dc656adabee0aaa1887fdc431544_icgraph}
+\end{center}
+\end{figure}

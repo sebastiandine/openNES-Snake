@@ -1,0 +1,230 @@
+\hypertarget{macros_8h}{}\section{C\+:/\+Users/\+Administrator/\+Documents/\+Git\+Hub/\+N\+E\+S-\/\+Snake/src/macros.h File Reference}
+\label{macros_8h}\index{C\+:/\+Users/\+Administrator/\+Documents/\+Git\+Hub/\+N\+E\+S-\/\+Snake/src/macros.\+h@{C\+:/\+Users/\+Administrator/\+Documents/\+Git\+Hub/\+N\+E\+S-\/\+Snake/src/macros.\+h}}
+
+
+This header file defines object-\/like macros (constants) and function-\/like macros for more efficient calculations.  
+
+
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{macros_8h_a1a11e72c77f9f8e9fb4c27479f969626}{L\+E\+V\+E\+L\+S\+\_\+\+A\+LL}~5
+\item 
+\#define \hyperlink{macros_8h_a6fb1d4c78b46a621cb8344c51adcdc02}{S\+N\+A\+K\+E\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE}~100
+\item 
+\#define \hyperlink{macros_8h_a6a31800fda2a0172123684a1a7810086}{L\+V\+L1\+\_\+\+S\+T\+A\+R\+T\+\_\+X}~120
+\item 
+\#define \hyperlink{macros_8h_ab5cba5877cf155edb1c90291ad60dede}{L\+V\+L1\+\_\+\+S\+T\+A\+R\+T\+\_\+Y}~120
+\item 
+\#define \hyperlink{macros_8h_ad0e5b099123a4ea1ee5f9738ce2858cd}{L\+V\+L1\+\_\+\+M\+A\+X\+\_\+\+S\+C\+O\+RE}~4
+\item 
+\#define \hyperlink{macros_8h_aead77f76abc75595172f0c8c0f520abd}{L\+V\+L2\+\_\+\+S\+T\+A\+R\+T\+\_\+X}~56
+\item 
+\#define \hyperlink{macros_8h_a249e8731f130fca874caac6f7dc56bde}{L\+V\+L2\+\_\+\+S\+T\+A\+R\+T\+\_\+Y}~120
+\item 
+\#define \hyperlink{macros_8h_a45430050f00f558270c2cebeea18f369}{L\+V\+L2\+\_\+\+M\+A\+X\+\_\+\+S\+C\+O\+RE}~8
+\item 
+\#define \hyperlink{macros_8h_af6b6d76b2cb121045ac2ab1a8f539f62}{N\+A\+M\+E\+T\+A\+B\+L\+E1\+\_\+\+S\+T\+A\+RT}~0x2000
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf Tile-\/based width and height of the level map}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{macros_8h_aa037a6d6a4f04d51c7ec1c9ee9054e76}{M\+A\+P\+\_\+\+W\+I\+D\+TH}~32
+\item 
+\#define \hyperlink{macros_8h_a529d5ebb449edf31d9835d13f4fb9f89}{M\+A\+P\+\_\+\+H\+E\+I\+G\+HT}~30
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Direction constants}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{macros_8h_a480d28eba00f028b351fb2f3312f5409}{D\+I\+R\+\_\+\+UP}~1
+\item 
+\#define \hyperlink{macros_8h_a90214d45dd9a40f97bbe24079f40218d}{D\+I\+R\+\_\+\+D\+O\+WN}~2
+\item 
+\#define \hyperlink{macros_8h_a788d3497514ea05602fd974d7bdcdbde}{D\+I\+R\+\_\+\+L\+E\+FT}~3
+\item 
+\#define \hyperlink{macros_8h_a85ae9767b23edf40871541d23962784b}{D\+I\+R\+\_\+\+R\+I\+G\+HT}~4
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Tile constants}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{macros_8h_a6fc4256d763255b590cfbb9bab1d1592}{W\+A\+L\+L\+\_\+\+T\+I\+L\+E\+\_\+1}~0x43
+\item 
+\#define \hyperlink{macros_8h_a9dc5bc06ab6f00d2c106766046501322}{W\+A\+L\+L\+\_\+\+T\+I\+L\+E\+\_\+2}~0x44
+\item 
+\#define \hyperlink{macros_8h_a7c4639b62d666878579c932ff2106237}{S\+N\+A\+K\+E\+\_\+\+H\+E\+A\+D\+\_\+\+T\+I\+L\+E\+\_\+\+V\+E\+RT}~0x41
+\item 
+\#define \hyperlink{macros_8h_a2f6c959fa13e7bd598f3dc86c456effe}{S\+N\+A\+K\+E\+\_\+\+H\+E\+A\+D\+\_\+\+T\+I\+L\+E\+\_\+\+H\+O\+RZ}~0x42
+\item 
+\#define \hyperlink{macros_8h_a976a73369145472da9fa5abf13385dba}{S\+N\+A\+K\+E\+\_\+\+B\+O\+D\+Y\+\_\+\+T\+I\+LE}~0x40
+\item 
+\#define \hyperlink{macros_8h_ac4c51b4dd32e646ca187c9807e2f3417}{E\+M\+P\+T\+Y\+\_\+\+T\+I\+LE}~0x00
+\item 
+\#define \hyperlink{macros_8h_a843d1ce9c1733c8deb7f4bf88d66c0f4}{S\+P\+I\+D\+E\+R\+\_\+\+T\+I\+LE}~0x45
+\item 
+\#define \hyperlink{macros_8h_a9a991eae7bd6c31066a7e56c0acdee17}{D\+I\+G\+I\+T\+\_\+\+O\+\_\+\+T\+I\+LE}~0x10
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Macros for more efficent caluclations}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{macros_8h_a705ec7deb75ce089210eaf94aa8d2b1b}{M\+A\+P\+A\+R\+R\+A\+Y\+\_\+\+A\+DR}(x,  y)~((y$<$$<$2)$\vert$(x$>$$>$3))
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\subsection{Detailed Description}
+This header file defines object-\/like macros (constants) and function-\/like macros for more efficient calculations. 
+
+\begin{DoxyAuthor}{Author}
+Sebastian Dine 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{macros_8h_a9a991eae7bd6c31066a7e56c0acdee17}{}\label{macros_8h_a9a991eae7bd6c31066a7e56c0acdee17} 
+\index{macros.\+h@{macros.\+h}!D\+I\+G\+I\+T\+\_\+\+O\+\_\+\+T\+I\+LE@{D\+I\+G\+I\+T\+\_\+\+O\+\_\+\+T\+I\+LE}}
+\index{D\+I\+G\+I\+T\+\_\+\+O\+\_\+\+T\+I\+LE@{D\+I\+G\+I\+T\+\_\+\+O\+\_\+\+T\+I\+LE}!macros.\+h@{macros.\+h}}
+\subsubsection{\texorpdfstring{D\+I\+G\+I\+T\+\_\+\+O\+\_\+\+T\+I\+LE}{DIGIT\_O\_TILE}}
+{\footnotesize\ttfamily \#define D\+I\+G\+I\+T\+\_\+\+O\+\_\+\+T\+I\+LE~0x10}
+
+Tile of digit 0 (zero) \hypertarget{macros_8h_a90214d45dd9a40f97bbe24079f40218d}{}\label{macros_8h_a90214d45dd9a40f97bbe24079f40218d} 
+\index{macros.\+h@{macros.\+h}!D\+I\+R\+\_\+\+D\+O\+WN@{D\+I\+R\+\_\+\+D\+O\+WN}}
+\index{D\+I\+R\+\_\+\+D\+O\+WN@{D\+I\+R\+\_\+\+D\+O\+WN}!macros.\+h@{macros.\+h}}
+\subsubsection{\texorpdfstring{D\+I\+R\+\_\+\+D\+O\+WN}{DIR\_DOWN}}
+{\footnotesize\ttfamily \#define D\+I\+R\+\_\+\+D\+O\+WN~2}
+
+\hypertarget{macros_8h_a788d3497514ea05602fd974d7bdcdbde}{}\label{macros_8h_a788d3497514ea05602fd974d7bdcdbde} 
+\index{macros.\+h@{macros.\+h}!D\+I\+R\+\_\+\+L\+E\+FT@{D\+I\+R\+\_\+\+L\+E\+FT}}
+\index{D\+I\+R\+\_\+\+L\+E\+FT@{D\+I\+R\+\_\+\+L\+E\+FT}!macros.\+h@{macros.\+h}}
+\subsubsection{\texorpdfstring{D\+I\+R\+\_\+\+L\+E\+FT}{DIR\_LEFT}}
+{\footnotesize\ttfamily \#define D\+I\+R\+\_\+\+L\+E\+FT~3}
+
+\hypertarget{macros_8h_a85ae9767b23edf40871541d23962784b}{}\label{macros_8h_a85ae9767b23edf40871541d23962784b} 
+\index{macros.\+h@{macros.\+h}!D\+I\+R\+\_\+\+R\+I\+G\+HT@{D\+I\+R\+\_\+\+R\+I\+G\+HT}}
+\index{D\+I\+R\+\_\+\+R\+I\+G\+HT@{D\+I\+R\+\_\+\+R\+I\+G\+HT}!macros.\+h@{macros.\+h}}
+\subsubsection{\texorpdfstring{D\+I\+R\+\_\+\+R\+I\+G\+HT}{DIR\_RIGHT}}
+{\footnotesize\ttfamily \#define D\+I\+R\+\_\+\+R\+I\+G\+HT~4}
+
+\hypertarget{macros_8h_a480d28eba00f028b351fb2f3312f5409}{}\label{macros_8h_a480d28eba00f028b351fb2f3312f5409} 
+\index{macros.\+h@{macros.\+h}!D\+I\+R\+\_\+\+UP@{D\+I\+R\+\_\+\+UP}}
+\index{D\+I\+R\+\_\+\+UP@{D\+I\+R\+\_\+\+UP}!macros.\+h@{macros.\+h}}
+\subsubsection{\texorpdfstring{D\+I\+R\+\_\+\+UP}{DIR\_UP}}
+{\footnotesize\ttfamily \#define D\+I\+R\+\_\+\+UP~1}
+
+\hypertarget{macros_8h_ac4c51b4dd32e646ca187c9807e2f3417}{}\label{macros_8h_ac4c51b4dd32e646ca187c9807e2f3417} 
+\index{macros.\+h@{macros.\+h}!E\+M\+P\+T\+Y\+\_\+\+T\+I\+LE@{E\+M\+P\+T\+Y\+\_\+\+T\+I\+LE}}
+\index{E\+M\+P\+T\+Y\+\_\+\+T\+I\+LE@{E\+M\+P\+T\+Y\+\_\+\+T\+I\+LE}!macros.\+h@{macros.\+h}}
+\subsubsection{\texorpdfstring{E\+M\+P\+T\+Y\+\_\+\+T\+I\+LE}{EMPTY\_TILE}}
+{\footnotesize\ttfamily \#define E\+M\+P\+T\+Y\+\_\+\+T\+I\+LE~0x00}
+
+Tile of empty space \hypertarget{macros_8h_a1a11e72c77f9f8e9fb4c27479f969626}{}\label{macros_8h_a1a11e72c77f9f8e9fb4c27479f969626} 
+\index{macros.\+h@{macros.\+h}!L\+E\+V\+E\+L\+S\+\_\+\+A\+LL@{L\+E\+V\+E\+L\+S\+\_\+\+A\+LL}}
+\index{L\+E\+V\+E\+L\+S\+\_\+\+A\+LL@{L\+E\+V\+E\+L\+S\+\_\+\+A\+LL}!macros.\+h@{macros.\+h}}
+\subsubsection{\texorpdfstring{L\+E\+V\+E\+L\+S\+\_\+\+A\+LL}{LEVELS\_ALL}}
+{\footnotesize\ttfamily \#define L\+E\+V\+E\+L\+S\+\_\+\+A\+LL~5}
+
+Total number of level maps (ingame background nametables) \hypertarget{macros_8h_ad0e5b099123a4ea1ee5f9738ce2858cd}{}\label{macros_8h_ad0e5b099123a4ea1ee5f9738ce2858cd} 
+\index{macros.\+h@{macros.\+h}!L\+V\+L1\+\_\+\+M\+A\+X\+\_\+\+S\+C\+O\+RE@{L\+V\+L1\+\_\+\+M\+A\+X\+\_\+\+S\+C\+O\+RE}}
+\index{L\+V\+L1\+\_\+\+M\+A\+X\+\_\+\+S\+C\+O\+RE@{L\+V\+L1\+\_\+\+M\+A\+X\+\_\+\+S\+C\+O\+RE}!macros.\+h@{macros.\+h}}
+\subsubsection{\texorpdfstring{L\+V\+L1\+\_\+\+M\+A\+X\+\_\+\+S\+C\+O\+RE}{LVL1\_MAX\_SCORE}}
+{\footnotesize\ttfamily \#define L\+V\+L1\+\_\+\+M\+A\+X\+\_\+\+S\+C\+O\+RE~4}
+
+\hypertarget{macros_8h_a6a31800fda2a0172123684a1a7810086}{}\label{macros_8h_a6a31800fda2a0172123684a1a7810086} 
+\index{macros.\+h@{macros.\+h}!L\+V\+L1\+\_\+\+S\+T\+A\+R\+T\+\_\+X@{L\+V\+L1\+\_\+\+S\+T\+A\+R\+T\+\_\+X}}
+\index{L\+V\+L1\+\_\+\+S\+T\+A\+R\+T\+\_\+X@{L\+V\+L1\+\_\+\+S\+T\+A\+R\+T\+\_\+X}!macros.\+h@{macros.\+h}}
+\subsubsection{\texorpdfstring{L\+V\+L1\+\_\+\+S\+T\+A\+R\+T\+\_\+X}{LVL1\_START\_X}}
+{\footnotesize\ttfamily \#define L\+V\+L1\+\_\+\+S\+T\+A\+R\+T\+\_\+X~120}
+
+\hypertarget{macros_8h_ab5cba5877cf155edb1c90291ad60dede}{}\label{macros_8h_ab5cba5877cf155edb1c90291ad60dede} 
+\index{macros.\+h@{macros.\+h}!L\+V\+L1\+\_\+\+S\+T\+A\+R\+T\+\_\+Y@{L\+V\+L1\+\_\+\+S\+T\+A\+R\+T\+\_\+Y}}
+\index{L\+V\+L1\+\_\+\+S\+T\+A\+R\+T\+\_\+Y@{L\+V\+L1\+\_\+\+S\+T\+A\+R\+T\+\_\+Y}!macros.\+h@{macros.\+h}}
+\subsubsection{\texorpdfstring{L\+V\+L1\+\_\+\+S\+T\+A\+R\+T\+\_\+Y}{LVL1\_START\_Y}}
+{\footnotesize\ttfamily \#define L\+V\+L1\+\_\+\+S\+T\+A\+R\+T\+\_\+Y~120}
+
+\hypertarget{macros_8h_a45430050f00f558270c2cebeea18f369}{}\label{macros_8h_a45430050f00f558270c2cebeea18f369} 
+\index{macros.\+h@{macros.\+h}!L\+V\+L2\+\_\+\+M\+A\+X\+\_\+\+S\+C\+O\+RE@{L\+V\+L2\+\_\+\+M\+A\+X\+\_\+\+S\+C\+O\+RE}}
+\index{L\+V\+L2\+\_\+\+M\+A\+X\+\_\+\+S\+C\+O\+RE@{L\+V\+L2\+\_\+\+M\+A\+X\+\_\+\+S\+C\+O\+RE}!macros.\+h@{macros.\+h}}
+\subsubsection{\texorpdfstring{L\+V\+L2\+\_\+\+M\+A\+X\+\_\+\+S\+C\+O\+RE}{LVL2\_MAX\_SCORE}}
+{\footnotesize\ttfamily \#define L\+V\+L2\+\_\+\+M\+A\+X\+\_\+\+S\+C\+O\+RE~8}
+
+\hypertarget{macros_8h_aead77f76abc75595172f0c8c0f520abd}{}\label{macros_8h_aead77f76abc75595172f0c8c0f520abd} 
+\index{macros.\+h@{macros.\+h}!L\+V\+L2\+\_\+\+S\+T\+A\+R\+T\+\_\+X@{L\+V\+L2\+\_\+\+S\+T\+A\+R\+T\+\_\+X}}
+\index{L\+V\+L2\+\_\+\+S\+T\+A\+R\+T\+\_\+X@{L\+V\+L2\+\_\+\+S\+T\+A\+R\+T\+\_\+X}!macros.\+h@{macros.\+h}}
+\subsubsection{\texorpdfstring{L\+V\+L2\+\_\+\+S\+T\+A\+R\+T\+\_\+X}{LVL2\_START\_X}}
+{\footnotesize\ttfamily \#define L\+V\+L2\+\_\+\+S\+T\+A\+R\+T\+\_\+X~56}
+
+\hypertarget{macros_8h_a249e8731f130fca874caac6f7dc56bde}{}\label{macros_8h_a249e8731f130fca874caac6f7dc56bde} 
+\index{macros.\+h@{macros.\+h}!L\+V\+L2\+\_\+\+S\+T\+A\+R\+T\+\_\+Y@{L\+V\+L2\+\_\+\+S\+T\+A\+R\+T\+\_\+Y}}
+\index{L\+V\+L2\+\_\+\+S\+T\+A\+R\+T\+\_\+Y@{L\+V\+L2\+\_\+\+S\+T\+A\+R\+T\+\_\+Y}!macros.\+h@{macros.\+h}}
+\subsubsection{\texorpdfstring{L\+V\+L2\+\_\+\+S\+T\+A\+R\+T\+\_\+Y}{LVL2\_START\_Y}}
+{\footnotesize\ttfamily \#define L\+V\+L2\+\_\+\+S\+T\+A\+R\+T\+\_\+Y~120}
+
+\hypertarget{macros_8h_a529d5ebb449edf31d9835d13f4fb9f89}{}\label{macros_8h_a529d5ebb449edf31d9835d13f4fb9f89} 
+\index{macros.\+h@{macros.\+h}!M\+A\+P\+\_\+\+H\+E\+I\+G\+HT@{M\+A\+P\+\_\+\+H\+E\+I\+G\+HT}}
+\index{M\+A\+P\+\_\+\+H\+E\+I\+G\+HT@{M\+A\+P\+\_\+\+H\+E\+I\+G\+HT}!macros.\+h@{macros.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+P\+\_\+\+H\+E\+I\+G\+HT}{MAP\_HEIGHT}}
+{\footnotesize\ttfamily \#define M\+A\+P\+\_\+\+H\+E\+I\+G\+HT~30}
+
+\hypertarget{macros_8h_aa037a6d6a4f04d51c7ec1c9ee9054e76}{}\label{macros_8h_aa037a6d6a4f04d51c7ec1c9ee9054e76} 
+\index{macros.\+h@{macros.\+h}!M\+A\+P\+\_\+\+W\+I\+D\+TH@{M\+A\+P\+\_\+\+W\+I\+D\+TH}}
+\index{M\+A\+P\+\_\+\+W\+I\+D\+TH@{M\+A\+P\+\_\+\+W\+I\+D\+TH}!macros.\+h@{macros.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+P\+\_\+\+W\+I\+D\+TH}{MAP\_WIDTH}}
+{\footnotesize\ttfamily \#define M\+A\+P\+\_\+\+W\+I\+D\+TH~32}
+
+\hypertarget{macros_8h_a705ec7deb75ce089210eaf94aa8d2b1b}{}\label{macros_8h_a705ec7deb75ce089210eaf94aa8d2b1b} 
+\index{macros.\+h@{macros.\+h}!M\+A\+P\+A\+R\+R\+A\+Y\+\_\+\+A\+DR@{M\+A\+P\+A\+R\+R\+A\+Y\+\_\+\+A\+DR}}
+\index{M\+A\+P\+A\+R\+R\+A\+Y\+\_\+\+A\+DR@{M\+A\+P\+A\+R\+R\+A\+Y\+\_\+\+A\+DR}!macros.\+h@{macros.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+P\+A\+R\+R\+A\+Y\+\_\+\+A\+DR}{MAPARRAY\_ADR}}
+{\footnotesize\ttfamily \#define M\+A\+P\+A\+R\+R\+A\+Y\+\_\+\+A\+DR(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})~((y$<$$<$2)$\vert$(x$>$$>$3))}
+
+Macro for calculating in which tile of the 32$\ast$30 tiles the given position is placed. Optimized with bitshifting, arithmetic pendant is (((y/8)$\ast$32)+(x/8)). x and y are assumed to be Sprite-\/coordinates (not Tile-\/coordinates). \hypertarget{macros_8h_af6b6d76b2cb121045ac2ab1a8f539f62}{}\label{macros_8h_af6b6d76b2cb121045ac2ab1a8f539f62} 
+\index{macros.\+h@{macros.\+h}!N\+A\+M\+E\+T\+A\+B\+L\+E1\+\_\+\+S\+T\+A\+RT@{N\+A\+M\+E\+T\+A\+B\+L\+E1\+\_\+\+S\+T\+A\+RT}}
+\index{N\+A\+M\+E\+T\+A\+B\+L\+E1\+\_\+\+S\+T\+A\+RT@{N\+A\+M\+E\+T\+A\+B\+L\+E1\+\_\+\+S\+T\+A\+RT}!macros.\+h@{macros.\+h}}
+\subsubsection{\texorpdfstring{N\+A\+M\+E\+T\+A\+B\+L\+E1\+\_\+\+S\+T\+A\+RT}{NAMETABLE1\_START}}
+{\footnotesize\ttfamily \#define N\+A\+M\+E\+T\+A\+B\+L\+E1\+\_\+\+S\+T\+A\+RT~0x2000}
+
+Start address in V\+R\+AM for first nametable \hypertarget{macros_8h_a976a73369145472da9fa5abf13385dba}{}\label{macros_8h_a976a73369145472da9fa5abf13385dba} 
+\index{macros.\+h@{macros.\+h}!S\+N\+A\+K\+E\+\_\+\+B\+O\+D\+Y\+\_\+\+T\+I\+LE@{S\+N\+A\+K\+E\+\_\+\+B\+O\+D\+Y\+\_\+\+T\+I\+LE}}
+\index{S\+N\+A\+K\+E\+\_\+\+B\+O\+D\+Y\+\_\+\+T\+I\+LE@{S\+N\+A\+K\+E\+\_\+\+B\+O\+D\+Y\+\_\+\+T\+I\+LE}!macros.\+h@{macros.\+h}}
+\subsubsection{\texorpdfstring{S\+N\+A\+K\+E\+\_\+\+B\+O\+D\+Y\+\_\+\+T\+I\+LE}{SNAKE\_BODY\_TILE}}
+{\footnotesize\ttfamily \#define S\+N\+A\+K\+E\+\_\+\+B\+O\+D\+Y\+\_\+\+T\+I\+LE~0x40}
+
+Tile of snake body element \hypertarget{macros_8h_a2f6c959fa13e7bd598f3dc86c456effe}{}\label{macros_8h_a2f6c959fa13e7bd598f3dc86c456effe} 
+\index{macros.\+h@{macros.\+h}!S\+N\+A\+K\+E\+\_\+\+H\+E\+A\+D\+\_\+\+T\+I\+L\+E\+\_\+\+H\+O\+RZ@{S\+N\+A\+K\+E\+\_\+\+H\+E\+A\+D\+\_\+\+T\+I\+L\+E\+\_\+\+H\+O\+RZ}}
+\index{S\+N\+A\+K\+E\+\_\+\+H\+E\+A\+D\+\_\+\+T\+I\+L\+E\+\_\+\+H\+O\+RZ@{S\+N\+A\+K\+E\+\_\+\+H\+E\+A\+D\+\_\+\+T\+I\+L\+E\+\_\+\+H\+O\+RZ}!macros.\+h@{macros.\+h}}
+\subsubsection{\texorpdfstring{S\+N\+A\+K\+E\+\_\+\+H\+E\+A\+D\+\_\+\+T\+I\+L\+E\+\_\+\+H\+O\+RZ}{SNAKE\_HEAD\_TILE\_HORZ}}
+{\footnotesize\ttfamily \#define S\+N\+A\+K\+E\+\_\+\+H\+E\+A\+D\+\_\+\+T\+I\+L\+E\+\_\+\+H\+O\+RZ~0x42}
+
+Tile of horizontal snake head element \hypertarget{macros_8h_a7c4639b62d666878579c932ff2106237}{}\label{macros_8h_a7c4639b62d666878579c932ff2106237} 
+\index{macros.\+h@{macros.\+h}!S\+N\+A\+K\+E\+\_\+\+H\+E\+A\+D\+\_\+\+T\+I\+L\+E\+\_\+\+V\+E\+RT@{S\+N\+A\+K\+E\+\_\+\+H\+E\+A\+D\+\_\+\+T\+I\+L\+E\+\_\+\+V\+E\+RT}}
+\index{S\+N\+A\+K\+E\+\_\+\+H\+E\+A\+D\+\_\+\+T\+I\+L\+E\+\_\+\+V\+E\+RT@{S\+N\+A\+K\+E\+\_\+\+H\+E\+A\+D\+\_\+\+T\+I\+L\+E\+\_\+\+V\+E\+RT}!macros.\+h@{macros.\+h}}
+\subsubsection{\texorpdfstring{S\+N\+A\+K\+E\+\_\+\+H\+E\+A\+D\+\_\+\+T\+I\+L\+E\+\_\+\+V\+E\+RT}{SNAKE\_HEAD\_TILE\_VERT}}
+{\footnotesize\ttfamily \#define S\+N\+A\+K\+E\+\_\+\+H\+E\+A\+D\+\_\+\+T\+I\+L\+E\+\_\+\+V\+E\+RT~0x41}
+
+Tile of vertical snake head element \hypertarget{macros_8h_a6fb1d4c78b46a621cb8344c51adcdc02}{}\label{macros_8h_a6fb1d4c78b46a621cb8344c51adcdc02} 
+\index{macros.\+h@{macros.\+h}!S\+N\+A\+K\+E\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE@{S\+N\+A\+K\+E\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE}}
+\index{S\+N\+A\+K\+E\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE@{S\+N\+A\+K\+E\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE}!macros.\+h@{macros.\+h}}
+\subsubsection{\texorpdfstring{S\+N\+A\+K\+E\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE}{SNAKE\_MAX\_SIZE}}
+{\footnotesize\ttfamily \#define S\+N\+A\+K\+E\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE~100}
+
+Number of body elements, the snake can get. \hypertarget{macros_8h_a843d1ce9c1733c8deb7f4bf88d66c0f4}{}\label{macros_8h_a843d1ce9c1733c8deb7f4bf88d66c0f4} 
+\index{macros.\+h@{macros.\+h}!S\+P\+I\+D\+E\+R\+\_\+\+T\+I\+LE@{S\+P\+I\+D\+E\+R\+\_\+\+T\+I\+LE}}
+\index{S\+P\+I\+D\+E\+R\+\_\+\+T\+I\+LE@{S\+P\+I\+D\+E\+R\+\_\+\+T\+I\+LE}!macros.\+h@{macros.\+h}}
+\subsubsection{\texorpdfstring{S\+P\+I\+D\+E\+R\+\_\+\+T\+I\+LE}{SPIDER\_TILE}}
+{\footnotesize\ttfamily \#define S\+P\+I\+D\+E\+R\+\_\+\+T\+I\+LE~0x45}
+
+Tile of spider item \hypertarget{macros_8h_a6fc4256d763255b590cfbb9bab1d1592}{}\label{macros_8h_a6fc4256d763255b590cfbb9bab1d1592} 
+\index{macros.\+h@{macros.\+h}!W\+A\+L\+L\+\_\+\+T\+I\+L\+E\+\_\+1@{W\+A\+L\+L\+\_\+\+T\+I\+L\+E\+\_\+1}}
+\index{W\+A\+L\+L\+\_\+\+T\+I\+L\+E\+\_\+1@{W\+A\+L\+L\+\_\+\+T\+I\+L\+E\+\_\+1}!macros.\+h@{macros.\+h}}
+\subsubsection{\texorpdfstring{W\+A\+L\+L\+\_\+\+T\+I\+L\+E\+\_\+1}{WALL\_TILE\_1}}
+{\footnotesize\ttfamily \#define W\+A\+L\+L\+\_\+\+T\+I\+L\+E\+\_\+1~0x43}
+
+Tile of horiontal wall element \hypertarget{macros_8h_a9dc5bc06ab6f00d2c106766046501322}{}\label{macros_8h_a9dc5bc06ab6f00d2c106766046501322} 
+\index{macros.\+h@{macros.\+h}!W\+A\+L\+L\+\_\+\+T\+I\+L\+E\+\_\+2@{W\+A\+L\+L\+\_\+\+T\+I\+L\+E\+\_\+2}}
+\index{W\+A\+L\+L\+\_\+\+T\+I\+L\+E\+\_\+2@{W\+A\+L\+L\+\_\+\+T\+I\+L\+E\+\_\+2}!macros.\+h@{macros.\+h}}
+\subsubsection{\texorpdfstring{W\+A\+L\+L\+\_\+\+T\+I\+L\+E\+\_\+2}{WALL\_TILE\_2}}
+{\footnotesize\ttfamily \#define W\+A\+L\+L\+\_\+\+T\+I\+L\+E\+\_\+2~0x44}
+
+Tile of vertical wall element 

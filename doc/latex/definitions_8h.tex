@@ -1,0 +1,499 @@
+\hypertarget{definitions_8h}{}\section{C\+:/\+Users/\+Administrator/\+Documents/\+Git\+Hub/\+N\+E\+S-\/\+Snake/src/definitions.h File Reference}
+\label{definitions_8h}\index{C\+:/\+Users/\+Administrator/\+Documents/\+Git\+Hub/\+N\+E\+S-\/\+Snake/src/definitions.\+h@{C\+:/\+Users/\+Administrator/\+Documents/\+Git\+Hub/\+N\+E\+S-\/\+Snake/src/definitions.\+h}}
+
+
+This header files contains defines all global variables and constants, macros and includes of nametable and palette definition.  
+
+
+{\ttfamily \#include \char`\"{}level1\+\_\+nam.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}level2\+\_\+nam.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}game\+\_\+over\+\_\+nam.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}titlescreen\+\_\+nam.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}levels\+\_\+pal.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sprites\+\_\+pal.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}menue\+\_\+pal.\+h\char`\"{}}\newline
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structsnake__struct}{snake\+\_\+struct}
+\begin{DoxyCompactList}\small\item\em This structure contains all elements required to interact and display the snake. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{definitions_8h_a1a11e72c77f9f8e9fb4c27479f969626}{L\+E\+V\+E\+L\+S\+\_\+\+A\+LL}~5
+\item 
+\#define \hyperlink{definitions_8h_a6fb1d4c78b46a621cb8344c51adcdc02}{S\+N\+A\+K\+E\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE}~100
+\item 
+\#define \hyperlink{definitions_8h_a6a31800fda2a0172123684a1a7810086}{L\+V\+L1\+\_\+\+S\+T\+A\+R\+T\+\_\+X}~120
+\item 
+\#define \hyperlink{definitions_8h_ab5cba5877cf155edb1c90291ad60dede}{L\+V\+L1\+\_\+\+S\+T\+A\+R\+T\+\_\+Y}~120
+\item 
+\#define \hyperlink{definitions_8h_ad0e5b099123a4ea1ee5f9738ce2858cd}{L\+V\+L1\+\_\+\+M\+A\+X\+\_\+\+S\+C\+O\+RE}~4
+\item 
+\#define \hyperlink{definitions_8h_aead77f76abc75595172f0c8c0f520abd}{L\+V\+L2\+\_\+\+S\+T\+A\+R\+T\+\_\+X}~56
+\item 
+\#define \hyperlink{definitions_8h_a249e8731f130fca874caac6f7dc56bde}{L\+V\+L2\+\_\+\+S\+T\+A\+R\+T\+\_\+Y}~120
+\item 
+\#define \hyperlink{definitions_8h_a45430050f00f558270c2cebeea18f369}{L\+V\+L2\+\_\+\+M\+A\+X\+\_\+\+S\+C\+O\+RE}~8
+\item 
+\#define \hyperlink{definitions_8h_af6b6d76b2cb121045ac2ab1a8f539f62}{N\+A\+M\+E\+T\+A\+B\+L\+E1\+\_\+\+S\+T\+A\+RT}~0x2000
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf Tile-\/based width and height of the level map}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{definitions_8h_aa037a6d6a4f04d51c7ec1c9ee9054e76}{M\+A\+P\+\_\+\+W\+I\+D\+TH}~32
+\item 
+\#define \hyperlink{definitions_8h_a529d5ebb449edf31d9835d13f4fb9f89}{M\+A\+P\+\_\+\+H\+E\+I\+G\+HT}~30
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Direction constants}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{definitions_8h_a480d28eba00f028b351fb2f3312f5409}{D\+I\+R\+\_\+\+UP}~1
+\item 
+\#define \hyperlink{definitions_8h_a90214d45dd9a40f97bbe24079f40218d}{D\+I\+R\+\_\+\+D\+O\+WN}~2
+\item 
+\#define \hyperlink{definitions_8h_a788d3497514ea05602fd974d7bdcdbde}{D\+I\+R\+\_\+\+L\+E\+FT}~3
+\item 
+\#define \hyperlink{definitions_8h_a85ae9767b23edf40871541d23962784b}{D\+I\+R\+\_\+\+R\+I\+G\+HT}~4
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Tile constants}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{definitions_8h_a6fc4256d763255b590cfbb9bab1d1592}{W\+A\+L\+L\+\_\+\+T\+I\+L\+E\+\_\+1}~0x43
+\item 
+\#define \hyperlink{definitions_8h_a9dc5bc06ab6f00d2c106766046501322}{W\+A\+L\+L\+\_\+\+T\+I\+L\+E\+\_\+2}~0x44
+\item 
+\#define \hyperlink{definitions_8h_a7c4639b62d666878579c932ff2106237}{S\+N\+A\+K\+E\+\_\+\+H\+E\+A\+D\+\_\+\+T\+I\+L\+E\+\_\+\+V\+E\+RT}~0x41
+\item 
+\#define \hyperlink{definitions_8h_a2f6c959fa13e7bd598f3dc86c456effe}{S\+N\+A\+K\+E\+\_\+\+H\+E\+A\+D\+\_\+\+T\+I\+L\+E\+\_\+\+H\+O\+RZ}~0x42
+\item 
+\#define \hyperlink{definitions_8h_a976a73369145472da9fa5abf13385dba}{S\+N\+A\+K\+E\+\_\+\+B\+O\+D\+Y\+\_\+\+T\+I\+LE}~0x40
+\item 
+\#define \hyperlink{definitions_8h_ac4c51b4dd32e646ca187c9807e2f3417}{E\+M\+P\+T\+Y\+\_\+\+T\+I\+LE}~0x00
+\item 
+\#define \hyperlink{definitions_8h_a843d1ce9c1733c8deb7f4bf88d66c0f4}{S\+P\+I\+D\+E\+R\+\_\+\+T\+I\+LE}~0x45
+\item 
+\#define \hyperlink{definitions_8h_a9a991eae7bd6c31066a7e56c0acdee17}{D\+I\+G\+I\+T\+\_\+\+O\+\_\+\+T\+I\+LE}~0x10
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Macros for more efficent caluclations}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{definitions_8h_a705ec7deb75ce089210eaf94aa8d2b1b}{M\+A\+P\+A\+R\+R\+A\+Y\+\_\+\+A\+DR}(x,  y)~((y$<$$<$2)$\vert$(x$>$$>$3))
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static struct \hyperlink{structsnake__struct}{snake\+\_\+struct} \hyperlink{definitions_8h_ada8e3425c66aed8c5ea9ecfebebc2d3a}{snake}
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf Global variables, used to interact with the level map}\par
+\begin{DoxyCompactItemize}
+\item 
+static unsigned char \hyperlink{definitions_8h_a937f08b44e3e7c5d94de749012bc2a08}{map} \mbox{[}\hyperlink{definitions_8h_aa037a6d6a4f04d51c7ec1c9ee9054e76}{M\+A\+P\+\_\+\+W\+I\+D\+TH} $\ast$\hyperlink{definitions_8h_a529d5ebb449edf31d9835d13f4fb9f89}{M\+A\+P\+\_\+\+H\+E\+I\+G\+HT}\mbox{]}
+\item 
+static unsigned char \hyperlink{definitions_8h_a2682880253356b9c35b2e6745c44f125}{name\+Row} \mbox{[}\hyperlink{definitions_8h_aa037a6d6a4f04d51c7ec1c9ee9054e76}{M\+A\+P\+\_\+\+W\+I\+D\+TH}\mbox{]}
+\item 
+static unsigned int \hyperlink{definitions_8h_a2656bd7f8fed8b98552f3a172c6f270e}{nametable\+\_\+fetch}
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Global variables, which are used to calculate pixel based coordinates (of body elements) to tile based coordinates.}\par
+\begin{DoxyCompactItemize}
+\item 
+static unsigned char \hyperlink{definitions_8h_aa34783fb27a592a4d71fe0b2ce00c70c}{body\+\_\+tile\+\_\+x}
+\item 
+static unsigned char \hyperlink{definitions_8h_a50934ccbb2c4319957362196a1054ab3}{body\+\_\+tile\+\_\+y}
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Global variables, used to modify the background ingame}\par
+\begin{DoxyCompactItemize}
+\item 
+static unsigned char \hyperlink{definitions_8h_af1d853c79c2b46ff63daf4f811d7ce95}{update\+\_\+list} \mbox{[}5 $\ast$3+1\mbox{]}
+\item 
+static unsigned char $\ast$ \hyperlink{definitions_8h_a493d790d010c98b6db7310b87faf8d05}{ul}
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Global variables, used for rendering sprites ingame}\par
+\begin{DoxyCompactItemize}
+\item 
+static unsigned char \hyperlink{definitions_8h_a4ffc86f06d1c7507f0a9079421ef75da}{sprite\+\_\+offset}
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Global variables, used for universal purpose e.\+g loops}\par
+\begin{DoxyCompactItemize}
+\item 
+static unsigned char \hyperlink{definitions_8h_a01494b8fd5801ba9e205324f4b1545ea}{i}
+\item 
+static unsigned char \hyperlink{definitions_8h_aac1217779551b743f5645c17740178e3}{j}
+\item 
+static unsigned int \hyperlink{definitions_8h_a90e096a39cfc6da042e02d27a346f2d3}{k}
+\item 
+static unsigned int \hyperlink{definitions_8h_a3f724abfb9c2d5e84437c641786dcd70}{l}
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Global variables, used to interact with items}\par
+\begin{DoxyCompactItemize}
+\item 
+static unsigned char \hyperlink{definitions_8h_affca1b55c6470261c2b871273f1b604c}{item\+\_\+x}
+\item 
+static unsigned char \hyperlink{definitions_8h_a126b314f52cc35faee4633c99042bf47}{item\+\_\+y}
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Global variables, used for game-\/states, menues, input}\par
+\begin{DoxyCompactItemize}
+\item 
+static unsigned char \hyperlink{definitions_8h_a4ca25633b87b17b67b540bc6eb28ecdd}{current\+\_\+level}
+\item 
+static unsigned char \hyperlink{definitions_8h_a4c4b635fa72f98af449ca934c32c7b38}{max\+\_\+score}
+\item 
+static unsigned char \hyperlink{definitions_8h_af005a22a9f7e1dbfe61f0c4380f5ce83}{pause}
+\item 
+static unsigned char \hyperlink{definitions_8h_a474959fed45282f58d55114249dd04e1}{gameover}
+\item 
+static unsigned char \hyperlink{definitions_8h_aec35dd4d246ba470806403dd75aba7b0}{input}
+\item 
+static unsigned char \hyperlink{definitions_8h_a46d8dc26b0c7504baa3bd76429c0fe91}{pause\+\_\+loop}
+\item 
+static unsigned char \hyperlink{definitions_8h_aa948973cb51e50909ae6ea85b7664767}{gameover\+\_\+loop}
+\item 
+static unsigned char \hyperlink{definitions_8h_a050924f3d98ed7e3871436955ef669bd}{titlescreen}
+\item 
+static unsigned char \hyperlink{definitions_8h_aaad902cba22507e143238f5671e8d234}{restart}
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf List of the levels, include pointer to the packed nametable of the levels, menues, and pointer to the associated palette.}\par
+\begin{DoxyCompactItemize}
+\item 
+const unsigned char $\ast$const \hyperlink{definitions_8h_a3d77d32a3d5948ab26ad38f3c7d65d1d}{level\+List} \mbox{[}\hyperlink{definitions_8h_a1a11e72c77f9f8e9fb4c27479f969626}{L\+E\+V\+E\+L\+S\+\_\+\+A\+LL}+2+2\mbox{]}
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\subsection{Detailed Description}
+This header files contains defines all global variables and constants, macros and includes of nametable and palette definition. 
+
+\begin{DoxyAuthor}{Author}
+Sebastian Dine 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{definitions_8h_a9a991eae7bd6c31066a7e56c0acdee17}{}\label{definitions_8h_a9a991eae7bd6c31066a7e56c0acdee17} 
+\index{definitions.\+h@{definitions.\+h}!D\+I\+G\+I\+T\+\_\+\+O\+\_\+\+T\+I\+LE@{D\+I\+G\+I\+T\+\_\+\+O\+\_\+\+T\+I\+LE}}
+\index{D\+I\+G\+I\+T\+\_\+\+O\+\_\+\+T\+I\+LE@{D\+I\+G\+I\+T\+\_\+\+O\+\_\+\+T\+I\+LE}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{D\+I\+G\+I\+T\+\_\+\+O\+\_\+\+T\+I\+LE}{DIGIT\_O\_TILE}}
+{\footnotesize\ttfamily \#define D\+I\+G\+I\+T\+\_\+\+O\+\_\+\+T\+I\+LE~0x10}
+
+Tile of digit 0 (zero) \hypertarget{definitions_8h_a90214d45dd9a40f97bbe24079f40218d}{}\label{definitions_8h_a90214d45dd9a40f97bbe24079f40218d} 
+\index{definitions.\+h@{definitions.\+h}!D\+I\+R\+\_\+\+D\+O\+WN@{D\+I\+R\+\_\+\+D\+O\+WN}}
+\index{D\+I\+R\+\_\+\+D\+O\+WN@{D\+I\+R\+\_\+\+D\+O\+WN}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{D\+I\+R\+\_\+\+D\+O\+WN}{DIR\_DOWN}}
+{\footnotesize\ttfamily \#define D\+I\+R\+\_\+\+D\+O\+WN~2}
+
+\hypertarget{definitions_8h_a788d3497514ea05602fd974d7bdcdbde}{}\label{definitions_8h_a788d3497514ea05602fd974d7bdcdbde} 
+\index{definitions.\+h@{definitions.\+h}!D\+I\+R\+\_\+\+L\+E\+FT@{D\+I\+R\+\_\+\+L\+E\+FT}}
+\index{D\+I\+R\+\_\+\+L\+E\+FT@{D\+I\+R\+\_\+\+L\+E\+FT}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{D\+I\+R\+\_\+\+L\+E\+FT}{DIR\_LEFT}}
+{\footnotesize\ttfamily \#define D\+I\+R\+\_\+\+L\+E\+FT~3}
+
+\hypertarget{definitions_8h_a85ae9767b23edf40871541d23962784b}{}\label{definitions_8h_a85ae9767b23edf40871541d23962784b} 
+\index{definitions.\+h@{definitions.\+h}!D\+I\+R\+\_\+\+R\+I\+G\+HT@{D\+I\+R\+\_\+\+R\+I\+G\+HT}}
+\index{D\+I\+R\+\_\+\+R\+I\+G\+HT@{D\+I\+R\+\_\+\+R\+I\+G\+HT}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{D\+I\+R\+\_\+\+R\+I\+G\+HT}{DIR\_RIGHT}}
+{\footnotesize\ttfamily \#define D\+I\+R\+\_\+\+R\+I\+G\+HT~4}
+
+\hypertarget{definitions_8h_a480d28eba00f028b351fb2f3312f5409}{}\label{definitions_8h_a480d28eba00f028b351fb2f3312f5409} 
+\index{definitions.\+h@{definitions.\+h}!D\+I\+R\+\_\+\+UP@{D\+I\+R\+\_\+\+UP}}
+\index{D\+I\+R\+\_\+\+UP@{D\+I\+R\+\_\+\+UP}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{D\+I\+R\+\_\+\+UP}{DIR\_UP}}
+{\footnotesize\ttfamily \#define D\+I\+R\+\_\+\+UP~1}
+
+\hypertarget{definitions_8h_ac4c51b4dd32e646ca187c9807e2f3417}{}\label{definitions_8h_ac4c51b4dd32e646ca187c9807e2f3417} 
+\index{definitions.\+h@{definitions.\+h}!E\+M\+P\+T\+Y\+\_\+\+T\+I\+LE@{E\+M\+P\+T\+Y\+\_\+\+T\+I\+LE}}
+\index{E\+M\+P\+T\+Y\+\_\+\+T\+I\+LE@{E\+M\+P\+T\+Y\+\_\+\+T\+I\+LE}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{E\+M\+P\+T\+Y\+\_\+\+T\+I\+LE}{EMPTY\_TILE}}
+{\footnotesize\ttfamily \#define E\+M\+P\+T\+Y\+\_\+\+T\+I\+LE~0x00}
+
+Tile of empty space \hypertarget{definitions_8h_a1a11e72c77f9f8e9fb4c27479f969626}{}\label{definitions_8h_a1a11e72c77f9f8e9fb4c27479f969626} 
+\index{definitions.\+h@{definitions.\+h}!L\+E\+V\+E\+L\+S\+\_\+\+A\+LL@{L\+E\+V\+E\+L\+S\+\_\+\+A\+LL}}
+\index{L\+E\+V\+E\+L\+S\+\_\+\+A\+LL@{L\+E\+V\+E\+L\+S\+\_\+\+A\+LL}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{L\+E\+V\+E\+L\+S\+\_\+\+A\+LL}{LEVELS\_ALL}}
+{\footnotesize\ttfamily \#define L\+E\+V\+E\+L\+S\+\_\+\+A\+LL~5}
+
+Total number of level maps (ingame background nametables) \hypertarget{definitions_8h_ad0e5b099123a4ea1ee5f9738ce2858cd}{}\label{definitions_8h_ad0e5b099123a4ea1ee5f9738ce2858cd} 
+\index{definitions.\+h@{definitions.\+h}!L\+V\+L1\+\_\+\+M\+A\+X\+\_\+\+S\+C\+O\+RE@{L\+V\+L1\+\_\+\+M\+A\+X\+\_\+\+S\+C\+O\+RE}}
+\index{L\+V\+L1\+\_\+\+M\+A\+X\+\_\+\+S\+C\+O\+RE@{L\+V\+L1\+\_\+\+M\+A\+X\+\_\+\+S\+C\+O\+RE}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{L\+V\+L1\+\_\+\+M\+A\+X\+\_\+\+S\+C\+O\+RE}{LVL1\_MAX\_SCORE}}
+{\footnotesize\ttfamily \#define L\+V\+L1\+\_\+\+M\+A\+X\+\_\+\+S\+C\+O\+RE~4}
+
+\hypertarget{definitions_8h_a6a31800fda2a0172123684a1a7810086}{}\label{definitions_8h_a6a31800fda2a0172123684a1a7810086} 
+\index{definitions.\+h@{definitions.\+h}!L\+V\+L1\+\_\+\+S\+T\+A\+R\+T\+\_\+X@{L\+V\+L1\+\_\+\+S\+T\+A\+R\+T\+\_\+X}}
+\index{L\+V\+L1\+\_\+\+S\+T\+A\+R\+T\+\_\+X@{L\+V\+L1\+\_\+\+S\+T\+A\+R\+T\+\_\+X}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{L\+V\+L1\+\_\+\+S\+T\+A\+R\+T\+\_\+X}{LVL1\_START\_X}}
+{\footnotesize\ttfamily \#define L\+V\+L1\+\_\+\+S\+T\+A\+R\+T\+\_\+X~120}
+
+\hypertarget{definitions_8h_ab5cba5877cf155edb1c90291ad60dede}{}\label{definitions_8h_ab5cba5877cf155edb1c90291ad60dede} 
+\index{definitions.\+h@{definitions.\+h}!L\+V\+L1\+\_\+\+S\+T\+A\+R\+T\+\_\+Y@{L\+V\+L1\+\_\+\+S\+T\+A\+R\+T\+\_\+Y}}
+\index{L\+V\+L1\+\_\+\+S\+T\+A\+R\+T\+\_\+Y@{L\+V\+L1\+\_\+\+S\+T\+A\+R\+T\+\_\+Y}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{L\+V\+L1\+\_\+\+S\+T\+A\+R\+T\+\_\+Y}{LVL1\_START\_Y}}
+{\footnotesize\ttfamily \#define L\+V\+L1\+\_\+\+S\+T\+A\+R\+T\+\_\+Y~120}
+
+\hypertarget{definitions_8h_a45430050f00f558270c2cebeea18f369}{}\label{definitions_8h_a45430050f00f558270c2cebeea18f369} 
+\index{definitions.\+h@{definitions.\+h}!L\+V\+L2\+\_\+\+M\+A\+X\+\_\+\+S\+C\+O\+RE@{L\+V\+L2\+\_\+\+M\+A\+X\+\_\+\+S\+C\+O\+RE}}
+\index{L\+V\+L2\+\_\+\+M\+A\+X\+\_\+\+S\+C\+O\+RE@{L\+V\+L2\+\_\+\+M\+A\+X\+\_\+\+S\+C\+O\+RE}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{L\+V\+L2\+\_\+\+M\+A\+X\+\_\+\+S\+C\+O\+RE}{LVL2\_MAX\_SCORE}}
+{\footnotesize\ttfamily \#define L\+V\+L2\+\_\+\+M\+A\+X\+\_\+\+S\+C\+O\+RE~8}
+
+\hypertarget{definitions_8h_aead77f76abc75595172f0c8c0f520abd}{}\label{definitions_8h_aead77f76abc75595172f0c8c0f520abd} 
+\index{definitions.\+h@{definitions.\+h}!L\+V\+L2\+\_\+\+S\+T\+A\+R\+T\+\_\+X@{L\+V\+L2\+\_\+\+S\+T\+A\+R\+T\+\_\+X}}
+\index{L\+V\+L2\+\_\+\+S\+T\+A\+R\+T\+\_\+X@{L\+V\+L2\+\_\+\+S\+T\+A\+R\+T\+\_\+X}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{L\+V\+L2\+\_\+\+S\+T\+A\+R\+T\+\_\+X}{LVL2\_START\_X}}
+{\footnotesize\ttfamily \#define L\+V\+L2\+\_\+\+S\+T\+A\+R\+T\+\_\+X~56}
+
+\hypertarget{definitions_8h_a249e8731f130fca874caac6f7dc56bde}{}\label{definitions_8h_a249e8731f130fca874caac6f7dc56bde} 
+\index{definitions.\+h@{definitions.\+h}!L\+V\+L2\+\_\+\+S\+T\+A\+R\+T\+\_\+Y@{L\+V\+L2\+\_\+\+S\+T\+A\+R\+T\+\_\+Y}}
+\index{L\+V\+L2\+\_\+\+S\+T\+A\+R\+T\+\_\+Y@{L\+V\+L2\+\_\+\+S\+T\+A\+R\+T\+\_\+Y}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{L\+V\+L2\+\_\+\+S\+T\+A\+R\+T\+\_\+Y}{LVL2\_START\_Y}}
+{\footnotesize\ttfamily \#define L\+V\+L2\+\_\+\+S\+T\+A\+R\+T\+\_\+Y~120}
+
+\hypertarget{definitions_8h_a529d5ebb449edf31d9835d13f4fb9f89}{}\label{definitions_8h_a529d5ebb449edf31d9835d13f4fb9f89} 
+\index{definitions.\+h@{definitions.\+h}!M\+A\+P\+\_\+\+H\+E\+I\+G\+HT@{M\+A\+P\+\_\+\+H\+E\+I\+G\+HT}}
+\index{M\+A\+P\+\_\+\+H\+E\+I\+G\+HT@{M\+A\+P\+\_\+\+H\+E\+I\+G\+HT}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+P\+\_\+\+H\+E\+I\+G\+HT}{MAP\_HEIGHT}}
+{\footnotesize\ttfamily \#define M\+A\+P\+\_\+\+H\+E\+I\+G\+HT~30}
+
+\hypertarget{definitions_8h_aa037a6d6a4f04d51c7ec1c9ee9054e76}{}\label{definitions_8h_aa037a6d6a4f04d51c7ec1c9ee9054e76} 
+\index{definitions.\+h@{definitions.\+h}!M\+A\+P\+\_\+\+W\+I\+D\+TH@{M\+A\+P\+\_\+\+W\+I\+D\+TH}}
+\index{M\+A\+P\+\_\+\+W\+I\+D\+TH@{M\+A\+P\+\_\+\+W\+I\+D\+TH}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+P\+\_\+\+W\+I\+D\+TH}{MAP\_WIDTH}}
+{\footnotesize\ttfamily \#define M\+A\+P\+\_\+\+W\+I\+D\+TH~32}
+
+\hypertarget{definitions_8h_a705ec7deb75ce089210eaf94aa8d2b1b}{}\label{definitions_8h_a705ec7deb75ce089210eaf94aa8d2b1b} 
+\index{definitions.\+h@{definitions.\+h}!M\+A\+P\+A\+R\+R\+A\+Y\+\_\+\+A\+DR@{M\+A\+P\+A\+R\+R\+A\+Y\+\_\+\+A\+DR}}
+\index{M\+A\+P\+A\+R\+R\+A\+Y\+\_\+\+A\+DR@{M\+A\+P\+A\+R\+R\+A\+Y\+\_\+\+A\+DR}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+P\+A\+R\+R\+A\+Y\+\_\+\+A\+DR}{MAPARRAY\_ADR}}
+{\footnotesize\ttfamily \#define M\+A\+P\+A\+R\+R\+A\+Y\+\_\+\+A\+DR(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})~((y$<$$<$2)$\vert$(x$>$$>$3))}
+
+Macro for calculating in which tile of the 32$\ast$30 tiles the given position is placed. Optimized with bitshifting, arithmetic pendant is (((y/8)$\ast$32)+(x/8)). x and y are assumed to be Sprite-\/coordinates (not Tile-\/coordinates). \hypertarget{definitions_8h_af6b6d76b2cb121045ac2ab1a8f539f62}{}\label{definitions_8h_af6b6d76b2cb121045ac2ab1a8f539f62} 
+\index{definitions.\+h@{definitions.\+h}!N\+A\+M\+E\+T\+A\+B\+L\+E1\+\_\+\+S\+T\+A\+RT@{N\+A\+M\+E\+T\+A\+B\+L\+E1\+\_\+\+S\+T\+A\+RT}}
+\index{N\+A\+M\+E\+T\+A\+B\+L\+E1\+\_\+\+S\+T\+A\+RT@{N\+A\+M\+E\+T\+A\+B\+L\+E1\+\_\+\+S\+T\+A\+RT}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{N\+A\+M\+E\+T\+A\+B\+L\+E1\+\_\+\+S\+T\+A\+RT}{NAMETABLE1\_START}}
+{\footnotesize\ttfamily \#define N\+A\+M\+E\+T\+A\+B\+L\+E1\+\_\+\+S\+T\+A\+RT~0x2000}
+
+Start address in V\+R\+AM for first nametable \hypertarget{definitions_8h_a976a73369145472da9fa5abf13385dba}{}\label{definitions_8h_a976a73369145472da9fa5abf13385dba} 
+\index{definitions.\+h@{definitions.\+h}!S\+N\+A\+K\+E\+\_\+\+B\+O\+D\+Y\+\_\+\+T\+I\+LE@{S\+N\+A\+K\+E\+\_\+\+B\+O\+D\+Y\+\_\+\+T\+I\+LE}}
+\index{S\+N\+A\+K\+E\+\_\+\+B\+O\+D\+Y\+\_\+\+T\+I\+LE@{S\+N\+A\+K\+E\+\_\+\+B\+O\+D\+Y\+\_\+\+T\+I\+LE}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{S\+N\+A\+K\+E\+\_\+\+B\+O\+D\+Y\+\_\+\+T\+I\+LE}{SNAKE\_BODY\_TILE}}
+{\footnotesize\ttfamily \#define S\+N\+A\+K\+E\+\_\+\+B\+O\+D\+Y\+\_\+\+T\+I\+LE~0x40}
+
+Tile of snake body element \hypertarget{definitions_8h_a2f6c959fa13e7bd598f3dc86c456effe}{}\label{definitions_8h_a2f6c959fa13e7bd598f3dc86c456effe} 
+\index{definitions.\+h@{definitions.\+h}!S\+N\+A\+K\+E\+\_\+\+H\+E\+A\+D\+\_\+\+T\+I\+L\+E\+\_\+\+H\+O\+RZ@{S\+N\+A\+K\+E\+\_\+\+H\+E\+A\+D\+\_\+\+T\+I\+L\+E\+\_\+\+H\+O\+RZ}}
+\index{S\+N\+A\+K\+E\+\_\+\+H\+E\+A\+D\+\_\+\+T\+I\+L\+E\+\_\+\+H\+O\+RZ@{S\+N\+A\+K\+E\+\_\+\+H\+E\+A\+D\+\_\+\+T\+I\+L\+E\+\_\+\+H\+O\+RZ}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{S\+N\+A\+K\+E\+\_\+\+H\+E\+A\+D\+\_\+\+T\+I\+L\+E\+\_\+\+H\+O\+RZ}{SNAKE\_HEAD\_TILE\_HORZ}}
+{\footnotesize\ttfamily \#define S\+N\+A\+K\+E\+\_\+\+H\+E\+A\+D\+\_\+\+T\+I\+L\+E\+\_\+\+H\+O\+RZ~0x42}
+
+Tile of horizontal snake head element \hypertarget{definitions_8h_a7c4639b62d666878579c932ff2106237}{}\label{definitions_8h_a7c4639b62d666878579c932ff2106237} 
+\index{definitions.\+h@{definitions.\+h}!S\+N\+A\+K\+E\+\_\+\+H\+E\+A\+D\+\_\+\+T\+I\+L\+E\+\_\+\+V\+E\+RT@{S\+N\+A\+K\+E\+\_\+\+H\+E\+A\+D\+\_\+\+T\+I\+L\+E\+\_\+\+V\+E\+RT}}
+\index{S\+N\+A\+K\+E\+\_\+\+H\+E\+A\+D\+\_\+\+T\+I\+L\+E\+\_\+\+V\+E\+RT@{S\+N\+A\+K\+E\+\_\+\+H\+E\+A\+D\+\_\+\+T\+I\+L\+E\+\_\+\+V\+E\+RT}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{S\+N\+A\+K\+E\+\_\+\+H\+E\+A\+D\+\_\+\+T\+I\+L\+E\+\_\+\+V\+E\+RT}{SNAKE\_HEAD\_TILE\_VERT}}
+{\footnotesize\ttfamily \#define S\+N\+A\+K\+E\+\_\+\+H\+E\+A\+D\+\_\+\+T\+I\+L\+E\+\_\+\+V\+E\+RT~0x41}
+
+Tile of vertical snake head element \hypertarget{definitions_8h_a6fb1d4c78b46a621cb8344c51adcdc02}{}\label{definitions_8h_a6fb1d4c78b46a621cb8344c51adcdc02} 
+\index{definitions.\+h@{definitions.\+h}!S\+N\+A\+K\+E\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE@{S\+N\+A\+K\+E\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE}}
+\index{S\+N\+A\+K\+E\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE@{S\+N\+A\+K\+E\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{S\+N\+A\+K\+E\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE}{SNAKE\_MAX\_SIZE}}
+{\footnotesize\ttfamily \#define S\+N\+A\+K\+E\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE~100}
+
+Number of body elements, the snake can get. \hypertarget{definitions_8h_a843d1ce9c1733c8deb7f4bf88d66c0f4}{}\label{definitions_8h_a843d1ce9c1733c8deb7f4bf88d66c0f4} 
+\index{definitions.\+h@{definitions.\+h}!S\+P\+I\+D\+E\+R\+\_\+\+T\+I\+LE@{S\+P\+I\+D\+E\+R\+\_\+\+T\+I\+LE}}
+\index{S\+P\+I\+D\+E\+R\+\_\+\+T\+I\+LE@{S\+P\+I\+D\+E\+R\+\_\+\+T\+I\+LE}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{S\+P\+I\+D\+E\+R\+\_\+\+T\+I\+LE}{SPIDER\_TILE}}
+{\footnotesize\ttfamily \#define S\+P\+I\+D\+E\+R\+\_\+\+T\+I\+LE~0x45}
+
+Tile of spider item \hypertarget{definitions_8h_a6fc4256d763255b590cfbb9bab1d1592}{}\label{definitions_8h_a6fc4256d763255b590cfbb9bab1d1592} 
+\index{definitions.\+h@{definitions.\+h}!W\+A\+L\+L\+\_\+\+T\+I\+L\+E\+\_\+1@{W\+A\+L\+L\+\_\+\+T\+I\+L\+E\+\_\+1}}
+\index{W\+A\+L\+L\+\_\+\+T\+I\+L\+E\+\_\+1@{W\+A\+L\+L\+\_\+\+T\+I\+L\+E\+\_\+1}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{W\+A\+L\+L\+\_\+\+T\+I\+L\+E\+\_\+1}{WALL\_TILE\_1}}
+{\footnotesize\ttfamily \#define W\+A\+L\+L\+\_\+\+T\+I\+L\+E\+\_\+1~0x43}
+
+Tile of horiontal wall element \hypertarget{definitions_8h_a9dc5bc06ab6f00d2c106766046501322}{}\label{definitions_8h_a9dc5bc06ab6f00d2c106766046501322} 
+\index{definitions.\+h@{definitions.\+h}!W\+A\+L\+L\+\_\+\+T\+I\+L\+E\+\_\+2@{W\+A\+L\+L\+\_\+\+T\+I\+L\+E\+\_\+2}}
+\index{W\+A\+L\+L\+\_\+\+T\+I\+L\+E\+\_\+2@{W\+A\+L\+L\+\_\+\+T\+I\+L\+E\+\_\+2}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{W\+A\+L\+L\+\_\+\+T\+I\+L\+E\+\_\+2}{WALL\_TILE\_2}}
+{\footnotesize\ttfamily \#define W\+A\+L\+L\+\_\+\+T\+I\+L\+E\+\_\+2~0x44}
+
+Tile of vertical wall element 
+
+\subsection{Variable Documentation}
+\hypertarget{definitions_8h_aa34783fb27a592a4d71fe0b2ce00c70c}{}\label{definitions_8h_aa34783fb27a592a4d71fe0b2ce00c70c} 
+\index{definitions.\+h@{definitions.\+h}!body\+\_\+tile\+\_\+x@{body\+\_\+tile\+\_\+x}}
+\index{body\+\_\+tile\+\_\+x@{body\+\_\+tile\+\_\+x}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{body\+\_\+tile\+\_\+x}{body\_tile\_x}}
+{\footnotesize\ttfamily unsigned char body\+\_\+tile\+\_\+x\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{definitions_8h_a50934ccbb2c4319957362196a1054ab3}{}\label{definitions_8h_a50934ccbb2c4319957362196a1054ab3} 
+\index{definitions.\+h@{definitions.\+h}!body\+\_\+tile\+\_\+y@{body\+\_\+tile\+\_\+y}}
+\index{body\+\_\+tile\+\_\+y@{body\+\_\+tile\+\_\+y}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{body\+\_\+tile\+\_\+y}{body\_tile\_y}}
+{\footnotesize\ttfamily unsigned char body\+\_\+tile\+\_\+y\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{definitions_8h_a4ca25633b87b17b67b540bc6eb28ecdd}{}\label{definitions_8h_a4ca25633b87b17b67b540bc6eb28ecdd} 
+\index{definitions.\+h@{definitions.\+h}!current\+\_\+level@{current\+\_\+level}}
+\index{current\+\_\+level@{current\+\_\+level}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{current\+\_\+level}{current\_level}}
+{\footnotesize\ttfamily unsigned char current\+\_\+level\hspace{0.3cm}{\ttfamily [static]}}
+
+Global variable, indicating the current level. \hypertarget{definitions_8h_a474959fed45282f58d55114249dd04e1}{}\label{definitions_8h_a474959fed45282f58d55114249dd04e1} 
+\index{definitions.\+h@{definitions.\+h}!gameover@{gameover}}
+\index{gameover@{gameover}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{gameover}{gameover}}
+{\footnotesize\ttfamily unsigned char gameover\hspace{0.3cm}{\ttfamily [static]}}
+
+Global variable, indicating the game over mode (1= game over 0= no game over). \hypertarget{definitions_8h_aa948973cb51e50909ae6ea85b7664767}{}\label{definitions_8h_aa948973cb51e50909ae6ea85b7664767} 
+\index{definitions.\+h@{definitions.\+h}!gameover\+\_\+loop@{gameover\+\_\+loop}}
+\index{gameover\+\_\+loop@{gameover\+\_\+loop}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{gameover\+\_\+loop}{gameover\_loop}}
+{\footnotesize\ttfamily unsigned char gameover\+\_\+loop\hspace{0.3cm}{\ttfamily [static]}}
+
+identifier to check, if first gameover loop is passed (1= true, 0= false). \hypertarget{definitions_8h_a01494b8fd5801ba9e205324f4b1545ea}{}\label{definitions_8h_a01494b8fd5801ba9e205324f4b1545ea} 
+\index{definitions.\+h@{definitions.\+h}!i@{i}}
+\index{i@{i}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{i}{i}}
+{\footnotesize\ttfamily unsigned char i\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{definitions_8h_aec35dd4d246ba470806403dd75aba7b0}{}\label{definitions_8h_aec35dd4d246ba470806403dd75aba7b0} 
+\index{definitions.\+h@{definitions.\+h}!input@{input}}
+\index{input@{input}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{input}{input}}
+{\footnotesize\ttfamily unsigned char input\hspace{0.3cm}{\ttfamily [static]}}
+
+Global variable, holding the controller input of the current frame \hypertarget{definitions_8h_affca1b55c6470261c2b871273f1b604c}{}\label{definitions_8h_affca1b55c6470261c2b871273f1b604c} 
+\index{definitions.\+h@{definitions.\+h}!item\+\_\+x@{item\+\_\+x}}
+\index{item\+\_\+x@{item\+\_\+x}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{item\+\_\+x}{item\_x}}
+{\footnotesize\ttfamily unsigned char item\+\_\+x\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{definitions_8h_a126b314f52cc35faee4633c99042bf47}{}\label{definitions_8h_a126b314f52cc35faee4633c99042bf47} 
+\index{definitions.\+h@{definitions.\+h}!item\+\_\+y@{item\+\_\+y}}
+\index{item\+\_\+y@{item\+\_\+y}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{item\+\_\+y}{item\_y}}
+{\footnotesize\ttfamily unsigned char item\+\_\+y\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{definitions_8h_aac1217779551b743f5645c17740178e3}{}\label{definitions_8h_aac1217779551b743f5645c17740178e3} 
+\index{definitions.\+h@{definitions.\+h}!j@{j}}
+\index{j@{j}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{j}{j}}
+{\footnotesize\ttfamily unsigned char j\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{definitions_8h_a90e096a39cfc6da042e02d27a346f2d3}{}\label{definitions_8h_a90e096a39cfc6da042e02d27a346f2d3} 
+\index{definitions.\+h@{definitions.\+h}!k@{k}}
+\index{k@{k}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{k}{k}}
+{\footnotesize\ttfamily unsigned int k\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{definitions_8h_a3f724abfb9c2d5e84437c641786dcd70}{}\label{definitions_8h_a3f724abfb9c2d5e84437c641786dcd70} 
+\index{definitions.\+h@{definitions.\+h}!l@{l}}
+\index{l@{l}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{l}{l}}
+{\footnotesize\ttfamily unsigned int l\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{definitions_8h_a3d77d32a3d5948ab26ad38f3c7d65d1d}{}\label{definitions_8h_a3d77d32a3d5948ab26ad38f3c7d65d1d} 
+\index{definitions.\+h@{definitions.\+h}!level\+List@{level\+List}}
+\index{level\+List@{level\+List}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{level\+List}{levelList}}
+{\footnotesize\ttfamily const unsigned char$\ast$ const level\+List\mbox{[}\hyperlink{definitions_8h_a1a11e72c77f9f8e9fb4c27479f969626}{L\+E\+V\+E\+L\+S\+\_\+\+A\+LL}+2+2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=\{
+    \hyperlink{level1__nam_8h_ae1585c8a4bd0ed3a7e1954654c7d25fb}{level1\_nam}, \hyperlink{level2__nam_8h_a1bd83e2d284faa101ea18d6e646b2a08}{level2\_nam},
+    \hyperlink{game__over__nam_8h_adfee526430359e813aef4ebf5afe5b1c}{game\_over\_nam}, \hyperlink{titlescreen__nam_8h_a06862ae3bc1cd77a6d3a6b5372bcf89e}{titlescreen\_nam},
+    \hyperlink{levels__pal_8h_a44ac48608bb3b86935fae3bdbdda8063}{levels\_pal}, \hyperlink{menue__pal_8h_a600954b5bbf9585ff21dfe398314f60d}{menue\_pal}
+\}
+\end{DoxyCode}
+\hypertarget{definitions_8h_a937f08b44e3e7c5d94de749012bc2a08}{}\label{definitions_8h_a937f08b44e3e7c5d94de749012bc2a08} 
+\index{definitions.\+h@{definitions.\+h}!map@{map}}
+\index{map@{map}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{map}{map}}
+{\footnotesize\ttfamily unsigned char map\mbox{[}\hyperlink{definitions_8h_aa037a6d6a4f04d51c7ec1c9ee9054e76}{M\+A\+P\+\_\+\+W\+I\+D\+TH} $\ast$\hyperlink{definitions_8h_a529d5ebb449edf31d9835d13f4fb9f89}{M\+A\+P\+\_\+\+H\+E\+I\+G\+HT}\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+Array of the complete game map (tile-\/based). \hypertarget{definitions_8h_a4c4b635fa72f98af449ca934c32c7b38}{}\label{definitions_8h_a4c4b635fa72f98af449ca934c32c7b38} 
+\index{definitions.\+h@{definitions.\+h}!max\+\_\+score@{max\+\_\+score}}
+\index{max\+\_\+score@{max\+\_\+score}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{max\+\_\+score}{max\_score}}
+{\footnotesize\ttfamily unsigned char max\+\_\+score\hspace{0.3cm}{\ttfamily [static]}}
+
+Global variable, indicating the maximum score of the current level. \hypertarget{definitions_8h_a2682880253356b9c35b2e6745c44f125}{}\label{definitions_8h_a2682880253356b9c35b2e6745c44f125} 
+\index{definitions.\+h@{definitions.\+h}!name\+Row@{name\+Row}}
+\index{name\+Row@{name\+Row}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{name\+Row}{nameRow}}
+{\footnotesize\ttfamily unsigned char name\+Row\mbox{[}\hyperlink{definitions_8h_aa037a6d6a4f04d51c7ec1c9ee9054e76}{M\+A\+P\+\_\+\+W\+I\+D\+TH}\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+Array for fetching nametable into array \textquotesingle{}map\textquotesingle{}, row by row. \hypertarget{definitions_8h_a2656bd7f8fed8b98552f3a172c6f270e}{}\label{definitions_8h_a2656bd7f8fed8b98552f3a172c6f270e} 
+\index{definitions.\+h@{definitions.\+h}!nametable\+\_\+fetch@{nametable\+\_\+fetch}}
+\index{nametable\+\_\+fetch@{nametable\+\_\+fetch}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{nametable\+\_\+fetch}{nametable\_fetch}}
+{\footnotesize\ttfamily unsigned int nametable\+\_\+fetch\hspace{0.3cm}{\ttfamily [static]}}
+
+Variable for fetching through nametable. \hypertarget{definitions_8h_af005a22a9f7e1dbfe61f0c4380f5ce83}{}\label{definitions_8h_af005a22a9f7e1dbfe61f0c4380f5ce83} 
+\index{definitions.\+h@{definitions.\+h}!pause@{pause}}
+\index{pause@{pause}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{pause}{pause}}
+{\footnotesize\ttfamily unsigned char pause\hspace{0.3cm}{\ttfamily [static]}}
+
+Global variable, indicating the pause mode (1= pause, 0= no pause). \hypertarget{definitions_8h_a46d8dc26b0c7504baa3bd76429c0fe91}{}\label{definitions_8h_a46d8dc26b0c7504baa3bd76429c0fe91} 
+\index{definitions.\+h@{definitions.\+h}!pause\+\_\+loop@{pause\+\_\+loop}}
+\index{pause\+\_\+loop@{pause\+\_\+loop}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{pause\+\_\+loop}{pause\_loop}}
+{\footnotesize\ttfamily unsigned char pause\+\_\+loop\hspace{0.3cm}{\ttfamily [static]}}
+
+Identifier to check, if first pause-\/loop is passed (1= true, 0= false). \hypertarget{definitions_8h_aaad902cba22507e143238f5671e8d234}{}\label{definitions_8h_aaad902cba22507e143238f5671e8d234} 
+\index{definitions.\+h@{definitions.\+h}!restart@{restart}}
+\index{restart@{restart}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{restart}{restart}}
+{\footnotesize\ttfamily unsigned char restart\hspace{0.3cm}{\ttfamily [static]}}
+
+Global variable, for handling the restart input \hypertarget{definitions_8h_ada8e3425c66aed8c5ea9ecfebebc2d3a}{}\label{definitions_8h_ada8e3425c66aed8c5ea9ecfebebc2d3a} 
+\index{definitions.\+h@{definitions.\+h}!snake@{snake}}
+\index{snake@{snake}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{snake}{snake}}
+{\footnotesize\ttfamily \hyperlink{structsnake__struct_aee3e536edc6d71b7578c751509573500}{snake\+\_\+struct\+::head\+\_\+sprite\+\_\+attribute} Global variable for holding attributes of the head sprite of the snake\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{definitions_8h_a4ffc86f06d1c7507f0a9079421ef75da}{}\label{definitions_8h_a4ffc86f06d1c7507f0a9079421ef75da} 
+\index{definitions.\+h@{definitions.\+h}!sprite\+\_\+offset@{sprite\+\_\+offset}}
+\index{sprite\+\_\+offset@{sprite\+\_\+offset}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{sprite\+\_\+offset}{sprite\_offset}}
+{\footnotesize\ttfamily unsigned char sprite\+\_\+offset\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{definitions_8h_a050924f3d98ed7e3871436955ef669bd}{}\label{definitions_8h_a050924f3d98ed7e3871436955ef669bd} 
+\index{definitions.\+h@{definitions.\+h}!titlescreen@{titlescreen}}
+\index{titlescreen@{titlescreen}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{titlescreen}{titlescreen}}
+{\footnotesize\ttfamily unsigned char titlescreen\hspace{0.3cm}{\ttfamily [static]}}
+
+Global variable, indicating the titlescreen mode (1=titlescreen 0= no titlescreen). \hypertarget{definitions_8h_a493d790d010c98b6db7310b87faf8d05}{}\label{definitions_8h_a493d790d010c98b6db7310b87faf8d05} 
+\index{definitions.\+h@{definitions.\+h}!ul@{ul}}
+\index{ul@{ul}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{ul}{ul}}
+{\footnotesize\ttfamily unsigned char$\ast$ ul\hspace{0.3cm}{\ttfamily [static]}}
+
+Pointer to array \textquotesingle{}update\+\_\+list\textquotesingle{} to enable better handling of the list \hypertarget{definitions_8h_af1d853c79c2b46ff63daf4f811d7ce95}{}\label{definitions_8h_af1d853c79c2b46ff63daf4f811d7ce95} 
+\index{definitions.\+h@{definitions.\+h}!update\+\_\+list@{update\+\_\+list}}
+\index{update\+\_\+list@{update\+\_\+list}!definitions.\+h@{definitions.\+h}}
+\subsubsection{\texorpdfstring{update\+\_\+list}{update\_list}}
+{\footnotesize\ttfamily unsigned char update\+\_\+list\mbox{[}5 $\ast$3+1\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+Array of bg-\/elements which will be used to update V\+R\+AM once per frame. Every 3 entries are describing one bg-\/element.
+\begin{DoxyItemize}
+\item the first 3 elements (9 array-\/elements) are assigned to the game score
+\item the 4. and 5. element are assigned to the first and last body element of the snake
+\item the last array-\/element needs to be the V\+R\+AM end-\/of-\/file-\/indicator N\+T\+\_\+\+U\+P\+D\+\_\+\+E\+OF.
+\end{DoxyItemize}
+
+Only two body elements need to be updated once per frame\+:
+\begin{DoxyItemize}
+\item The new first body element needs to be drawn
+\item The old last body element need to be disabled 
+\end{DoxyItemize}

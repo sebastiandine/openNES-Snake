@@ -15,7 +15,7 @@
 */
 void draw_snake(void){
 	/* Draw snakes head - as a sprite */
-	sprite_offset = oam_spr(snake_x,snake_y,snake_head_tile,snake_head_attribute,0);
+	sprite_offset = oam_spr(snake.head_sprite_x,snake.head_sprite_y,snake.head_sprite,snake.head_sprite_attribute,0);
 
 	/*
 	 * Draw snakes body_coordinates - as background-tiles.
@@ -26,37 +26,37 @@ void draw_snake(void){
 	                       at array-index 9.
 	                    */
 
-	if(size_index != 0){
+	if(snake.size_index != 0){
 		/* check if any body tile has been drawn before */
-		if(last_body_pixel_x == 0 && last_body_pixel_y == 0){
-			last_body_pixel_x = body_coordinates[size_index-2];
-			last_body_pixel_y = body_coordinates[size_index-1];
+		if(snake.last_body_element_x == 0 && snake.last_body_element_y == 0){
+			snake.last_body_element_x = snake.body_element_coordinates[snake.size_index-2];
+			snake.last_body_element_y = snake.body_element_coordinates[snake.size_index-1];
 		}
 		/* Disable old last body tile */
 		else{
-			map[MAPARRAY_ADR(last_body_pixel_x,last_body_pixel_y)] = EMPTY_TILE;		/* Update array map, so collision with
+			map[MAPARRAY_ADR(snake.last_body_element_x,snake.last_body_element_y)] = EMPTY_TILE;		/* Update array map, so collision with
 																					   body tiles can be detected
 																					*/
 
-			body_tile_x = last_body_pixel_x >> 3;	  /* Calculate tile-based X/Y-coordinates from */
-			body_tile_y = last_body_pixel_y >> 3; 	 /*  pixel-based X/Y-coordinates */
+			tile_x = snake.last_body_element_x >> 3;	  /* Calculate tile-based X/Y-coordinates from */
+			tile_y = snake.last_body_element_y >> 3; 	 /*  pixel-based X/Y-coordinates */
 
-			nametable_fetch = NTADR_A(body_tile_x, body_tile_y);
+			nametable_fetch = NTADR_A(tile_x, tile_y);
 			*ul ++ = MSB(nametable_fetch);
 			*ul ++ = LSB(nametable_fetch);
 			*ul ++ = EMPTY_TILE;
 
-			last_body_pixel_x = body_coordinates[size_index-2];
-			last_body_pixel_y = body_coordinates[size_index-1];
+			snake.last_body_element_x = snake.body_element_coordinates[snake.size_index-2];
+			snake.last_body_element_y = snake.body_element_coordinates[snake.size_index-1];
 		}
 
 		/* Draw new first body tile */
-		map[MAPARRAY_ADR(body_coordinates[0],body_coordinates[1])] = SNAKE_BODY_TILE;	/* Update array map, so collision with
+		map[MAPARRAY_ADR(snake.body_element_coordinates[0],snake.body_element_coordinates[1])] = SNAKE_BODY_TILE;	/* Update array map, so collision with
 																					       body tiles can be detected
 																						*/
-		body_tile_x = body_coordinates[0] >> 3;	  				 /* Calculate tile-based X/Y-coordinates from */
-		body_tile_y = body_coordinates[1] >> 3; 				 /*  pixel-based X/Y-coordinates */
-		nametable_fetch = NTADR_A(body_tile_x, body_tile_y);
+		tile_x = snake.body_element_coordinates[0] >> 3;	  				 /* Calculate tile-based X/Y-coordinates from */
+		tile_y = snake.body_element_coordinates[1] >> 3; 				 /*  pixel-based X/Y-coordinates */
+		nametable_fetch = NTADR_A(tile_x, tile_y);
 		*ul ++ = MSB(nametable_fetch);
 		*ul ++ = LSB(nametable_fetch);
 		*ul ++ = SNAKE_BODY_TILE;
@@ -83,9 +83,9 @@ void draw_item(void){
  */
 void draw_score(void){
 	/* The score is defined by global field size_index divided by 2 (size_index/2). */
-	update_list[2] = DIGIT_O_TILE+((size_index >> 1) >> 10);
-    update_list[5] = DIGIT_O_TILE+(((size_index >> 1)/10) %10);
-    update_list[8] = DIGIT_O_TILE+((size_index >> 1) %10);
+	update_list[2] = DIGIT_O_TILE+((snake.size_index >> 1) >> 10);
+    update_list[5] = DIGIT_O_TILE+(((snake.size_index >> 1)/10) %10);
+    update_list[8] = DIGIT_O_TILE+((snake.size_index >> 1) %10);
 }
 
 /**
