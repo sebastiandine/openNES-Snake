@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['snake_5fstruct',['snake_struct',['../structsnake__struct.html',1,'']]]
+  ['item_5fstruct',['item_struct',['../structitem__struct.html',1,'']]],
+  ['items_5fstruct',['items_struct',['../structitems__struct.html',1,'']]]
 ];

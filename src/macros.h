@@ -22,8 +22,11 @@
 #define MAP_HEIGHT		30
 /** @} */
 
-/** Number of body elements, the snake can get. */
+/** Maximum of body elements, the snake can get. */
 #define SNAKE_MAX_SIZE	100
+
+/** Maximum of items, that can be on the screen on the same time. */
+#define ITEM_MAX_ON_SCREEN	4
 
 /**
 * @name Direction constants

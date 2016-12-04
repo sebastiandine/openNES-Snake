@@ -1,13 +1,10 @@
 var searchData=
 [
-  ['map_5fheight',['MAP_HEIGHT',['../macros_8h.html#a529d5ebb449edf31d9835d13f4fb9f89',1,'macros.h']]],
-  ['map_5fwidth',['MAP_WIDTH',['../macros_8h.html#aa037a6d6a4f04d51c7ec1c9ee9054e76',1,'macros.h']]],
-  ['maparray_5fadr',['MAPARRAY_ADR',['../macros_8h.html#a705ec7deb75ce089210eaf94aa8d2b1b',1,'macros.h']]],
-  ['mask_5fbg',['MASK_BG',['../neslib_8h.html#a6a343f591166c993bddcf4b6f0cea8b5',1,'neslib.h']]],
-  ['mask_5fedge_5fbg',['MASK_EDGE_BG',['../neslib_8h.html#a26a5061466e5e11330181f8faa37370c',1,'neslib.h']]],
-  ['mask_5fedge_5fspr',['MASK_EDGE_SPR',['../neslib_8h.html#a8c9b3c6480798161e902a20934a94f3b',1,'neslib.h']]],
-  ['mask_5fspr',['MASK_SPR',['../neslib_8h.html#a61e19c8e001a2f730345f8b82ba8f1b6',1,'neslib.h']]],
-  ['max',['MAX',['../neslib_8h.html#a555ef4d6248609dd62d8b042a4f87581',1,'neslib.h']]],
-  ['min',['MIN',['../neslib_8h.html#ae91b68324b23275c2e6c535d455f616b',1,'neslib.h']]],
-  ['msb',['MSB',['../neslib_8h.html#aeb61a4e8fff2f4624a632a3189cbd3a0',1,'neslib.h']]]
+  ['levels_5fall',['LEVELS_ALL',['../macros_8h.html#a1a11e72c77f9f8e9fb4c27479f969626',1,'macros.h']]],
+  ['lvl1_5fmax_5fscore',['LVL1_MAX_SCORE',['../macros_8h.html#ad0e5b099123a4ea1ee5f9738ce2858cd',1,'macros.h']]],
+  ['lvl1_5fstart_5fx',['LVL1_START_X',['../macros_8h.html#a6a31800fda2a0172123684a1a7810086',1,'macros.h']]],
+  ['lvl1_5fstart_5fy',['LVL1_START_Y',['../macros_8h.html#ab5cba5877cf155edb1c90291ad60dede',1,'macros.h']]],
+  ['lvl2_5fmax_5fscore',['LVL2_MAX_SCORE',['../macros_8h.html#a45430050f00f558270c2cebeea18f369',1,'macros.h']]],
+  ['lvl2_5fstart_5fx',['LVL2_START_X',['../macros_8h.html#aead77f76abc75595172f0c8c0f520abd',1,'macros.h']]],
+  ['lvl2_5fstart_5fy',['LVL2_START_Y',['../macros_8h.html#a249e8731f130fca874caac6f7dc56bde',1,'macros.h']]]
 ];

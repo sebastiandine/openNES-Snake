@@ -38,10 +38,10 @@ void draw_snake(void){
 																					   body tiles can be detected
 																					*/
 
-			tile_x = snake.last_body_element_x >> 3;	  /* Calculate tile-based X/Y-coordinates from */
-			tile_y = snake.last_body_element_y >> 3; 	 /*  pixel-based X/Y-coordinates */
+			coord_x = snake.last_body_element_x >> 3;	  /* Calculate tile-based X/Y-coordinates from */
+			coord_y = snake.last_body_element_y >> 3; 	 /*  pixel-based X/Y-coordinates */
 
-			nametable_fetch = NTADR_A(tile_x, tile_y);
+			nametable_fetch = NTADR_A(coord_x, coord_y);
 			*ul ++ = MSB(nametable_fetch);
 			*ul ++ = LSB(nametable_fetch);
 			*ul ++ = EMPTY_TILE;
@@ -54,9 +54,9 @@ void draw_snake(void){
 		map[MAPARRAY_ADR(snake.body_element_coordinates[0],snake.body_element_coordinates[1])] = SNAKE_BODY_TILE;	/* Update array map, so collision with
 																					       body tiles can be detected
 																						*/
-		tile_x = snake.body_element_coordinates[0] >> 3;	  				 /* Calculate tile-based X/Y-coordinates from */
-		tile_y = snake.body_element_coordinates[1] >> 3; 				 /*  pixel-based X/Y-coordinates */
-		nametable_fetch = NTADR_A(tile_x, tile_y);
+		coord_x = snake.body_element_coordinates[0] >> 3;	  				 /* Calculate tile-based X/Y-coordinates from */
+		coord_y = snake.body_element_coordinates[1] >> 3; 				 /*  pixel-based X/Y-coordinates */
+		nametable_fetch = NTADR_A(coord_x, coord_y);
 		*ul ++ = MSB(nametable_fetch);
 		*ul ++ = LSB(nametable_fetch);
 		*ul ++ = SNAKE_BODY_TILE;
@@ -66,13 +66,18 @@ void draw_snake(void){
 }
 
 /**
-*	This function draws an element as a sprite to the screen.
+*	This function draws all item elements as sprites to the screen.
 *
 *	@author Sebastian Dine
 *
 */
-void draw_item(void){
-	sprite_offset = oam_spr(item_x,item_y,SPIDER_TILE,0,sprite_offset);
+void draw_items(void){
+
+	for(i=0; i < (ITEM_MAX_ON_SCREEN <<1); i+=2){
+		if((items.item_coordinates[i] != 0) && (items.item_coordinates[i+1] != 0)){
+			sprite_offset = oam_spr(items.item_coordinates[i],items.item_coordinates[i+1],SPIDER_TILE,0,sprite_offset);
+		}
+	}
 }
 
 /**
@@ -248,6 +253,6 @@ void mainloop_render(void){
 	/* default render-rountine */
 	draw_score();
 	draw_snake();
-	draw_item();
+	draw_items();
 
 }

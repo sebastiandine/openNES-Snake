@@ -35,9 +35,31 @@ typedef struct snake_struct {
 	unsigned char last_body_element_x;		/**< Pixel based X-coordinate of the last body element from last frame. */
 	unsigned char last_body_element_y;		/**< Pixel based Y-coordinate of the last body element from last frame. */
 
-	unsigned char body_element_coordinates[SNAKE_MAX_SIZE <<1]; /**< Array of snakes body-coordinates (pixel-based),
-																 * two elements are a coordinate set, eg. body[0] is
-																 * the x-coordinate of the first body-element and body[1]
+	unsigned char body_element_coordinates[SNAKE_MAX_SIZE <<1]; /**< Array of snakes body-coordinates (pixelbased),
+																 * two elements are a coordinate set, eg. [0] is
+																 * the x-coordinate of the first body-element and [1]
 																 *  its y-coordinate.
 																 */
+};
+
+/**
+ * @struct 	item_struct
+ * @brief	This structure contains all elements required to interact with and display items.
+ * @author	Sebastian Dine
+ *
+ */
+typedef struct items_struct {
+	unsigned char item_respawn_frm_rate;	/**< tbd */
+	unsigned char item_coordinates[ITEM_MAX_ON_SCREEN <<1]; /**< Array of item coordinates (pixel based)
+															 * two elements are a coordinate set, eg. [0] is
+															 * the x-coordinate of the first item and [1]
+															 *  its y-coordinate.
+															 */
+	unsigned char item_attributes[ITEM_MAX_ON_SCREEN];		/**< tbd */
+	unsigned char item_respawn_count[ITEM_MAX_ON_SCREEN];	/**< tbd */
+	unsigned char item_collision_flags[ITEM_MAX_ON_SCREEN];	/**< Array which indicates collisions with items
+															 * (0 = no collision, 1 = collision).
+															 * E.g. [0]=1 means, that the snake collided with the first
+															 * element.
+															 */
 };

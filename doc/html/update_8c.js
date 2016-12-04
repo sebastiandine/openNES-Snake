@@ -1,7 +1,6 @@
 var update_8c =
 [
     [ "add_snake_body_element", "update_8c.html#ab8a45cae1f3c11e0ac4e758200257dd5", null ],
-    [ "calc_random_item_position", "update_8c.html#a5e1a11d04da8b93d988f7f469cced908", null ],
     [ "check_collision_body", "update_8c.html#a5fc00c88d57d8ba35a79d70316c2b478", null ],
     [ "check_collision_item", "update_8c.html#a10b8789c8aedb4abbcf3d3c98ed723e7", null ],
     [ "check_collision_wall", "update_8c.html#a4a602dbc65a1829ae32ec9328241d016", null ],

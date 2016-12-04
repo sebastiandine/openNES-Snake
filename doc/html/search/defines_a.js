@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['wall_5ftile_5f1',['WALL_TILE_1',['../macros_8h.html#a6fc4256d763255b590cfbb9bab1d1592',1,'macros.h']]],
-  ['wall_5ftile_5f2',['WALL_TILE_2',['../macros_8h.html#a9dc5bc06ab6f00d2c106766046501322',1,'macros.h']]]
+  ['true',['TRUE',['../neslib_8h.html#aa8cecfc5c5c054d2875c03e77b7be15d',1,'neslib.h']]]
 ];

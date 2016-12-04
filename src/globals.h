@@ -12,11 +12,12 @@
 /******************************************************************************/
 
 /**
-* @name Global variables, which are used to calculate pixel based coordinates (of body elements) to tile based coordinates.
+* @name Global variables, which are used for several coordination calculations,
+*  e.g. calculate pixel based coordinates (of body elements) to tile based coordinates.
 * @{
 */
-static unsigned char tile_x;
-static unsigned char tile_y;
+static unsigned char coord_x;
+static unsigned char coord_y;
 /** @} */
 
 
@@ -55,14 +56,6 @@ static unsigned char sprite_offset;
 */
 static unsigned char i, j;										// universal indexes for loops
 static unsigned int k, l;										// universal indexes for lager numbers
-/** @} */
-
-/** 
-* @name Global variables, used to interact with items
-* @{
-*/
-static unsigned char item_x;									// pixel-based coordinates of item
-static unsigned char item_y;
 /** @} */
 
 
@@ -116,6 +109,9 @@ static unsigned int nametable_fetch;							//int because first nametable starts 
 
 /** Global variable, containing all elements used to interact and display the snake */
 static struct snake_struct snake;
+
+/** Global variable, containing all elements used to interact with and display items */
+static struct items_struct items;
 
 /** 
 * @name List of the levels, include pointer to the packed nametable of the levels, menues, and pointer to the associated palette.

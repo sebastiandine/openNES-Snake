@@ -7,43 +7,7 @@
 *
 */
 
-/**
-*	This function calculates the coordinates of an grow-item. 
-*	It stores the calculated coordinates into global fields 'item_x' and 'item_y'.
-*
-*	@author Sebastian Dine
-*
-*/
-void calc_random_item_position(void){
-	while(1){
-		item_y = rand8();
-		i = item_y &7;											/* Ensure, that coordinate is divisible through 8 */
-		item_y = item_y - i;									/* this makes collision detection much easier */
 
-		if(item_y <= 24 || item_y > 232){						/* First three tile-lines y-coordinate $00-$30 are not part of 	*/
-			continue;											/* of the level map. Also the y-coordinate maximum is 240 	   	*/
-		}														/* therefore 232 is the largest y-coordinate for proper display.*/
-
-		item_x = rand8();										/* Ensure, that coordinate is divisible through 8 */
-		i = item_x &7;											/* this makes collision detection much easier */
-		item_x = item_x - i;
-		if(item_x > 248 || item_x < 8){							/* x-coordinate can reach from $00-$F9 (0-256), therefore 		*/
-			continue;											/* 248 and 8 are the maximum x-coordinates for proper display.	*/
-		}
-
-
-		if(map[MAPARRAY_ADR(item_x,item_y)] == WALL_TILE_1 	/* check if calculatec cooridantes are in range of aa wall or body tile */
-				|| map[MAPARRAY_ADR(item_x,item_y)] == WALL_TILE_2
-				|| map[MAPARRAY_ADR(item_x,item_y)] == SNAKE_BODY_TILE){
-
-			continue;
-		}
-
-		i = item_y &7;
-
-		break;
-	}
-}
 
 /**
 *	This function updates the body coordinates of the snake in order to simulate its movement.
@@ -173,10 +137,14 @@ unsigned char check_collision_body(void){
  */
 unsigned char check_collision_item(void){
 	k = MAPARRAY_ADR(snake.head_sprite_x,snake.head_sprite_y);
-	l = MAPARRAY_ADR(item_x,item_y);
 	
-	if(k == l){
-		return 1;
+	for(i=0; i < (ITEM_MAX_ON_SCREEN <<1); i+=2){
+		l = MAPARRAY_ADR(items.item_coordinates[i],items.item_coordinates[i+1]);
+
+		if(k == l){
+			items.item_collision_flags[i >>1] = 1;
+			return 1;
+		}
 	}
 	return 0;
 }
@@ -221,8 +189,18 @@ void mainloop_update(void){
 			snake.size_index+=2;
 		}
 
-		//Calculate coordiantes of new item coordinate
-		calc_random_item_position();
+		/*
+		 * Calculate coordiantes of new items. j needs to be used for looping, since function
+		 * calc_random_item_position(); uses i.
+		 */
+		for(j=0; j < ITEM_MAX_ON_SCREEN; j++){
+			if(items.item_collision_flags[j]){
+				calc_random_item_position();
+				items.item_coordinates[j <<1] = coord_x;
+				items.item_coordinates[(j <<1)+1] = coord_y;
+				items.item_collision_flags[j] = 0;
+			}
+		}
 	}
 
 	/* 

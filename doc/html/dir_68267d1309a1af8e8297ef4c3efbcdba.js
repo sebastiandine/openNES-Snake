@@ -7,7 +7,8 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "render.c", "render_8c.html", "render_8c" ],
     [ "snake.c", "snake_8c.html", "snake_8c" ],
     [ "structures.h", "structures_8h.html", [
-      [ "snake_struct", "structsnake__struct.html", "structsnake__struct" ]
+      [ "snake_struct", "structsnake__struct.html", "structsnake__struct" ],
+      [ "items_struct", "structitems__struct.html", "structitems__struct" ]
     ] ],
     [ "update.c", "update_8c.html", "update_8c" ]
 ];

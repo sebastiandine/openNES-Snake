@@ -6,6 +6,7 @@ var macros_8h =
     [ "DIR_RIGHT", "macros_8h.html#a85ae9767b23edf40871541d23962784b", null ],
     [ "DIR_UP", "macros_8h.html#a480d28eba00f028b351fb2f3312f5409", null ],
     [ "EMPTY_TILE", "macros_8h.html#ac4c51b4dd32e646ca187c9807e2f3417", null ],
+    [ "ITEM_MAX_ON_SCREEN", "macros_8h.html#a7e03b7d3541424447645569c949aacba", null ],
     [ "LEVELS_ALL", "macros_8h.html#a1a11e72c77f9f8e9fb4c27479f969626", null ],
     [ "LVL1_MAX_SCORE", "macros_8h.html#ad0e5b099123a4ea1ee5f9738ce2858cd", null ],
     [ "LVL1_START_X", "macros_8h.html#a6a31800fda2a0172123684a1a7810086", null ],
