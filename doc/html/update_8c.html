@@ -99,8 +99,10 @@ Functions</h2></td></tr>
 <tr class="separator:a4a602dbc65a1829ae32ec9328241d016"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fc00c88d57d8ba35a79d70316c2b478"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="update_8c.html#a5fc00c88d57d8ba35a79d70316c2b478">check_collision_body</a> (void)</td></tr>
 <tr class="separator:a5fc00c88d57d8ba35a79d70316c2b478"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10b8789c8aedb4abbcf3d3c98ed723e7"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="update_8c.html#a10b8789c8aedb4abbcf3d3c98ed723e7">check_collision_item</a> (void)</td></tr>
-<tr class="separator:a10b8789c8aedb4abbcf3d3c98ed723e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43b780da56b2d15f8f91cad68b3481bd"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="update_8c.html#a43b780da56b2d15f8f91cad68b3481bd">check_collision_with_items</a> (void)</td></tr>
+<tr class="separator:a43b780da56b2d15f8f91cad68b3481bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3488a06fb6aba1dfcf15953247f5f5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="update_8c.html#ae3488a06fb6aba1dfcf15953247f5f5d">respawn_items</a> (void)</td></tr>
+<tr class="separator:ae3488a06fb6aba1dfcf15953247f5f5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ea36e0f75f408285b5d3a5bc8287b4f"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="update_8c.html#a2ea36e0f75f408285b5d3a5bc8287b4f">check_next_level</a> (void)</td></tr>
 <tr class="separator:a2ea36e0f75f408285b5d3a5bc8287b4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31c8504e7fe9671dbda52ba62a382b1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="update_8c.html#a31c8504e7fe9671dbda52ba62a382b1f">mainloop_update</a> (void)</td></tr>
@@ -168,36 +170,6 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a10b8789c8aedb4abbcf3d3c98ed723e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10b8789c8aedb4abbcf3d3c98ed723e7">&sect;&nbsp;</a></span>check_collision_item()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned char check_collision_item </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Collision detection of snakes' head-sprite with an item-sprite.</p>
-<dl class="section return"><dt>Returns</dt><dd>1 = collision with item sprite, 0 = no collision with item sprite</dd></dl>
-<dl class="section author"><dt>Author</dt><dd>Sebastian Dine </dd></dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="update_8c_a10b8789c8aedb4abbcf3d3c98ed723e7_icgraph.png" border="0" usemap="#update_8c_a10b8789c8aedb4abbcf3d3c98ed723e7_icgraph" alt=""/></div>
-<map name="update_8c_a10b8789c8aedb4abbcf3d3c98ed723e7_icgraph" id="update_8c_a10b8789c8aedb4abbcf3d3c98ed723e7_icgraph">
-<area shape="rect" id="node2" href="update_8c.html#a31c8504e7fe9671dbda52ba62a382b1f" title="mainloop_update" alt="" coords="196,5,316,32"/>
-<area shape="rect" id="node3" href="snake_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="Main game loop. " alt="" coords="364,5,415,32"/>
-</map>
-</div>
-
-</div>
-</div>
 <a id="a4a602dbc65a1829ae32ec9328241d016"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4a602dbc65a1829ae32ec9328241d016">&sect;&nbsp;</a></span>check_collision_wall()</h2>
 
@@ -223,6 +195,36 @@ Here is the caller graph for this function:</div>
 <map name="update_8c_a4a602dbc65a1829ae32ec9328241d016_icgraph" id="update_8c_a4a602dbc65a1829ae32ec9328241d016_icgraph">
 <area shape="rect" id="node2" href="update_8c.html#a31c8504e7fe9671dbda52ba62a382b1f" title="mainloop_update" alt="" coords="193,5,313,32"/>
 <area shape="rect" id="node3" href="snake_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="Main game loop. " alt="" coords="361,5,412,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a43b780da56b2d15f8f91cad68b3481bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43b780da56b2d15f8f91cad68b3481bd">&sect;&nbsp;</a></span>check_collision_with_items()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char check_collision_with_items </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Collision detection of snakes' head-sprite with an item-sprite.</p>
+<dl class="section return"><dt>Returns</dt><dd>1 = collision with item sprite, 0 = no collision with item sprite</dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Sebastian Dine </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="update_8c_a43b780da56b2d15f8f91cad68b3481bd_icgraph.png" border="0" usemap="#update_8c_a43b780da56b2d15f8f91cad68b3481bd_icgraph" alt=""/></div>
+<map name="update_8c_a43b780da56b2d15f8f91cad68b3481bd_icgraph" id="update_8c_a43b780da56b2d15f8f91cad68b3481bd_icgraph">
+<area shape="rect" id="node2" href="update_8c.html#a31c8504e7fe9671dbda52ba62a382b1f" title="mainloop_update" alt="" coords="195,13,315,39"/>
+<area shape="rect" id="node3" href="snake_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="Main game loop. " alt="" coords="363,13,413,39"/>
 </map>
 </div>
 
@@ -279,13 +281,14 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="update_8c_a31c8504e7fe9671dbda52ba62a382b1f_cgraph.png" border="0" usemap="#update_8c_a31c8504e7fe9671dbda52ba62a382b1f_cgraph" alt=""/></div>
 <map name="update_8c_a31c8504e7fe9671dbda52ba62a382b1f_cgraph" id="update_8c_a31c8504e7fe9671dbda52ba62a382b1f_cgraph">
-<area shape="rect" id="node2" href="update_8c.html#a4a602dbc65a1829ae32ec9328241d016" title="check_collision_wall" alt="" coords="193,5,333,32"/>
-<area shape="rect" id="node3" href="update_8c.html#a5fc00c88d57d8ba35a79d70316c2b478" title="check_collision_body" alt="" coords="190,56,337,83"/>
-<area shape="rect" id="node4" href="update_8c.html#a10b8789c8aedb4abbcf3d3c98ed723e7" title="check_collision_item" alt="" coords="192,107,335,133"/>
-<area shape="rect" id="node5" href="update_8c.html#ab8a45cae1f3c11e0ac4e758200257dd5" title="add_snake_body_element" alt="" coords="177,157,350,184"/>
-<area shape="rect" id="node6" href="init_8c.html#a5e1a11d04da8b93d988f7f469cced908" title="calc_random_item_position" alt="" coords="173,208,353,235"/>
-<area shape="rect" id="node8" href="update_8c.html#a9441f5df7c591a90d7cc8bda74209bef" title="update_snake_body" alt="" coords="194,259,333,285"/>
-<area shape="rect" id="node7" href="neslib_8h.html#a8fe1185fb429a4f9a0b82f9cd2c703e5" title="rand8" alt="" coords="401,208,456,235"/>
+<area shape="rect" id="node2" href="update_8c.html#a4a602dbc65a1829ae32ec9328241d016" title="check_collision_wall" alt="" coords="190,5,330,32"/>
+<area shape="rect" id="node3" href="update_8c.html#a5fc00c88d57d8ba35a79d70316c2b478" title="check_collision_body" alt="" coords="187,56,333,83"/>
+<area shape="rect" id="node4" href="update_8c.html#a43b780da56b2d15f8f91cad68b3481bd" title="check_collision_with\l_items" alt="" coords="189,107,331,149"/>
+<area shape="rect" id="node5" href="update_8c.html#ab8a45cae1f3c11e0ac4e758200257dd5" title="add_snake_body_element" alt="" coords="173,173,347,200"/>
+<area shape="rect" id="node6" href="init_8c.html#a5e1a11d04da8b93d988f7f469cced908" title="calc_random_item_position" alt="" coords="395,249,575,276"/>
+<area shape="rect" id="node8" href="update_8c.html#ae3488a06fb6aba1dfcf15953247f5f5d" title="respawn_items" alt="" coords="205,275,315,301"/>
+<area shape="rect" id="node9" href="update_8c.html#a9441f5df7c591a90d7cc8bda74209bef" title="update_snake_body" alt="" coords="191,325,329,352"/>
+<area shape="rect" id="node7" href="neslib_8h.html#a8fe1185fb429a4f9a0b82f9cd2c703e5" title="rand8" alt="" coords="623,249,677,276"/>
 </map>
 </div>
 <div class="dynheader">
@@ -294,6 +297,44 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="update_8c_a31c8504e7fe9671dbda52ba62a382b1f_icgraph.png" border="0" usemap="#update_8c_a31c8504e7fe9671dbda52ba62a382b1f_icgraph" alt=""/></div>
 <map name="update_8c_a31c8504e7fe9671dbda52ba62a382b1f_icgraph" id="update_8c_a31c8504e7fe9671dbda52ba62a382b1f_icgraph">
 <area shape="rect" id="node2" href="snake_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="Main game loop. " alt="" coords="173,5,224,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae3488a06fb6aba1dfcf15953247f5f5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3488a06fb6aba1dfcf15953247f5f5d">&sect;&nbsp;</a></span>respawn_items()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void respawn_items </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function counts down the frame rate for items until they respawn and calculates the new position in case of a respawn.</p>
+<dl class="section author"><dt>Author</dt><dd>Sebastian Dine </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="update_8c_ae3488a06fb6aba1dfcf15953247f5f5d_cgraph.png" border="0" usemap="#update_8c_ae3488a06fb6aba1dfcf15953247f5f5d_cgraph" alt=""/></div>
+<map name="update_8c_ae3488a06fb6aba1dfcf15953247f5f5d_cgraph" id="update_8c_ae3488a06fb6aba1dfcf15953247f5f5d_cgraph">
+<area shape="rect" id="node2" href="init_8c.html#a5e1a11d04da8b93d988f7f469cced908" title="calc_random_item_position" alt="" coords="163,5,343,32"/>
+<area shape="rect" id="node3" href="neslib_8h.html#a8fe1185fb429a4f9a0b82f9cd2c703e5" title="rand8" alt="" coords="391,5,445,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="update_8c_ae3488a06fb6aba1dfcf15953247f5f5d_icgraph.png" border="0" usemap="#update_8c_ae3488a06fb6aba1dfcf15953247f5f5d_icgraph" alt=""/></div>
+<map name="update_8c_ae3488a06fb6aba1dfcf15953247f5f5d_icgraph" id="update_8c_ae3488a06fb6aba1dfcf15953247f5f5d_icgraph">
+<area shape="rect" id="node2" href="update_8c.html#a31c8504e7fe9671dbda52ba62a382b1f" title="mainloop_update" alt="" coords="163,5,283,32"/>
+<area shape="rect" id="node3" href="snake_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="Main game loop. " alt="" coords="331,5,381,32"/>
 </map>
 </div>
 

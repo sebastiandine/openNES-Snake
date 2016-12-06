@@ -71,7 +71,6 @@ void load_map_data_into_array(void){
 
 void init_items(void){
 	for(i=0; i<(ITEM_MAX_ON_SCREEN); i++){
-		items.item_attributes[i] = 0;
 		items.item_respawn_count[i] = 0;
 		items.item_collision_flags[i] = 0;
 	}
@@ -80,9 +79,7 @@ void init_items(void){
 		items.item_coordinates[i+1] = 0;
 	}
 
-	//items.item_collision_flags[0] = 1;
-	items.item_coordinates[0] = 80;
-	items.item_coordinates[1] = 80;
+	items.item_respawn_frm_rate = 600;
 }
 
 /**
@@ -100,6 +97,7 @@ void init_level_params(void){
 		calc_random_item_position();
 		items.item_coordinates[0] = coord_x;
 		items.item_coordinates[1] = coord_y;
+		items.item_respawn_count[0] = items.item_respawn_frm_rate;
 		return;
 	}
 	if(current_level == 1){
@@ -110,9 +108,11 @@ void init_level_params(void){
 		calc_random_item_position();
 		items.item_coordinates[0] = coord_x;
 		items.item_coordinates[1] = coord_y;
+		items.item_respawn_count[0] = items.item_respawn_frm_rate;
 		calc_random_item_position();
 		items.item_coordinates[2] = coord_x;
 		items.item_coordinates[3] = coord_y;
+		items.item_respawn_count[1] = items.item_respawn_frm_rate;
 		return;
 	}
 }

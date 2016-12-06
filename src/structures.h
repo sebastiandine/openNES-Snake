@@ -43,20 +43,26 @@ typedef struct snake_struct {
 };
 
 /**
- * @struct 	item_struct
+ * @struct 	items_struct
  * @brief	This structure contains all elements required to interact with and display items.
  * @author	Sebastian Dine
  *
  */
 typedef struct items_struct {
-	unsigned char item_respawn_frm_rate;	/**< tbd */
+	unsigned int item_respawn_frm_rate;						/**< Variable, which contains the frame rate until an
+	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 * items should respawn. Remember NES is 60FPS.
+	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 */
 	unsigned char item_coordinates[ITEM_MAX_ON_SCREEN <<1]; /**< Array of item coordinates (pixel based)
 															 * two elements are a coordinate set, eg. [0] is
 															 * the x-coordinate of the first item and [1]
 															 *  its y-coordinate.
 															 */
-	unsigned char item_attributes[ITEM_MAX_ON_SCREEN];		/**< tbd */
-	unsigned char item_respawn_count[ITEM_MAX_ON_SCREEN];	/**< tbd */
+	unsigned int  item_respawn_count[ITEM_MAX_ON_SCREEN];	/**< Array which counts down the frames until an item
+															 * respawn. 0 indicates a non active visible item.
+															 * Due to this decision, items will respawn, once their
+															 * frame countdown reaches 1.
+															 */
+
 	unsigned char item_collision_flags[ITEM_MAX_ON_SCREEN];	/**< Array which indicates collisions with items
 															 * (0 = no collision, 1 = collision).
 															 * E.g. [0]=1 means, that the snake collided with the first

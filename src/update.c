@@ -135,18 +135,45 @@ unsigned char check_collision_body(void){
  *	@author Sebastian Dine
  *
  */
-unsigned char check_collision_item(void){
+unsigned char check_collision_with_items(void){
 	k = MAPARRAY_ADR(snake.head_sprite_x,snake.head_sprite_y);
 	
 	for(i=0; i < (ITEM_MAX_ON_SCREEN <<1); i+=2){
 		l = MAPARRAY_ADR(items.item_coordinates[i],items.item_coordinates[i+1]);
 
 		if(k == l){
-			items.item_collision_flags[i >>1] = 1;
+			items.item_collision_flags[i >>1] = 1;							/* Mark the item, with which the snake collided */
+			items.item_collision_flags[i] = items.item_respawn_frm_rate;	/* Reset the frame countdown for respawning */
 			return 1;
 		}
 	}
 	return 0;
+}
+
+/**
+ * This function counts down the frame rate for items until they respawn
+ * and calculates the new position in case of a respawn.
+ *
+ * @author Sebastian Dine
+ *
+ */
+void respawn_items(void){
+	for(j=0; j < ITEM_MAX_ON_SCREEN; j++){				/* j needs to be used for looping, since function */
+		 	 	 	 	 	 	 	 	 	 	 	 	/* calc_random_item_position(); uses i.			  */
+
+		if(items.item_respawn_count[j] != 0){			/* Design decision: item_respawn_count[i]=0 */
+														/* means, the item is not active/visible.	*/
+			--items.item_respawn_count[j];
+
+			if(items.item_respawn_count[j] == 1){		/* Since 0 marks an non active item, active items */
+				calc_random_item_position();			/* respawn when they reach frame count 1.		  */
+				items.item_coordinates[j <<1] = coord_x;
+				items.item_coordinates[(j <<1)+1] = coord_y;
+				items.item_respawn_count[j] = items.item_respawn_frm_rate;
+
+			}
+		}
+	}
 }
 
 /**
@@ -182,7 +209,7 @@ void mainloop_update(void){
 	/*
 	 * Growth collision detection
 	 */
-	if(check_collision_item()){
+	if(check_collision_with_items()){
 		 //Handle snakes growth
 		if(snake.size_index < (SNAKE_MAX_SIZE <<1)){
 			add_snake_body_element();
@@ -202,6 +229,11 @@ void mainloop_update(void){
 			}
 		}
 	}
+
+	/*
+	 * Handle item respawning.
+	 */
+	respawn_items();
 
 	/* 
 	 * Update Position
