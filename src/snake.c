@@ -96,9 +96,12 @@ void main(void){
 			mainloop_handle_input();
 
 			/* UPDATE */
-			if(!pause){
+			if(!pause && !gameover){
 				mainloop_update();
-				if(check_next_level()) break;
+				if(check_next_level()){
+					sfx_play(SFX_NEXT_LEVEL,0);
+					break;
+				}
 			}
 
 			/* RENDER */

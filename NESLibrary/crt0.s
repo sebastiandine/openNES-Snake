@@ -235,12 +235,13 @@ detectNTSC:
 
 .segment "RODATA"
 
-music_data:
-	.include "music.s"
+
+ music_data:
+ 	.include "music.s"
 
 	.if(FT_SFX_ENABLE)
 sounds_data:
-	.include "sounds.s"
+	.include "snake_sfx.s"
 	.endif
 
 .segment "SAMPLES"

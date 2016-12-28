@@ -8,6 +8,7 @@ SET WORKSPACE=%WORKSPACE:~,-5%
 SET SOURCE_DIR=%WORKSPACE%src
 SET BUILD_DIR=%WORKSPACE%build
 SET GRAPHICS_DIR=%WORKSPACE%gfx
+SET SOUND_DIR=%WORKSPACE%sfx
 SET CONFIG_DIR=%WORKSPACE%config
 SET NES_LIB_DIR=%WORKSPACE%NESLibrary
 SET TEMP_DIR=%BUILD_DIR%\temp
@@ -35,6 +36,7 @@ ECHO Copying data into temporary build-directory
 COPY %NES_LIB_DIR%\* %TEMP_DIR%
 COPY %CONFIG_DIR%\* %TEMP_DIR%
 COPY %GRAPHICS_DIR%\* %TEMP_DIR%
+COPY %SOUND_DIR%\* %TEMP_DIR%
 XCOPY /s %SOURCE_DIR%\* %TEMP_DIR%
 
 REM ###############################################################

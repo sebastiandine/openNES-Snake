@@ -19,12 +19,19 @@ void input_btn_start(void){
 	if(gameover){
 		current_level = 0;
 		restart = 1;
+		sfx_play(SFX_NEXT_LEVEL,0);
 		return;
 	}
 
 	if(titlescreen){
 		titlescreen = 0;
+		sfx_play(SFX_NEXT_LEVEL,0);
 		return;
+	}
+
+	if(!pause){			/* this needs to be checked in order to play the pause sfx, */
+						/* every time, the pause mode is entered.					*/
+		sfx_play(SFX_PAUSE,0);
 	}
 
 	pause = !pause;

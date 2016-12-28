@@ -1,0 +1,62 @@
+\hypertarget{structitems__struct}{}\section{items\+\_\+struct Struct Reference}
+\label{structitems__struct}\index{items\+\_\+struct@{items\+\_\+struct}}
+
+
+This structure contains all elements required to interact with and display items.  
+
+
+
+
+{\ttfamily \#include $<$structures.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{structitems__struct_a82d1c6f853d57e8c61d32ed8751c17b7}{item\+\_\+respawn\+\_\+frm\+\_\+rate}
+\item 
+unsigned char \hyperlink{structitems__struct_ae3d624d3f41bdcd547bbf2c93cac857a}{item\+\_\+coordinates} \mbox{[}\hyperlink{macros_8h_a7e03b7d3541424447645569c949aacba}{I\+T\+E\+M\+\_\+\+M\+A\+X\+\_\+\+O\+N\+\_\+\+S\+C\+R\+E\+EN}$<$$<$ 1\mbox{]}
+\item 
+unsigned int \hyperlink{structitems__struct_a1c6ded913b15bdbde6b7e4e1d335323c}{item\+\_\+respawn\+\_\+count} \mbox{[}\hyperlink{macros_8h_a7e03b7d3541424447645569c949aacba}{I\+T\+E\+M\+\_\+\+M\+A\+X\+\_\+\+O\+N\+\_\+\+S\+C\+R\+E\+EN}\mbox{]}
+\item 
+unsigned char \hyperlink{structitems__struct_a22cd37d68ba10ae58f769a0090ceb392}{item\+\_\+collision\+\_\+flags} \mbox{[}\hyperlink{macros_8h_a7e03b7d3541424447645569c949aacba}{I\+T\+E\+M\+\_\+\+M\+A\+X\+\_\+\+O\+N\+\_\+\+S\+C\+R\+E\+EN}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This structure contains all elements required to interact with and display items. 
+
+\begin{DoxyAuthor}{Author}
+Sebastian Dine 
+\end{DoxyAuthor}
+
+
+\subsection{Field Documentation}
+\hypertarget{structitems__struct_a22cd37d68ba10ae58f769a0090ceb392}{}\label{structitems__struct_a22cd37d68ba10ae58f769a0090ceb392} 
+\index{items\+\_\+struct@{items\+\_\+struct}!item\+\_\+collision\+\_\+flags@{item\+\_\+collision\+\_\+flags}}
+\index{item\+\_\+collision\+\_\+flags@{item\+\_\+collision\+\_\+flags}!items\+\_\+struct@{items\+\_\+struct}}
+\subsubsection{\texorpdfstring{item\+\_\+collision\+\_\+flags}{item\_collision\_flags}}
+{\footnotesize\ttfamily unsigned char item\+\_\+collision\+\_\+flags\mbox{[}\hyperlink{macros_8h_a7e03b7d3541424447645569c949aacba}{I\+T\+E\+M\+\_\+\+M\+A\+X\+\_\+\+O\+N\+\_\+\+S\+C\+R\+E\+EN}\mbox{]}}
+
+Array which indicates collisions with items (0 = no collision, 1 = collision). E.\+g. \mbox{[}0\mbox{]}=1 means, that the snake collided with the first element. \hypertarget{structitems__struct_ae3d624d3f41bdcd547bbf2c93cac857a}{}\label{structitems__struct_ae3d624d3f41bdcd547bbf2c93cac857a} 
+\index{items\+\_\+struct@{items\+\_\+struct}!item\+\_\+coordinates@{item\+\_\+coordinates}}
+\index{item\+\_\+coordinates@{item\+\_\+coordinates}!items\+\_\+struct@{items\+\_\+struct}}
+\subsubsection{\texorpdfstring{item\+\_\+coordinates}{item\_coordinates}}
+{\footnotesize\ttfamily unsigned char item\+\_\+coordinates\mbox{[}\hyperlink{macros_8h_a7e03b7d3541424447645569c949aacba}{I\+T\+E\+M\+\_\+\+M\+A\+X\+\_\+\+O\+N\+\_\+\+S\+C\+R\+E\+EN}$<$$<$ 1\mbox{]}}
+
+Array of item coordinates (pixel based) two elements are a coordinate set, eg. \mbox{[}0\mbox{]} is the x-\/coordinate of the first item and \mbox{[}1\mbox{]} its y-\/coordinate. \hypertarget{structitems__struct_a1c6ded913b15bdbde6b7e4e1d335323c}{}\label{structitems__struct_a1c6ded913b15bdbde6b7e4e1d335323c} 
+\index{items\+\_\+struct@{items\+\_\+struct}!item\+\_\+respawn\+\_\+count@{item\+\_\+respawn\+\_\+count}}
+\index{item\+\_\+respawn\+\_\+count@{item\+\_\+respawn\+\_\+count}!items\+\_\+struct@{items\+\_\+struct}}
+\subsubsection{\texorpdfstring{item\+\_\+respawn\+\_\+count}{item\_respawn\_count}}
+{\footnotesize\ttfamily unsigned int item\+\_\+respawn\+\_\+count\mbox{[}\hyperlink{macros_8h_a7e03b7d3541424447645569c949aacba}{I\+T\+E\+M\+\_\+\+M\+A\+X\+\_\+\+O\+N\+\_\+\+S\+C\+R\+E\+EN}\mbox{]}}
+
+Array which counts down the frames until an item respawn. 0 indicates a non active visible item. Due to this decision, items will respawn, once their frame countdown reaches 1. \hypertarget{structitems__struct_a82d1c6f853d57e8c61d32ed8751c17b7}{}\label{structitems__struct_a82d1c6f853d57e8c61d32ed8751c17b7} 
+\index{items\+\_\+struct@{items\+\_\+struct}!item\+\_\+respawn\+\_\+frm\+\_\+rate@{item\+\_\+respawn\+\_\+frm\+\_\+rate}}
+\index{item\+\_\+respawn\+\_\+frm\+\_\+rate@{item\+\_\+respawn\+\_\+frm\+\_\+rate}!items\+\_\+struct@{items\+\_\+struct}}
+\subsubsection{\texorpdfstring{item\+\_\+respawn\+\_\+frm\+\_\+rate}{item\_respawn\_frm\_rate}}
+{\footnotesize\ttfamily unsigned int item\+\_\+respawn\+\_\+frm\+\_\+rate}
+
+Variable, which contains the frame rate until an items should respawn. Remember N\+ES is 60\+F\+PS. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Administrator/\+Documents/\+Git\+Hub/\+N\+E\+S-\/\+Snake/src/\hyperlink{structures_8h}{structures.\+h}\end{DoxyCompactItemize}

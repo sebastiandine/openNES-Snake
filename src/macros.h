@@ -74,6 +74,21 @@
 /** @} */
 
 /****************************************************************************
+ * Defining tile-constants												  	*
+ ****************************************************************************/
+/**
+* @name Sound effect constants.
+* 		Each constants represents the number of an sound effect within
+* 		sfx/snake_sfx.s (connect between game and .s file is created in file NESLibrary/crt0.s).
+* @{
+*/
+#define SFX_ABSORB_ITEM	0
+#define SFX_CRASH		1
+#define SFX_PAUSE		2
+#define SFX_NEXT_LEVEL	3
+/** @} */
+
+/****************************************************************************
  * Some hardware-specific settings (memory-organization)				  	*
  ****************************************************************************/
  /** Start address in VRAM for first nametable */

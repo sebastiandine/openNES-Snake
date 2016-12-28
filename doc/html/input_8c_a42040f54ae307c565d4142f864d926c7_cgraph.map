@@ -1,4 +1,5 @@
 <map id="mainloop_handle_input" name="mainloop_handle_input">
 <area shape="rect" id="node2" href="$neslib_8h.html#a73584a5b3af1517cb04f14c6118b5b0d" title="pad_trigger" alt="" coords="219,5,305,32"/>
 <area shape="rect" id="node3" href="$input_8c.html#a8bf87fe078154e7e046e88a4d05e3e8c" title="input_btn_start" alt="" coords="208,56,316,83"/>
+<area shape="rect" id="node4" href="$neslib_8h.html#aeb2c4e716b2b6e9d31315ad4cec98623" title="sfx_play" alt="" coords="364,56,435,83"/>
 </map>

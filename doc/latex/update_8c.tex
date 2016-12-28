@@ -1,0 +1,207 @@
+\hypertarget{update_8c}{}\section{C\+:/\+Users/\+Administrator/\+Documents/\+Git\+Hub/\+N\+E\+S-\/\+Snake/src/update.c File Reference}
+\label{update_8c}\index{C\+:/\+Users/\+Administrator/\+Documents/\+Git\+Hub/\+N\+E\+S-\/\+Snake/src/update.\+c@{C\+:/\+Users/\+Administrator/\+Documents/\+Git\+Hub/\+N\+E\+S-\/\+Snake/src/update.\+c}}
+
+
+This file contains all ingame logic functionalities and utility functionalities.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{update_8c_a9441f5df7c591a90d7cc8bda74209bef}{update\+\_\+snake\+\_\+body} ()
+\item 
+void \hyperlink{update_8c_ab8a45cae1f3c11e0ac4e758200257dd5}{add\+\_\+snake\+\_\+body\+\_\+element} ()
+\item 
+unsigned char \hyperlink{update_8c_a4a602dbc65a1829ae32ec9328241d016}{check\+\_\+collision\+\_\+wall} (void)
+\item 
+unsigned char \hyperlink{update_8c_a5fc00c88d57d8ba35a79d70316c2b478}{check\+\_\+collision\+\_\+body} (void)
+\item 
+unsigned char \hyperlink{update_8c_a43b780da56b2d15f8f91cad68b3481bd}{check\+\_\+collision\+\_\+with\+\_\+items} (void)
+\item 
+void \hyperlink{update_8c_ae3488a06fb6aba1dfcf15953247f5f5d}{respawn\+\_\+items} (void)
+\item 
+unsigned char \hyperlink{update_8c_a2ea36e0f75f408285b5d3a5bc8287b4f}{check\+\_\+next\+\_\+level} (void)
+\item 
+void \hyperlink{update_8c_a31c8504e7fe9671dbda52ba62a382b1f}{mainloop\+\_\+update} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains all ingame logic functionalities and utility functionalities. 
+
+\begin{DoxyAuthor}{Author}
+Sebastian Dine 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{update_8c_ab8a45cae1f3c11e0ac4e758200257dd5}{}\label{update_8c_ab8a45cae1f3c11e0ac4e758200257dd5} 
+\index{update.\+c@{update.\+c}!add\+\_\+snake\+\_\+body\+\_\+element@{add\+\_\+snake\+\_\+body\+\_\+element}}
+\index{add\+\_\+snake\+\_\+body\+\_\+element@{add\+\_\+snake\+\_\+body\+\_\+element}!update.\+c@{update.\+c}}
+\subsubsection{\texorpdfstring{add\+\_\+snake\+\_\+body\+\_\+element()}{add\_snake\_body\_element()}}
+{\footnotesize\ttfamily void add\+\_\+snake\+\_\+body\+\_\+element (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This function adds a new pair of body element coordinates to global array \textquotesingle{}body\+\_\+coordinates\textquotesingle{}.
+
+\begin{DoxyAuthor}{Author}
+Sebastian Dine 
+\end{DoxyAuthor}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{update_8c_ab8a45cae1f3c11e0ac4e758200257dd5_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{update_8c_a5fc00c88d57d8ba35a79d70316c2b478}{}\label{update_8c_a5fc00c88d57d8ba35a79d70316c2b478} 
+\index{update.\+c@{update.\+c}!check\+\_\+collision\+\_\+body@{check\+\_\+collision\+\_\+body}}
+\index{check\+\_\+collision\+\_\+body@{check\+\_\+collision\+\_\+body}!update.\+c@{update.\+c}}
+\subsubsection{\texorpdfstring{check\+\_\+collision\+\_\+body()}{check\_collision\_body()}}
+{\footnotesize\ttfamily unsigned char check\+\_\+collision\+\_\+body (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Collision detecation of snakes\textquotesingle{} head-\/sprite with body-\/tiles.
+
+\begin{DoxyReturn}{Returns}
+1 = collision with body element, 0 = no collision with body element
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Sebastian Dine 
+\end{DoxyAuthor}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{update_8c_a5fc00c88d57d8ba35a79d70316c2b478_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{update_8c_a4a602dbc65a1829ae32ec9328241d016}{}\label{update_8c_a4a602dbc65a1829ae32ec9328241d016} 
+\index{update.\+c@{update.\+c}!check\+\_\+collision\+\_\+wall@{check\+\_\+collision\+\_\+wall}}
+\index{check\+\_\+collision\+\_\+wall@{check\+\_\+collision\+\_\+wall}!update.\+c@{update.\+c}}
+\subsubsection{\texorpdfstring{check\+\_\+collision\+\_\+wall()}{check\_collision\_wall()}}
+{\footnotesize\ttfamily unsigned char check\+\_\+collision\+\_\+wall (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Collision detection of snakes\textquotesingle{} head-\/sprite with wall-\/tiles.
+
+\begin{DoxyReturn}{Returns}
+1 = collision with wall element, 0 = no collision with wall sprite
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Sebastian Dine 
+\end{DoxyAuthor}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{update_8c_a4a602dbc65a1829ae32ec9328241d016_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{update_8c_a43b780da56b2d15f8f91cad68b3481bd}{}\label{update_8c_a43b780da56b2d15f8f91cad68b3481bd} 
+\index{update.\+c@{update.\+c}!check\+\_\+collision\+\_\+with\+\_\+items@{check\+\_\+collision\+\_\+with\+\_\+items}}
+\index{check\+\_\+collision\+\_\+with\+\_\+items@{check\+\_\+collision\+\_\+with\+\_\+items}!update.\+c@{update.\+c}}
+\subsubsection{\texorpdfstring{check\+\_\+collision\+\_\+with\+\_\+items()}{check\_collision\_with\_items()}}
+{\footnotesize\ttfamily unsigned char check\+\_\+collision\+\_\+with\+\_\+items (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Collision detection of snakes\textquotesingle{} head-\/sprite with an item-\/sprite.
+
+\begin{DoxyReturn}{Returns}
+1 = collision with item sprite, 0 = no collision with item sprite
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Sebastian Dine 
+\end{DoxyAuthor}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{update_8c_a43b780da56b2d15f8f91cad68b3481bd_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{update_8c_a2ea36e0f75f408285b5d3a5bc8287b4f}{}\label{update_8c_a2ea36e0f75f408285b5d3a5bc8287b4f} 
+\index{update.\+c@{update.\+c}!check\+\_\+next\+\_\+level@{check\+\_\+next\+\_\+level}}
+\index{check\+\_\+next\+\_\+level@{check\+\_\+next\+\_\+level}!update.\+c@{update.\+c}}
+\subsubsection{\texorpdfstring{check\+\_\+next\+\_\+level()}{check\_next\_level()}}
+{\footnotesize\ttfamily unsigned char check\+\_\+next\+\_\+level (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Check, if the requirements for the next level are met.
+
+\begin{DoxyReturn}{Returns}
+1 = next level is reached, 0 = next level is not reached
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Sebastian Dine 
+\end{DoxyAuthor}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{update_8c_a2ea36e0f75f408285b5d3a5bc8287b4f_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{update_8c_a31c8504e7fe9671dbda52ba62a382b1f}{}\label{update_8c_a31c8504e7fe9671dbda52ba62a382b1f} 
+\index{update.\+c@{update.\+c}!mainloop\+\_\+update@{mainloop\+\_\+update}}
+\index{mainloop\+\_\+update@{mainloop\+\_\+update}!update.\+c@{update.\+c}}
+\subsubsection{\texorpdfstring{mainloop\+\_\+update()}{mainloop\_update()}}
+{\footnotesize\ttfamily void mainloop\+\_\+update (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This function provides the coordination of all ingame logic routines, once per frame.
+
+\begin{DoxyAuthor}{Author}
+Sebastian Dine 
+\end{DoxyAuthor}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{update_8c_a31c8504e7fe9671dbda52ba62a382b1f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{update_8c_a31c8504e7fe9671dbda52ba62a382b1f_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{update_8c_ae3488a06fb6aba1dfcf15953247f5f5d}{}\label{update_8c_ae3488a06fb6aba1dfcf15953247f5f5d} 
+\index{update.\+c@{update.\+c}!respawn\+\_\+items@{respawn\+\_\+items}}
+\index{respawn\+\_\+items@{respawn\+\_\+items}!update.\+c@{update.\+c}}
+\subsubsection{\texorpdfstring{respawn\+\_\+items()}{respawn\_items()}}
+{\footnotesize\ttfamily void respawn\+\_\+items (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This function counts down the frame rate for items until they respawn and calculates the new position in case of a respawn.
+
+\begin{DoxyAuthor}{Author}
+Sebastian Dine 
+\end{DoxyAuthor}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{update_8c_ae3488a06fb6aba1dfcf15953247f5f5d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{update_8c_ae3488a06fb6aba1dfcf15953247f5f5d_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{update_8c_a9441f5df7c591a90d7cc8bda74209bef}{}\label{update_8c_a9441f5df7c591a90d7cc8bda74209bef} 
+\index{update.\+c@{update.\+c}!update\+\_\+snake\+\_\+body@{update\+\_\+snake\+\_\+body}}
+\index{update\+\_\+snake\+\_\+body@{update\+\_\+snake\+\_\+body}!update.\+c@{update.\+c}}
+\subsubsection{\texorpdfstring{update\+\_\+snake\+\_\+body()}{update\_snake\_body()}}
+{\footnotesize\ttfamily void update\+\_\+snake\+\_\+body (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This function updates the body coordinates of the snake in order to simulate its movement.
+
+\begin{DoxyAuthor}{Author}
+Sebastian Dine 
+\end{DoxyAuthor}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{update_8c_a9441f5df7c591a90d7cc8bda74209bef_icgraph}
+\end{center}
+\end{figure}

@@ -204,7 +204,10 @@ void mainloop_update(void){
 	/*
 	 * Game-over collision detection
 	 */
-	if(check_collision_wall() || check_collision_body()) gameover = 1;
+	if(check_collision_wall() || check_collision_body()){
+		sfx_play(SFX_CRASH,0);
+		gameover = 1;
+	}
 
 	/*
 	 * Growth collision detection
@@ -212,6 +215,7 @@ void mainloop_update(void){
 	if(check_collision_with_items()){
 		 //Handle snakes growth
 		if(snake.size_index < (SNAKE_MAX_SIZE <<1)){
+			sfx_play(SFX_ABSORB_ITEM,0);
 			add_snake_body_element();
 			snake.size_index+=2;
 		}

@@ -7,6 +7,7 @@ WORKSPACE=${WORKSPACE%/*}
 SOURCE_DIR=${WORKSPACE}/src
 BUILD_DIR=${WORKSPACE}/build
 GRAPHICS_DIR=${WORKSPACE}/gfx
+SOUND_DIR=${WORKSPACE}/sfx
 CONFIG_DIR=${WORKSPACE}/config
 NES_LIB_DIR=${WORKSPACE}/NESLibrary
 TEMP_DIR=${BUILD_DIR}/temp
@@ -29,6 +30,7 @@ echo "Copying data into temporary build-directory"
 cp ${NES_LIB_DIR}/* ${TEMP_DIR}
 cp ${CONFIG_DIR}/* ${TEMP_DIR}
 cp ${GRAPHICS_DIR}/* ${TEMP_DIR}
+cp ${SOUND_DIR}/* ${TEMP_DIR}
 cp ${SOURCE_DIR}/* ${TEMP_DIR}
 
 ###############################################################

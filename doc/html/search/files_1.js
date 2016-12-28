@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['game_5fover_5fnam_2eh',['game_over_nam.h',['../game__over__nam_8h.html',1,'']]],
-  ['globals_2eh',['globals.h',['../globals_8h.html',1,'']]]
+  ['init_2ec',['init.c',['../init_8c.html',1,'']]],
+  ['input_2ec',['input.c',['../input_8c.html',1,'']]]
 ];
