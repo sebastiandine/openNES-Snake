@@ -115,6 +115,52 @@ void init_level_params(void){
 		items.item_respawn_count[1] = items.item_respawn_frm_rate;
 		return;
 	}
+	if(current_level == 2){
+		snake.head_sprite_x = LVL3_START_X;
+		snake.head_sprite_y = LVL3_START_Y;
+		max_score = LVL3_MAX_SCORE << 1;
+
+		calc_random_item_position();
+		items.item_coordinates[0] = coord_x;
+		items.item_coordinates[1] = coord_y;
+		items.item_respawn_count[0] = items.item_respawn_frm_rate;
+		calc_random_item_position();
+		items.item_coordinates[2] = coord_x;
+		items.item_coordinates[3] = coord_y;
+		items.item_respawn_count[1] = items.item_respawn_frm_rate;
+		return;
+	}
+	if(current_level == 3){
+		snake.head_sprite_x = LVL4_START_X;
+		snake.head_sprite_y = LVL4_START_Y;
+		max_score = LVL4_MAX_SCORE << 1;
+
+		calc_random_item_position();
+		items.item_coordinates[0] = coord_x;
+		items.item_coordinates[1] = coord_y;
+		items.item_respawn_count[0] = items.item_respawn_frm_rate;
+		calc_random_item_position();
+		items.item_coordinates[2] = coord_x;
+		items.item_coordinates[3] = coord_y;
+		items.item_respawn_count[1] = items.item_respawn_frm_rate;
+		return;
+	}
+	if(current_level == 4){
+		snake.head_sprite_x = LVL5_START_X;
+		snake.head_sprite_y = LVL5_START_Y;
+		max_score = LVL5_MAX_SCORE << 1;
+
+		calc_random_item_position();
+		items.item_coordinates[0] = coord_x;
+		items.item_coordinates[1] = coord_y;
+		items.item_respawn_count[0] = items.item_respawn_frm_rate;
+		calc_random_item_position();
+		items.item_coordinates[2] = coord_x;
+		items.item_coordinates[3] = coord_y;
+		items.item_respawn_count[1] = items.item_respawn_frm_rate;
+		return;
+	}
+
 }
 
 

@@ -155,8 +155,8 @@ void draw_game_over_screen(void){
 		ppu_off();
 		oam_clear();
 		vram_adr(NAMETABLE1_START);							//set vram pointer to Nametable1 starting adress
-		vram_unrle(levelList[2]);							//unpack level nametable and store data in VRAM
-		pal_bg(levelList[5]);								//set color-palette for background
+		vram_unrle(levelList[5]);							//unpack level nametable and store data in VRAM
+		pal_bg(levelList[8]);								//set color-palette for background
 		center_score_when_gameover();
 		ppu_on_bg();
 	}
@@ -173,8 +173,8 @@ void draw_title_screen(void){
 	ppu_off();
 	oam_clear();
 	vram_adr(NAMETABLE1_START);							//set vram pointer to Nametable1 starting adress
-	vram_unrle(levelList[3]);							//unpack level nametable and store data in VRAM
-	pal_bg(levelList[5]);								//set color-palette for background
+	vram_unrle(levelList[6]);							//unpack level nametable and store data in VRAM
+	pal_bg(levelList[8]);								//set color-palette for background
 	ppu_on_bg();
 
 }
@@ -212,19 +212,8 @@ void draw_pause_screen(void){
 *
 */
 void draw_level_screen(void){
-
-	if(current_level == 0){
-		vram_unrle(levelList[0]);						//unpack level nametable and store data in VRAM
-		pal_bg(levelList[4]);							//set color-palette for background
-		return;
-	}
-	if(current_level == 1){
-		vram_unrle(levelList[1]);						//unpack level nametable and store data in VRAM
-		pal_bg(levelList[4]);							//set color-palette for background
-		return;
-	}
-
-
+	pal_bg(levelList[7]);							//set color-palette for background
+	vram_unrle(levelList[current_level]);			//unpack level nametable and store data in VRAM
 }
 
 /**

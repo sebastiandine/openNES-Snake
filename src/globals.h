@@ -118,7 +118,7 @@ static struct items_struct items;
 *	@{ 
 */
 const unsigned char* const levelList[LEVELS_ALL+2+2]={
-	level1_nam, level2_nam,
+	level1_nam, level2_nam, level3_nam, level4_nam, level5_nam,
 	game_over_nam, titlescreen_nam,
 	levels_pal, menue_pal
 };

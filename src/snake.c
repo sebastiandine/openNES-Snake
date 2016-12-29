@@ -10,6 +10,9 @@
 /* Including Nametables */
 #include "level1_nam.h"
 #include "level2_nam.h"
+#include "level3_nam.h"
+#include "level4_nam.h"
+#include "level5_nam.h"
 #include "game_over_nam.h"
 #include "titlescreen_nam.h"
 

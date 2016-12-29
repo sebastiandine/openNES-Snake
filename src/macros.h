@@ -43,10 +43,19 @@
  ****************************************************************************/
 #define LVL1_START_X	120		// Attention: Make sure, that coordinates are divisble through 8,
 #define LVL1_START_Y	120		// this makes collision detection much more easy.
-#define LVL1_MAX_SCORE	4		// Attention: Make sure, that the max score is divisble through 2.
+#define LVL1_MAX_SCORE	10		// Attention: Make sure, that the max score is divisble through 2.
 #define LVL2_START_X	56
 #define LVL2_START_Y	120
-#define LVL2_MAX_SCORE	8
+#define LVL2_MAX_SCORE	20
+#define LVL3_START_X	56
+#define LVL3_START_Y	160
+#define LVL3_MAX_SCORE	30
+#define LVL4_START_X	40
+#define LVL4_START_Y	160
+#define LVL4_MAX_SCORE	40
+#define LVL5_START_X	24
+#define LVL5_START_Y	160
+#define LVL5_MAX_SCORE	50
 
 /****************************************************************************
  * Defining tile-constants												  	*
@@ -78,7 +87,7 @@
  ****************************************************************************/
 /**
 * @name Sound effect constants.
-* 		Each constants represents the number of an sound effect within
+* 		Each constant represents the number of an sound effect within
 * 		sfx/snake_sfx.s (connect between game and .s file is created in file NESLibrary/crt0.s).
 * @{
 */
