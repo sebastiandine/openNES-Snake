@@ -6,5 +6,14 @@ var searchData=
   ['lvl1_5fstart_5fy',['LVL1_START_Y',['../macros_8h.html#ab5cba5877cf155edb1c90291ad60dede',1,'macros.h']]],
   ['lvl2_5fmax_5fscore',['LVL2_MAX_SCORE',['../macros_8h.html#a45430050f00f558270c2cebeea18f369',1,'macros.h']]],
   ['lvl2_5fstart_5fx',['LVL2_START_X',['../macros_8h.html#aead77f76abc75595172f0c8c0f520abd',1,'macros.h']]],
-  ['lvl2_5fstart_5fy',['LVL2_START_Y',['../macros_8h.html#a249e8731f130fca874caac6f7dc56bde',1,'macros.h']]]
+  ['lvl2_5fstart_5fy',['LVL2_START_Y',['../macros_8h.html#a249e8731f130fca874caac6f7dc56bde',1,'macros.h']]],
+  ['lvl3_5fmax_5fscore',['LVL3_MAX_SCORE',['../macros_8h.html#ad7142b647b9ac0965e62c1233e00fdc3',1,'macros.h']]],
+  ['lvl3_5fstart_5fx',['LVL3_START_X',['../macros_8h.html#ab5ad79c1df39d0ab43c58b4d1bf387a6',1,'macros.h']]],
+  ['lvl3_5fstart_5fy',['LVL3_START_Y',['../macros_8h.html#af8f73e02be804944ab369f1a6e01336e',1,'macros.h']]],
+  ['lvl4_5fmax_5fscore',['LVL4_MAX_SCORE',['../macros_8h.html#ab288385982920c00f8a0f1c7158b3117',1,'macros.h']]],
+  ['lvl4_5fstart_5fx',['LVL4_START_X',['../macros_8h.html#a678ac333b18206fc8b6c955b30480512',1,'macros.h']]],
+  ['lvl4_5fstart_5fy',['LVL4_START_Y',['../macros_8h.html#a411a25d58a8a8e27f6f3f95046d3d6b0',1,'macros.h']]],
+  ['lvl5_5fmax_5fscore',['LVL5_MAX_SCORE',['../macros_8h.html#a8f7be8e5047c1a888fa1a6496df79605',1,'macros.h']]],
+  ['lvl5_5fstart_5fx',['LVL5_START_X',['../macros_8h.html#a16d546040cf4e829c79a86d6cf327e4c',1,'macros.h']]],
+  ['lvl5_5fstart_5fy',['LVL5_START_Y',['../macros_8h.html#a9c75e8df8fbbe0cc2b256d1624e46159',1,'macros.h']]]
 ];

@@ -143,7 +143,7 @@ unsigned char check_collision_with_items(void){
 
 		if(k == l){
 			items.item_collision_flags[i >>1] = 1;							/* Mark the item, with which the snake collided */
-			items.item_collision_flags[i] = items.item_respawn_frm_rate;	/* Reset the frame countdown for respawning */
+			items.item_respawn_count[i >>1] = items.item_respawn_frm_rate;	/* Reset the frame countdown for respawning */
 			return 1;
 		}
 	}
@@ -229,6 +229,7 @@ void mainloop_update(void){
 				calc_random_item_position();
 				items.item_coordinates[j <<1] = coord_x;
 				items.item_coordinates[(j <<1)+1] = coord_y;
+				items.item_respawn_count[j] = items.item_respawn_frm_rate;
 				items.item_collision_flags[j] = 0;
 			}
 		}
