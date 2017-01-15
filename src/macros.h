@@ -102,6 +102,7 @@
  ****************************************************************************/
  /** Start address in VRAM for first nametable */
 #define NAMETABLE1_START 0x2000
+#define NAMETABLE2_START 0x2400
 
 /****************************************************************************
  * Some macros for more efficent caluclations							  	*

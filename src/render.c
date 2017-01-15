@@ -181,6 +181,18 @@ void draw_title_screen(void){
 
 /**
 *
+*	This function draws the background of the current level to the screen.
+*
+*	@author Sebastian Dine
+*
+*/
+void draw_level_screen(void){
+	pal_bg(levelList[7]);							//set color-palette for background
+	vram_unrle(levelList[current_level]);			//unpack level nametable and store data in VRAM
+}
+
+/**
+*
 *	This function draws the letters PAUSE as sprites to the center of the screen,
 *	if the game is paused.
 *
@@ -194,26 +206,27 @@ void draw_pause_screen(void){
 															   this might generate flickering.
 															*/
 		pause_loop = 1;
-		oam_clear();
 
+
+
+		/* disable snakes body in update list */
+		update_list[15] = update_list[9];
+		update_list[9] = NT_UPD_EOF;
+		/* disable snakes head */
+		oam_clear();
+		/* switch to NAMETABLE2 in order to disable snakes body */
+		ppu_off();
+		vram_adr(NAMETABLE2_START);
+		draw_level_screen();
+		ppu_on_all();
+
+		/* Write PAUSE to the screen */
 		sprite_offset = oam_spr(120, 120, 0x30,1,0); 				//P
 		sprite_offset = oam_spr(128, 120, 0x21,1,sprite_offset); 	//A
 		sprite_offset = oam_spr(136, 120, 0x35,1,sprite_offset); 	//U
 		sprite_offset = oam_spr(144, 120, 0x33,1,sprite_offset); 	//S
 		sprite_offset = oam_spr(152, 120, 0x25,1,sprite_offset); 	//E
 	}
-}
-
-/**
-*
-*	This function draws the background of the current level to the screen.
-*
-*	@author Sebastian Dine
-*
-*/
-void draw_level_screen(void){
-	pal_bg(levelList[7]);							//set color-palette for background
-	vram_unrle(levelList[current_level]);			//unpack level nametable and store data in VRAM
 }
 
 /**
@@ -239,6 +252,7 @@ void mainloop_render(void){
 		pause_loop = 0;
 		oam_clear(); //clear 'PAUSE'-sprites
 	}
+
 	/* default render-rountine */
 	draw_score();
 	draw_snake();
