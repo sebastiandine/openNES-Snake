@@ -32,37 +32,40 @@ void draw_snake(void){
 			snake.last_body_element_x = snake.body_element_coordinates[snake.size_index-2];
 			snake.last_body_element_y = snake.body_element_coordinates[snake.size_index-1];
 		}
+
+		if(!snake.grow_event_flag){
 		/* Disable old last body tile */
-		else{
-			map[MAPARRAY_ADR(snake.last_body_element_x,snake.last_body_element_y)] = EMPTY_TILE;		/* Update array map, so collision with
-																					   body tiles can be detected
-																					*/
+		map[MAPARRAY_ADR(snake.last_body_element_x, snake.last_body_element_y)] = EMPTY_TILE;		/* Update array map, so collision with
+																										   body tiles can be detected
+																										*/
 
-			coord_x = snake.last_body_element_x >> 3;	  /* Calculate tile-based X/Y-coordinates from */
-			coord_y = snake.last_body_element_y >> 3; 	 /*  pixel-based X/Y-coordinates */
+		coord_x = snake.last_body_element_x >> 3;	  /* Calculate tile-based X/Y-coordinates from */
+		coord_y = snake.last_body_element_y >> 3; 	 /*  pixel-based X/Y-coordinates */
 
-			nametable_fetch = NTADR_A(coord_x, coord_y);
-			*ul ++ = MSB(nametable_fetch);
-			*ul ++ = LSB(nametable_fetch);
-			*ul ++ = EMPTY_TILE;
-
-			snake.last_body_element_x = snake.body_element_coordinates[snake.size_index-2];
-			snake.last_body_element_y = snake.body_element_coordinates[snake.size_index-1];
+		nametable_fetch = NTADR_A(coord_x, coord_y);
+		*ul ++ = MSB(nametable_fetch);
+		*ul ++ = LSB(nametable_fetch);
+		*ul ++ = EMPTY_TILE;
 		}
+		else{
+			snake.grow_event_flag= 0;
+		}
+		snake.last_body_element_x = snake.body_element_coordinates[snake.size_index-2];
+		snake.last_body_element_y = snake.body_element_coordinates[snake.size_index-1];
 
 		/* Draw new first body tile */
 		map[MAPARRAY_ADR(snake.body_element_coordinates[0],snake.body_element_coordinates[1])] = SNAKE_BODY_TILE;	/* Update array map, so collision with
-																					       body tiles can be detected
-																						*/
+																					       	   	   	   	   	   	   	   body tiles can be detected
+																													*/
 		coord_x = snake.body_element_coordinates[0] >> 3;	  				 /* Calculate tile-based X/Y-coordinates from */
-		coord_y = snake.body_element_coordinates[1] >> 3; 				 /*  pixel-based X/Y-coordinates */
+		coord_y = snake.body_element_coordinates[1] >> 3; 				 	/*  pixel-based X/Y-coordinates */
 		nametable_fetch = NTADR_A(coord_x, coord_y);
 		*ul ++ = MSB(nametable_fetch);
 		*ul ++ = LSB(nametable_fetch);
 		*ul ++ = SNAKE_BODY_TILE;
-
-		*ul = NT_UPD_EOF;										/* Add end-of-file indicator to update-list */
 	}
+
+	*ul = NT_UPD_EOF;										/* Add end-of-file indicator to update-list */
 }
 
 /**
@@ -255,7 +258,11 @@ void mainloop_render(void){
 
 	/* default render-rountine */
 	draw_score();
-	draw_snake();
+
+	if(render_movement_flag){
+		draw_snake();
+		render_movement_flag = 0;
+	}
 	draw_items();
 
 }

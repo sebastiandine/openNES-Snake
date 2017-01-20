@@ -1,6 +1,7 @@
 var structsnake__struct =
 [
     [ "body_element_coordinates", "structsnake__struct.html#a951e67290252c2a8d5ed463ce30d2743", null ],
+    [ "grow_event_flag", "structsnake__struct.html#a3585d0ec5907b12fe4f85338b4b7d446", null ],
     [ "head_sprite", "structsnake__struct.html#afebbff4a86a6b768aa89eb81da9b0611", null ],
     [ "head_sprite_attribute", "structsnake__struct.html#aee3e536edc6d71b7578c751509573500", null ],
     [ "head_sprite_x", "structsnake__struct.html#aded972bf189fa5a28e09cf0a71f59e6e", null ],

@@ -89,6 +89,8 @@ static unsigned char gameover_loop;
 static unsigned char titlescreen;
 /** Global variable, for handling the restart input */
 static unsigned char restart;
+/** Global variable, indicating when the movement of the snake can be rendered*/
+static unsigned char render_movement_flag;
 
 /** @} */
 
@@ -123,3 +125,4 @@ const unsigned char* const levelList[LEVELS_ALL+2+2]={
 	levels_pal, menue_pal
 };
 /** @} */
+

@@ -47,46 +47,46 @@ void add_snake_body_element(){
 	/* Special case, if first body_coordinates element will be added */
 	if(snake.size_index==0){
 		if(snake.moving_direction==DIR_UP){
-			snake.body_element_coordinates[snake.size_index] = snake.head_sprite_x;
-			snake.body_element_coordinates[snake.size_index+1] = snake.head_sprite_y+8;
+			snake.body_element_coordinates[snake.size_index-2] = snake.head_sprite_x;
+			snake.body_element_coordinates[snake.size_index-1] = snake.head_sprite_y+8;
 			return;
 		}
 		if(snake.moving_direction==DIR_DOWN){
-			snake.body_element_coordinates[snake.size_index] = snake.head_sprite_x;
-			snake.body_element_coordinates[snake.size_index+1] = snake.head_sprite_y-8;
+			snake.body_element_coordinates[snake.size_index-2] = snake.head_sprite_x;
+			snake.body_element_coordinates[snake.size_index-1] = snake.head_sprite_y-8;
 			return;
 		}
 		if(snake.moving_direction==DIR_LEFT){
-			snake.body_element_coordinates[snake.size_index] = snake.head_sprite_x+8;
-			snake.body_element_coordinates[snake.size_index+1] = snake.head_sprite_y;
+			snake.body_element_coordinates[snake.size_index-2] = snake.head_sprite_x+8;
+			snake.body_element_coordinates[snake.size_index-1] = snake.head_sprite_y;
 			return;
 		}
 		if(snake.moving_direction==DIR_RIGHT){
-			snake.body_element_coordinates[snake.size_index] = snake.head_sprite_x-8;
-			snake.body_element_coordinates[snake.size_index+1] = snake.head_sprite_y;
+			snake.body_element_coordinates[snake.size_index-2] = snake.head_sprite_x-8;
+			snake.body_element_coordinates[snake.size_index-1] = snake.head_sprite_y;
 			return;
 		}
 	}
 	/* Normal case, next body_coordinates element added  */
 	else{
 		if(snake.moving_direction==DIR_UP){
-			snake.body_element_coordinates[snake.size_index] = snake.body_element_coordinates[snake.size_index-2];
-			snake.body_element_coordinates[snake.size_index+1] = snake.body_element_coordinates[snake.size_index-1]+8;
+			snake.body_element_coordinates[snake.size_index-2] = snake.body_element_coordinates[snake.size_index-2];
+			snake.body_element_coordinates[snake.size_index-1] = snake.body_element_coordinates[snake.size_index-1]+8;
 			return;
 		}
 		if(snake.moving_direction==DIR_DOWN){
-			snake.body_element_coordinates[snake.size_index] = snake.body_element_coordinates[snake.size_index-2];
-			snake.body_element_coordinates[snake.size_index+1] = snake.body_element_coordinates[snake.size_index-1]-8;
+			snake.body_element_coordinates[snake.size_index-2] = snake.body_element_coordinates[snake.size_index-2];
+			snake.body_element_coordinates[snake.size_index-1] = snake.body_element_coordinates[snake.size_index-1]-8;
 			return;
 		}
 		if(snake.moving_direction==DIR_LEFT){
-			snake.body_element_coordinates[snake.size_index] = snake.body_element_coordinates[snake.size_index-2]+8;
-			snake.body_element_coordinates[snake.size_index+1] = snake.body_element_coordinates[snake.size_index-1];
+			snake.body_element_coordinates[snake.size_index-2] = snake.body_element_coordinates[snake.size_index-2]+8;
+			snake.body_element_coordinates[snake.size_index-1] = snake.body_element_coordinates[snake.size_index-1];
 			return;
 		}
 		if(snake.moving_direction==DIR_RIGHT){
-			snake.body_element_coordinates[snake.size_index] = snake.body_element_coordinates[snake.size_index-2]-8;
-			snake.body_element_coordinates[snake.size_index+1] = snake.body_element_coordinates[snake.size_index-1];
+			snake.body_element_coordinates[snake.size_index-2] = snake.body_element_coordinates[snake.size_index-2]-8;
+			snake.body_element_coordinates[snake.size_index-1] = snake.body_element_coordinates[snake.size_index-1];
 			return;
 		}
 	}
@@ -216,8 +216,9 @@ void mainloop_update(void){
 		 //Handle snakes growth
 		if(snake.size_index < (SNAKE_MAX_SIZE <<1)){
 			sfx_play(SFX_ABSORB_ITEM,0);
+			snake.size_index += 2;
+			snake.grow_event_flag = 1;
 			add_snake_body_element();
-			snake.size_index+=2;
 		}
 
 		/*
@@ -244,6 +245,7 @@ void mainloop_update(void){
 	 * Update Position
 	 */
 	if(++snake.speed_counter == 10){
+
 					switch(snake.moving_direction){
 						case DIR_UP: update_snake_body(); snake.head_sprite_y-=8; snake.head_sprite = SNAKE_HEAD_TILE_VERT; snake.head_sprite_attribute = 131;  break;
 						case DIR_DOWN: update_snake_body(); snake.head_sprite_y+=8; snake.head_sprite = SNAKE_HEAD_TILE_VERT; snake.head_sprite_attribute = 3;    break;
@@ -251,5 +253,6 @@ void mainloop_update(void){
 						case DIR_RIGHT: update_snake_body(); snake.head_sprite_x+=8; snake.head_sprite = SNAKE_HEAD_TILE_HORZ; snake.head_sprite_attribute = 3;    break;
 					}
 				snake.speed_counter = 0;
+				render_movement_flag = 1; //indicating render-routine, that the movement can be drawn to the screen
 	}
 }

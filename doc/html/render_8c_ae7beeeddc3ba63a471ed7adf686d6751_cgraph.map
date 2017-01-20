@@ -1,4 +1,10 @@
 <map id="draw_pause_screen" name="draw_pause_screen">
-<area shape="rect" id="node2" href="$neslib_8h.html#af0e0aec75a3a9210d71775340297a652" title="oam_clear" alt="" coords="191,5,273,32"/>
-<area shape="rect" id="node3" href="$neslib_8h.html#a6c0a83ae05e30af1643fbaf224ab8d74" title="oam_spr" alt="" coords="196,56,268,83"/>
+<area shape="rect" id="node2" href="$neslib_8h.html#af0e0aec75a3a9210d71775340297a652" title="oam_clear" alt="" coords="213,5,295,32"/>
+<area shape="rect" id="node3" href="$neslib_8h.html#ae647495b7a80abff740f5e6169935faf" title="ppu_off" alt="" coords="223,56,285,83"/>
+<area shape="rect" id="node4" href="$neslib_8h.html#a8460c4c927241500a3a09c245ceeea52" title="vram_adr" alt="" coords="217,107,291,133"/>
+<area shape="rect" id="node5" href="$render_8c.html#a0842d4314b6de6efca64c0ad01002712" title="draw_level_screen" alt="" coords="191,157,317,184"/>
+<area shape="rect" id="node8" href="$neslib_8h.html#a67f5c6d5ee71fb0a59eb15526bc2cc84" title="ppu_on_all" alt="" coords="212,208,296,235"/>
+<area shape="rect" id="node9" href="$neslib_8h.html#a6c0a83ae05e30af1643fbaf224ab8d74" title="oam_spr" alt="" coords="218,259,290,285"/>
+<area shape="rect" id="node6" href="$neslib_8h.html#a1f3f11758d2d0135f9451147e02f9f8f" title="pal_bg" alt="" coords="377,132,437,159"/>
+<area shape="rect" id="node7" href="$neslib_8h.html#a1adb35bc2bdf712c0b1b8223b72b1cb2" title="vram_unrle" alt="" coords="365,183,449,209"/>
 </map>

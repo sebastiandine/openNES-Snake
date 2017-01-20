@@ -21,9 +21,12 @@ typedef struct snake_struct {
 
 	unsigned char speed_counter;			/**< tbd. */
 
+
 	unsigned char moving_direction; 		/**< Indicator to which direction the snake is moving.
 	 	 	 	 	 	 	 	 	 	 	 *	 1=up,2=down,3=left,4=right.
 	 	 	 	 	 	 	 	 	 	 	 */
+
+	unsigned char grow_event_flag;			/**< Variable for indication, that the snake has been grown */
 
 	unsigned char head_sprite;				/**< tbd. */
 

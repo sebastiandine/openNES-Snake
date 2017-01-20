@@ -70,6 +70,8 @@ void main(void){
 		snake.size_index = 0;
 		snake.last_body_element_x = 0;
 		snake.last_body_element_y = 0;
+		snake.grow_event_flag = 0;
+		render_movement_flag = 0;
 
 		/* draw screen */
 		oam_clear();

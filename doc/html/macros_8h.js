@@ -27,6 +27,7 @@ var macros_8h =
     [ "MAP_WIDTH", "macros_8h.html#aa037a6d6a4f04d51c7ec1c9ee9054e76", null ],
     [ "MAPARRAY_ADR", "macros_8h.html#a705ec7deb75ce089210eaf94aa8d2b1b", null ],
     [ "NAMETABLE1_START", "macros_8h.html#af6b6d76b2cb121045ac2ab1a8f539f62", null ],
+    [ "NAMETABLE2_START", "macros_8h.html#ad4d646e65d686c0c56ed05bbca69bb52", null ],
     [ "SFX_ABSORB_ITEM", "macros_8h.html#ac40bcdd1dfa6181a2e5392f4c88ac836", null ],
     [ "SFX_CRASH", "macros_8h.html#a8c4dc535ec4a0a08d82ff92edaa9ae33", null ],
     [ "SFX_NEXT_LEVEL", "macros_8h.html#aa38d47aeebd54463e3e3d727cfb7c775", null ],
