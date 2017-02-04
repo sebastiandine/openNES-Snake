@@ -89,6 +89,12 @@ void init_items(void){
 void init_level_params(void){
 	init_items();
 
+	snake.moving_direction=DIR_UP;
+	snake.size_index = 0;
+	snake.last_body_element_x = 0;
+	snake.last_body_element_y = 0;
+	snake.grow_event_flag = 0;
+
 	if(current_level == 0){
 		snake.head_sprite_x = LVL1_START_X;
 		snake.head_sprite_y = LVL1_START_Y;

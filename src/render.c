@@ -78,7 +78,8 @@ void draw_items(void){
 
 	for(i=0; i < (ITEM_MAX_ON_SCREEN <<1); i+=2){
 		if((items.item_coordinates[i] != 0) && (items.item_coordinates[i+1] != 0)){
-			sprite_offset = oam_spr(items.item_coordinates[i],items.item_coordinates[i+1],SPIDER_TILE,0,sprite_offset);
+			sprite_offset = oam_spr(items.item_coordinates[i],items.item_coordinates[i+1],SPIDER_TILE,
+					SPRITE_ATTR(0,0,0,0),sprite_offset);
 		}
 	}
 }
@@ -224,11 +225,11 @@ void draw_pause_screen(void){
 		ppu_on_all();
 
 		/* Write PAUSE to the screen */
-		sprite_offset = oam_spr(120, 120, 0x30,1,0); 				//P
-		sprite_offset = oam_spr(128, 120, 0x21,1,sprite_offset); 	//A
-		sprite_offset = oam_spr(136, 120, 0x35,1,sprite_offset); 	//U
-		sprite_offset = oam_spr(144, 120, 0x33,1,sprite_offset); 	//S
-		sprite_offset = oam_spr(152, 120, 0x25,1,sprite_offset); 	//E
+		sprite_offset = oam_spr(112, 112, 0x30, SPRITE_ATTR(0,0,0,3), 0); 				//P
+		sprite_offset = oam_spr(120, 112, 0x21, SPRITE_ATTR(0,0,0,3), sprite_offset); 	//A
+		sprite_offset = oam_spr(128, 112, 0x35, SPRITE_ATTR(0,0,0,3), sprite_offset); 	//U
+		sprite_offset = oam_spr(136, 112, 0x33, SPRITE_ATTR(0,0,0,3), sprite_offset); 	//S
+		sprite_offset = oam_spr(144, 112, 0x25, SPRITE_ATTR(0,0,0,3), sprite_offset); 	//E
 	}
 }
 

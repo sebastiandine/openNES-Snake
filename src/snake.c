@@ -61,16 +61,11 @@ void main(void){
 
 		/* init variables */
 		init_level_params();
-		snake.moving_direction=DIR_UP;
 		pause = 0;
 		pause_loop = 0;
 		gameover = 0;
 		gameover_loop = 0;
 		restart = 0;
-		snake.size_index = 0;
-		snake.last_body_element_x = 0;
-		snake.last_body_element_y = 0;
-		snake.grow_event_flag = 0;
 		render_movement_flag = 0;
 
 		/* draw screen */

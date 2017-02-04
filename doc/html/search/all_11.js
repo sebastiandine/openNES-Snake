@@ -20,6 +20,7 @@ var searchData=
   ['speed_5fcounter',['speed_counter',['../structsnake__struct.html#a5b4861c8a096bac3fcc718c702265fb2',1,'snake_struct']]],
   ['spider_5ftile',['SPIDER_TILE',['../macros_8h.html#a843d1ce9c1733c8deb7f4bf88d66c0f4',1,'macros.h']]],
   ['split',['split',['../neslib_8h.html#a684e5302447c159136256469bd224c69',1,'neslib.h']]],
+  ['sprite_5fattr',['SPRITE_ATTR',['../macros_8h.html#ab9b8471c6f5e12332c17c27d06467647',1,'macros.h']]],
   ['sprite_5foffset',['sprite_offset',['../globals_8h.html#a4ffc86f06d1c7507f0a9079421ef75da',1,'globals.h']]],
   ['sprites_5fpal',['sprites_pal',['../sprites__pal_8h.html#a9abd856e8bb1b7fc34eec2a17b9165fd',1,'sprites_pal.h']]],
   ['sprites_5fpal_2eh',['sprites_pal.h',['../sprites__pal_8h.html',1,'']]],

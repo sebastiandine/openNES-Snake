@@ -37,6 +37,7 @@ var macros_8h =
     [ "SNAKE_HEAD_TILE_VERT", "macros_8h.html#a7c4639b62d666878579c932ff2106237", null ],
     [ "SNAKE_MAX_SIZE", "macros_8h.html#a6fb1d4c78b46a621cb8344c51adcdc02", null ],
     [ "SPIDER_TILE", "macros_8h.html#a843d1ce9c1733c8deb7f4bf88d66c0f4", null ],
+    [ "SPRITE_ATTR", "macros_8h.html#ab9b8471c6f5e12332c17c27d06467647", null ],
     [ "WALL_TILE_1", "macros_8h.html#a6fc4256d763255b590cfbb9bab1d1592", null ],
     [ "WALL_TILE_2", "macros_8h.html#a9dc5bc06ab6f00d2c106766046501322", null ]
 ];

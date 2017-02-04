@@ -117,4 +117,17 @@
    x and y are assumed to be Sprite-coordinates (not Tile-coordinates).
 */
 #define MAPARRAY_ADR(x,y)	((y<<2)|(x>>3))
+/**
+ * Macro for calculating the attribute byte of a sprite. The bits of this byte
+ * store data as followed (taken from NerdyNights tutorial):
+ *
+ * 76543210
+ * |||   ||
+ * |||   ++- Color Palette of sprite.  Choose which set of 4 from the 16 colors to use
+ * |||
+ * ||+------ Priority (0: in front of background; 1: behind background)
+ * |+------- Flip sprite horizontally
+ * +-------- Flip sprite vertically
+ */
+#define SPRITE_ATTR(flip_horz,flip_vert,prio,pal) ((flip_horz<<7) + (flip_vert<<6) + (prio<<5) + pal)
 /** @} */

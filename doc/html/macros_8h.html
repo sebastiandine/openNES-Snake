@@ -178,6 +178,8 @@ Macros</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Macros for more efficent caluclations</div></td></tr>
 <tr class="memitem:a705ec7deb75ce089210eaf94aa8d2b1b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="macros_8h.html#a705ec7deb75ce089210eaf94aa8d2b1b">MAPARRAY_ADR</a>(x,  y)&#160;&#160;&#160;((y&lt;&lt;2)|(x&gt;&gt;3))</td></tr>
 <tr class="separator:a705ec7deb75ce089210eaf94aa8d2b1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9b8471c6f5e12332c17c27d06467647"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="macros_8h.html#ab9b8471c6f5e12332c17c27d06467647">SPRITE_ATTR</a>(flip_horz,  flip_vert,  prio,  pal)&#160;&#160;&#160;((flip_horz&lt;&lt;7) + (flip_vert&lt;&lt;6) + (prio&lt;&lt;5) + pal)</td></tr>
+<tr class="separator:ab9b8471c6f5e12332c17c27d06467647"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This header file defines object-like macros (constants) and function-like macros for more efficient calculations. </p>
@@ -723,6 +725,48 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Tile of spider item </p>
+
+</div>
+</div>
+<a id="ab9b8471c6f5e12332c17c27d06467647"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9b8471c6f5e12332c17c27d06467647">&sect;&nbsp;</a></span>SPRITE_ATTR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPRITE_ATTR</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">flip_horz, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">flip_vert, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">prio, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pal&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;((flip_horz&lt;&lt;7) + (flip_vert&lt;&lt;6) + (prio&lt;&lt;5) + pal)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Macro for calculating the attribute byte of a sprite. The bits of this byte store data as followed (taken from NerdyNights tutorial):</p>
+<p>76543210 ||| || ||| ++- Color Palette of sprite. Choose which set of 4 from the 16 colors to use ||| ||+---&mdash; Priority (0: in front of background; 1: behind background) |+----&mdash; Flip sprite horizontally +-----&mdash; Flip sprite vertically </p>
 
 </div>
 </div>

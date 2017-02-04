@@ -8,5 +8,6 @@ var searchData=
   ['snake_5fhead_5ftile_5fhorz',['SNAKE_HEAD_TILE_HORZ',['../macros_8h.html#a2f6c959fa13e7bd598f3dc86c456effe',1,'macros.h']]],
   ['snake_5fhead_5ftile_5fvert',['SNAKE_HEAD_TILE_VERT',['../macros_8h.html#a7c4639b62d666878579c932ff2106237',1,'macros.h']]],
   ['snake_5fmax_5fsize',['SNAKE_MAX_SIZE',['../macros_8h.html#a6fb1d4c78b46a621cb8344c51adcdc02',1,'macros.h']]],
-  ['spider_5ftile',['SPIDER_TILE',['../macros_8h.html#a843d1ce9c1733c8deb7f4bf88d66c0f4',1,'macros.h']]]
+  ['spider_5ftile',['SPIDER_TILE',['../macros_8h.html#a843d1ce9c1733c8deb7f4bf88d66c0f4',1,'macros.h']]],
+  ['sprite_5fattr',['SPRITE_ATTR',['../macros_8h.html#ab9b8471c6f5e12332c17c27d06467647',1,'macros.h']]]
 ];
