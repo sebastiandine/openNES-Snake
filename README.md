@@ -1,8 +1,8 @@
-#openNES Snake
-##Rebuilding classic games for the NES as Open Source  
+# openNES Snake
+## Rebuilding classic games for the NES as Open Source  
 ![IMG1](snake-screenhost-1.png) ![IMG2](snake-screenhost-2.png) ![IMG3](snake-screenhost-3.png)
 
-##Project Description
+## Project Description
 This project marks the first entry in hopefuly a long line of projects, which attend to rebuild classic video games   
 for the Nintendo Entertainment System on an Open Source basis.  
 The purpose of these projects is to get more enthusiastic people into programming for the NES by providing code examples
@@ -14,10 +14,10 @@ but also because of the lack of knowledge of the main contributor at the time :s
 
 The project has been coded completely in C, using Shiru's NESLib and the cc65 cross compiler (for further references see the Toolkit section).
 
-##License
+## License
 This project is licensed under the zlib license. See also the attached README file.
 
-##Toolkit
+## Toolkit
 * [cc65 cross compiler](https://github.com/cc65/cc65) - A freeware C compiler for 6502 based systems
 
 * [Shiru's NESLib](http://shiru.untergrund.net/articles/programming_nes_games_in_c.htm) - An programming library on top of cc65 for more comfortable NES development. See also the more up to date fork [here](https://github.com/clbr/neslib).
@@ -39,9 +39,9 @@ This project is licensed under the zlib license. See also the attached README fi
 * [Nerdy Nights Tutorials](http://nintendoage.com/pub/faq/NA/index.html?load=nerdy_nights_out.html) - Even if it is based on introducing you to assembly, this is the classic lecture for understanding the NES architecture for many years.
 
 
-##How-To Built
+## How-To Built
 To build the software into an .NES rom, you need to have installed cc65 on your local machine in order to run eighter the script `build/build.sh` for Linux based systems or build/build.bat` for Windows based systems. You always find a build of the master-branch at `build/snake.nes`.
 
-##Notes for Contributors
+## Notes for Contributors
 Feel free to fork this project and extend its content. If you find bugs, please submit them as issues so we can discuss together how you can fix them. 
 All your contributions need to include explaining Doxygen comments in order to share your knowledge with future contributors and maintaining the project's code documentation.
