@@ -18,21 +18,21 @@ The project has been coded completely in C, using Shiru's NESLib and the cc65 cr
 This project is licensed under the zlib license. See also the attached README file.
 
 ## Toolkit
-* [cc65 cross compiler](https://github.com/cc65/cc65) - A freeware C compiler for 6502 based systems
+* [cc65 cross compiler v.2.5](https://github.com/cc65/cc65) - A freeware C compiler for 6502 based systems
 
-* [Shiru's NESLib](http://shiru.untergrund.net/articles/programming_nes_games_in_c.htm) - An programming library on top of cc65 for more comfortable NES development. See also the more up to date fork [here](https://github.com/clbr/neslib).
+* [Shiru's NESLib ](http://shiru.untergrund.net/articles/programming_nes_games_in_c.htm) - An programming library on top of cc65 for more comfortable NES development. See also the more up to date fork [here](https://github.com/clbr/neslib).
 
-* [Eclipse IDE for C/C++ Developers](http://www.eclipse.org/downloads/packages/eclipse-ide-cc-developers/keplersr2) - the famous IDE in its C/C++ variant
+* [Eclipse IDE for C/C++ Developers v.4.3 (Kepler)](http://www.eclipse.org/downloads/packages/eclipse-ide-cc-developers/keplersr2) - the famous IDE in its C/C++ variant
 
-* [Tile Molester](http://www.romhacking.net/utilities/109/) - A tileset editor, for designing tiles/sprites
+* [Tile Molester v.0.16](http://www.romhacking.net/utilities/109/) - A tileset editor, for designing tiles/sprites
 
-* [NES Screen Tool](https://shiru.untergrund.net/software.shtml) - A tool that allows to create and edit NES nametables, attributes, palettes, patterns (tiles), and metasprites
+* [NES Screen Tool v.2.04](https://shiru.untergrund.net/software.shtml) - A tool that allows to create and edit NES nametables, attributes, palettes, patterns (tiles), and metasprites
 
-* [FamiTracker](http://famitracker.com) - Famous tracker for producing music for the NES/Famicom-systems
+* [FamiTracker v.0.4.2](http://famitracker.com) - Famous tracker for producing music for the NES/Famicom-systems
 
-* [Doxygen](http://www.stack.nl/~dimitri/doxygen/) - Code documentation tool for C/C++ projects
+* [Doxygen v.1.8.12](http://www.stack.nl/~dimitri/doxygen/) - Code documentation tool for C/C++ projects
 
-* [FCEUX](http://www.fceux.com/web/home.html) - Famous NES emulator in the homebrew scene with many debugging utilities.
+* [FCEUX v.2.2.3](http://www.fceux.com/web/home.html) - Famous NES emulator in the homebrew scene with many debugging utilities.
 
 * [NesDev Forum](http://forums.nesdev.com/) - You will always find friendly, skilled and helpful people in this community, who are willing to help with problems you are facing during your project.
 
