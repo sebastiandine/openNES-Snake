@@ -15,7 +15,7 @@
 */
 void draw_snake(void){
 	/* Draw snakes head - as a sprite */
-	sprite_offset = oam_spr(snake.head_sprite_x,snake.head_sprite_y,snake.head_sprite,snake.head_sprite_attribute,0);
+	sprite_offset = oam_spr(snake.head_sprite_x,snake.head_sprite_y-1,snake.head_sprite,snake.head_sprite_attribute,0);
 
 	/*
 	 * Draw snakes body_coordinates - as background-tiles.
@@ -78,7 +78,7 @@ void draw_items(void){
 
 	for(i=0; i < (ITEM_MAX_ON_SCREEN <<1); i+=2){
 		if((items.item_coordinates[i] != 0) && (items.item_coordinates[i+1] != 0)){
-			sprite_offset = oam_spr(items.item_coordinates[i],items.item_coordinates[i+1],SPIDER_TILE,
+			sprite_offset = oam_spr(items.item_coordinates[i],items.item_coordinates[i+1]-1,SPIDER_TILE,
 					SPRITE_ATTR(0,0,0,0),sprite_offset);
 		}
 	}
