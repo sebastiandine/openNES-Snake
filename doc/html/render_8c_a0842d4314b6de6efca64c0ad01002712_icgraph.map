@@ -1,5 +1,0 @@
-<map id="draw_level_screen" name="draw_level_screen">
-<area shape="rect" id="node2" href="$render_8c.html#ae7beeeddc3ba63a471ed7adf686d6751" title="draw_pause_screen" alt="" coords="180,5,317,32"/>
-<area shape="rect" id="node4" href="$snake_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="Main game loop. " alt="" coords="531,31,581,57"/>
-<area shape="rect" id="node3" href="$render_8c.html#aedd9dc656adabee0aaa1887fdc431544" title="mainloop_render" alt="" coords="365,5,483,32"/>
-</map>

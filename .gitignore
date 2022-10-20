@@ -1,0 +1,9 @@
+.settings
+.project
+.cproject
+**/*.nam
+**/*.ftm
+**/*.nsf
+**/*.cdl
+**/*.ram.nl
+doc/html

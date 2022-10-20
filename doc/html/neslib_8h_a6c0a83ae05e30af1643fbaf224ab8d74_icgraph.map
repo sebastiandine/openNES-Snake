@@ -1,7 +1,0 @@
-<map id="oam_spr" name="oam_spr">
-<area shape="rect" id="node2" href="$render_8c.html#a115543b4c8b33eab539f43151ff51db3" title="draw_snake" alt="" coords="149,5,239,32"/>
-<area shape="rect" id="node5" href="$render_8c.html#a8505733de64030563c2907ef81fb4b96" title="draw_items" alt="" coords="150,56,238,83"/>
-<area shape="rect" id="node6" href="$render_8c.html#ae7beeeddc3ba63a471ed7adf686d6751" title="draw_pause_screen" alt="" coords="125,107,263,133"/>
-<area shape="rect" id="node3" href="$render_8c.html#aedd9dc656adabee0aaa1887fdc431544" title="mainloop_render" alt="" coords="311,56,428,83"/>
-<area shape="rect" id="node4" href="$snake_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="Main game loop. " alt="" coords="476,56,527,83"/>
-</map>

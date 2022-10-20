@@ -1,7 +1,0 @@
-<map id="rand8" name="rand8">
-<area shape="rect" id="node2" href="$init_8c.html#a5e1a11d04da8b93d988f7f469cced908" title="calc_random_item_position" alt="" coords="108,81,288,108"/>
-<area shape="rect" id="node3" href="$init_8c.html#a2c5205e4618e0f665b8732c538418639" title="init_level_params" alt="" coords="493,5,615,32"/>
-<area shape="rect" id="node4" href="$snake_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="Main game loop. " alt="" coords="663,56,713,83"/>
-<area shape="rect" id="node5" href="$update_8c.html#ae3488a06fb6aba1dfcf15953247f5f5d" title="respawn_items" alt="" coords="336,107,445,133"/>
-<area shape="rect" id="node6" href="$update_8c.html#a31c8504e7fe9671dbda52ba62a382b1f" title="mainloop_update" alt="" coords="494,107,614,133"/>
-</map>

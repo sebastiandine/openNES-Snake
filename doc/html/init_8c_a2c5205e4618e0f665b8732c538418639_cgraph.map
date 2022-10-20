@@ -1,5 +1,0 @@
-<map id="init_level_params" name="init_level_params">
-<area shape="rect" id="node2" href="$init_8c.html#a7b954d662e5d02b443505f282f168832" title="init_items" alt="" coords="225,5,304,32"/>
-<area shape="rect" id="node3" href="$init_8c.html#a5e1a11d04da8b93d988f7f469cced908" title="calc_random_item_position" alt="" coords="175,56,355,83"/>
-<area shape="rect" id="node4" href="$neslib_8h.html#a8fe1185fb429a4f9a0b82f9cd2c703e5" title="rand8" alt="" coords="403,56,457,83"/>
-</map>
