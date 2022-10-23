@@ -19,7 +19,7 @@ jobs:
           apt update && apt install -y build-essential git doxygen
           git clone https://github.com/cc65/cc65.git && cd cc65 && make && make avail
 
-    - name: Analyze Project Metadata
+      - name: Analyze Project Metadata
         run: |
           echo "PROJECT_VERSION=$(cat ./VERSION)" >> $GITHUB_ENV
               
