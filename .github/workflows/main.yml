@@ -26,6 +26,7 @@ jobs:
           ls
           cd build
           ls
+          ./build.sh
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
