@@ -9,3 +9,4 @@
 **/*.nes
 doc/html
 doc/latex
+doc/*.pdf
