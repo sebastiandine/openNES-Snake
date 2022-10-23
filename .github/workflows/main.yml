@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Setup Dev Environment
         run: |
-          apt update && apt install -y build-essential git doxygen
+          apt update && apt install -y build-essential git doxygen graphviz
           git clone https://github.com/cc65/cc65.git && cd cc65 && make && make avail
 
       - name: Analyze Project Metadata
