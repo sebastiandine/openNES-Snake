@@ -20,7 +20,7 @@ jobs:
 
       - name: Analyze Project Metadata
         run: |
-          echo "PROJECT_VERSION=$(cat ./VERSION)" >> $GITHUB_ENV
+          echo "PROJECT_VERSION=$(head -n 1 ./VERSION)" >> $GITHUB_ENV
               
       - name: Build & Package Game
         run: |
