@@ -1,10 +1,8 @@
-name: Java Snapshot CI
+name: NES CI
 
 on:
   push:
-    branches: [ "*", "!master" ]
-  pull_request:
-    branches: [ "*", "!master" ]
+    branches: [ "master" ]
 
 jobs:
 
@@ -15,20 +13,66 @@ jobs:
     steps:
       - name: Checkout the branch
         uses: actions/checkout@v3
-      
+
       - name: Setup Dev Environment
         run: |
           apt update && apt install -y build-essential git doxygen
           git clone https://github.com/cc65/cc65.git && cd cc65 && make && make avail
-        
+
+    - name: Analyze Project Metadata
+        run: |
+          echo "PROJECT_VERSION=$(cat ./VERSION)" >> $GITHUB_ENV
+              
       - name: Build Game
         run: |
           cd build
           sh build.sh
 
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v3
+      - name: Generate Documentation
+        run: |
+          doygen doc/doxygen-config
+          cd doc/html
+          zip -r ../documentation-${{ env.PROJECT_VERSION }}.zip *
+          tar -czvf ../documentation-${{ env.PROJECT_VERSION }}.tar.gz *
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          name: snake
-          path: build/snake.nes
+          tag_name: v${{ env.PROJECT_VERSION }}
+          release_name: ${{ env.PROJECT_VERSION }}
+          draft: false
+          prerelease: false
+
+      - name: Upload NES ROM
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: build/snake.nes
+          asset_name: ${{ github.event.repository.name }}-${{ env.PROJECT_VERSION }}.nes
+          asset_content_type: application/x-nes-rom
+
+      - name: Upload Documentation ZIP
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: doc/documentation-${{ env.PROJECT_VERSION }}.zip
+          asset_name: documentation-${{ env.PROJECT_VERSION }}.zip
+          asset_content_type: application/zip
+          
+      - name: Upload Documentation TAR.GZ
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: doc/documentation-${{ env.PROJECT_VERSION }}.tar.gz
+          asset_name: documentation-${{ env.PROJECT_VERSION }}.tar.gz
+          asset_content_type: application/gzip
           
