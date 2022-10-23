@@ -16,15 +16,14 @@ jobs:
       - name: Checkout the branch
         uses: actions/checkout@v3
       
-      # - name: Setup Dev Environment
-      #   run: |
-      #     apt update && apt install -y build-essential git doxygen
-      #     git clone https://github.com/cc65/cc65.git && cd cc65 && make && make avail
+      - name: Setup Dev Environment
+        run: |
+          apt update && apt install -y build-essential git doxygen
+          git clone https://github.com/cc65/cc65.git && cd cc65 && make && make avail
         
       - name: Build Game
         run: |
           cd build
-          ls -la
           sh build.sh
 
       - name: Upload Artifact
