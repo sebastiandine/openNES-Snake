@@ -1,0 +1,11 @@
+.settings
+.project
+.cproject
+**/*.nam
+**/*.ftm
+**/*.nsf
+**/*.cdl
+**/*.ram.nl
+**/*.nes
+doc/html
+doc/latex

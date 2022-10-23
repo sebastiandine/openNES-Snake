@@ -3,16 +3,16 @@
 ![IMG1](snake-screenhost-1.png) ![IMG2](snake-screenhost-2.png) ![IMG3](snake-screenhost-3.png)
 
 ## Project Description
-This project marks the first entry in hopefuly a long line of projects, which attend to rebuild classic video games   
-for the Nintendo Entertainment System on an Open Source basis.  
-The purpose of these projects is to get more enthusiastic people into programming for the NES by providing code examples
-and a starting points for making new games from the scratch.
+This project is the first entry in what I hope will be a long line of projects aimed at recreating classic video games   
+for the Nintendo Entertainment System on an open source basis.  
+The purpose of these projects is to get more enthusiastic people interested in programming for the NES by providing code examples
+and providing a starting point for developing new games from scratch.
 
-This particular project aims to rebuild the classic game Snake, also known as Nibbles. Since it is the first of its kind in terms of this project series,
-it is stripped down to the core mechanics of the original game, in order to avoid an overhead of information for future beginners
-but also because of the lack of knowledge of the main contributor at the time :stuck_out_tongue_winking_eye:.
+This particular project aims to recreate the classic game Snake, also known as Nibbles. As it is the first of its kind in this series of projects,
+it is reduced to the core mechanics of the original game, in order to avoid information overload for future beginners
+but also because of the lack of knowledge of the main author at that time :stuck_out_tongue_winking_eye:.
 
-The project has been coded completely in C, using Shiru's NESLib and the cc65 cross compiler (for further references see the Toolkit section).
+The project was programmed entirely in C, using Shiru's NESLib and the cc65 cross compiler (for more references see the Toolkit section).
 
 ## License
 This project is licensed under the zlib license. See also the attached README file.
@@ -21,8 +21,6 @@ This project is licensed under the zlib license. See also the attached README fi
 * [cc65 cross compiler v.2.5](https://github.com/cc65/cc65) - A freeware C compiler for 6502 based systems
 
 * [Shiru's NESLib ](http://shiru.untergrund.net/articles/programming_nes_games_in_c.htm) - An programming library on top of cc65 for more comfortable NES development. See also the more up to date fork [here](https://github.com/clbr/neslib).
-
-* [Eclipse IDE for C/C++ Developers v.4.3 (Kepler)](http://www.eclipse.org/downloads/packages/eclipse-ide-cc-developers/keplersr2) - the famous IDE in its C/C++ variant
 
 * [Tile Molester v.0.16](http://www.romhacking.net/utilities/109/) - A tileset editor, for designing tiles/sprites
 
@@ -39,9 +37,12 @@ This project is licensed under the zlib license. See also the attached README fi
 * [Nerdy Nights Tutorials](http://nintendoage.com/pub/faq/NA/index.html?load=nerdy_nights_out.html) - Even if it is based on introducing you to assembly, this is the classic lecture for understanding the NES architecture for many years.
 
 
-## How-To Built
-To build the software into an .NES rom, you need to have installed cc65 on your local machine in order to run eighter the script `build/build.sh` for Linux based systems or build/build.bat` for Windows based systems. You always find a build of the master-branch at `build/snake.nes`.
+## How To Build Locally
+To build a `.NES` rom from the project's sources, execute the build script at `build/build.sh` from the `build` directory or the script `build/build.bat` if you are working on Windows. Note that these scripts depend on the cc65 cross compiler, so you need ensure that this is available on your system.
+
+## Development Container
+This project provides [VS Code Development Container](https://code.visualstudio.com/docs/remote/containers) configuration at `.devcontainer/`. Via this configuration, you automatically have a complete development environment for developing NES games.
 
 ## Notes for Contributors
-Feel free to fork this project and extend its content. If you find bugs, please submit them as issues so we can discuss together how you can fix them. 
+Feel free to fork this project and extend it. If you find bugs, please submit them as issues so we can discuss together how you can fix them. 
 All your contributions need to include explaining Doxygen comments in order to share your knowledge with future contributors and maintaining the project's code documentation.

@@ -1,0 +1,15 @@
+{
+    "name": "NES Development Environment",
+    "dockerFile": "Dockerfile",
+
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "remoteEnv": {
+        "DISPLAY": "host.docker.internal:0"
+    },
+    "extensions": [
+        "ms-vscode.cpptools"
+    ]
+
+}

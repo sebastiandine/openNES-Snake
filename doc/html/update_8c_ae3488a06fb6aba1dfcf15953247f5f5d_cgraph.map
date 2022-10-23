@@ -1,4 +1,0 @@
-<map id="respawn_items" name="respawn_items">
-<area shape="rect" id="node2" href="$init_8c.html#a5e1a11d04da8b93d988f7f469cced908" title="calc_random_item_position" alt="" coords="163,5,343,32"/>
-<area shape="rect" id="node3" href="$neslib_8h.html#a8fe1185fb429a4f9a0b82f9cd2c703e5" title="rand8" alt="" coords="391,5,445,32"/>
-</map>

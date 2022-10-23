@@ -1,4 +1,0 @@
-<map id="vram_read" name="vram_read">
-<area shape="rect" id="node2" href="$init_8c.html#a0d12efc5b710644e3c76ceafe1b4f903" title="load_map_data_into\l_array" alt="" coords="135,5,273,47"/>
-<area shape="rect" id="node3" href="$snake_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="Main game loop. " alt="" coords="321,13,372,39"/>
-</map>

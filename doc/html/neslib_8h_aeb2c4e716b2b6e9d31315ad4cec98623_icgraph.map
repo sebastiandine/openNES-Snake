@@ -1,6 +1,0 @@
-<map id="sfx_play" name="sfx_play">
-<area shape="rect" id="node2" href="$input_8c.html#a8bf87fe078154e7e046e88a4d05e3e8c" title="input_btn_start" alt="" coords="124,5,232,32"/>
-<area shape="rect" id="node4" href="$snake_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="Main game loop. " alt="" coords="483,56,533,83"/>
-<area shape="rect" id="node5" href="$update_8c.html#a31c8504e7fe9671dbda52ba62a382b1f" title="mainloop_update" alt="" coords="297,107,417,133"/>
-<area shape="rect" id="node3" href="$input_8c.html#a42040f54ae307c565d4142f864d926c7" title="mainloop_handle_input" alt="" coords="280,5,435,32"/>
-</map>

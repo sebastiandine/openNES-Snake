@@ -1,5 +1,0 @@
-<map id="load_map_data_into_array" name="load_map_data_into_array">
-<area shape="rect" id="node2" href="$neslib_8h.html#ae647495b7a80abff740f5e6169935faf" title="ppu_off" alt="" coords="201,5,264,32"/>
-<area shape="rect" id="node3" href="$neslib_8h.html#a8460c4c927241500a3a09c245ceeea52" title="vram_adr" alt="" coords="195,56,270,83"/>
-<area shape="rect" id="node4" href="$neslib_8h.html#af14b2510268b3c13d9bd60837167bb09" title="vram_read" alt="" coords="192,107,273,133"/>
-</map>
