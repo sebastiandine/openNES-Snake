@@ -22,11 +22,13 @@ jobs:
         run: |
           echo "PROJECT_VERSION=$(cat ./VERSION)" >> $GITHUB_ENV
               
-      - name: Build Game
+      - name: Build & Package Game
         run: |
           cd build
           sh build.sh
-          
+          zip ${{ github.event.repository.name }}-${{ env.PROJECT_VERSION }}.zip *.nes
+          tar -czvf ${{ github.event.repository.name }}-${{ env.PROJECT_VERSION }}.tar.gz *.nes
+
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
@@ -38,13 +40,22 @@ jobs:
           draft: false
           prerelease: false
 
-      - name: Upload NES ROM
+      - name: Upload NES ROM ZIP
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: build/snake.nes
-          asset_name: ${{ github.event.repository.name }}-${{ env.PROJECT_VERSION }}.nes
-          asset_content_type: application/x-nes-rom
-          
+          asset_path: build/${{ github.event.repository.name }}-${{ env.PROJECT_VERSION }}.zip
+          asset_name: ${{ github.event.repository.name }}-${{ env.PROJECT_VERSION }}.zip
+          asset_content_type: application/zip
+
+      - name: Upload NES ROM TAR.GZ
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: build/${{ github.event.repository.name }}-${{ env.PROJECT_VERSION }}.tar.gz
+          asset_name: ${{ github.event.repository.name }}-${{ env.PROJECT_VERSION }}.tar.gz
+          asset_content_type: application/gzip
