@@ -5,7 +5,7 @@ NES_ROM_MAP_NAME=nrom_128_horz.cfg	#name of rom-mapping-file in $CONFIG_DIR-dire
 ASM_RESET_FILE=crt0			#name of 6502-assembler file in $SOURCE_DIR-directory, which contains
 					#startup-memory-organization, WITHOUT! extension
 
-rm -rf temp
+rm -rf ./temp
 mkdir temp
 cp ../src/* ../gfx/* ../sfx/* ../config/* ../NESLibrary/* ./temp
 
