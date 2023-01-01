@@ -71,7 +71,7 @@ void mainloop_handle_input(void){
 	}
 
 	if(input&PAD_A){
-		child_mode = 1;
+		child_mode = 1-child_mode;
 		return;
 	}
 }
