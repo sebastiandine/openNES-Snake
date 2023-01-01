@@ -48,7 +48,7 @@ void main(void){
 	 * next level.
 	 */
 	current_level = 0;
-
+	child_mode = 0;
 	/* draw title screen before main loop */
 	titlescreen = 1;
 	draw_title_screen();
@@ -92,6 +92,7 @@ void main(void){
 		/* game mainloop */
 		while(!restart){
 
+
 			/* INPUT */
 			mainloop_handle_input();
 
@@ -107,6 +108,7 @@ void main(void){
 			/* RENDER */
 			mainloop_render();
 			ppu_wait_nmi();
+
 
 		}
 	}

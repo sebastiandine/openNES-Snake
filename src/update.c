@@ -104,7 +104,6 @@ unsigned char check_collision_wall(void){
 	if(map[MAPARRAY_ADR(snake.head_sprite_x,snake.head_sprite_y)] == WALL_TILE_1 ||
 			map[MAPARRAY_ADR(snake.head_sprite_x,snake.head_sprite_y)] == WALL_TILE_2){
 
-		gameover = 1;
 		return 1;
 	}
 	return 0;
@@ -186,7 +185,7 @@ void respawn_items(void){
  */
 unsigned char check_next_level(void){
 	if(snake.size_index > 2){
-		if((snake.size_index >= max_score) && (current_level < LEVELS_ALL)){
+		if((snake.size_index >= max_score) && (current_level < LEVELS_ALL) && !child_mode){
 			++current_level;
 			return 1;
 		}
@@ -204,9 +203,25 @@ void mainloop_update(void){
 	/*
 	 * Game-over collision detection
 	 */
-	if(check_collision_wall() || check_collision_body()){
+	int ret;
+
+	if( check_collision_body()){
 		sfx_play(SFX_CRASH,0);
 		gameover = 1;
+	}
+
+	if(check_collision_wall()){
+		if(current_level == 0 && child_mode) {
+			switch(snake.moving_direction){
+					case DIR_UP: snake.head_sprite_y = 472; break;
+					case DIR_DOWN: snake.head_sprite_y = 40; break;
+					case DIR_LEFT: snake.head_sprite_x = 232;break;
+					case DIR_RIGHT: snake.head_sprite_x = 16; break;
+				}
+		} else {
+			sfx_play(SFX_CRASH,0);
+			gameover = 1;
+		}
 	}
 
 	/*
@@ -255,4 +270,6 @@ void mainloop_update(void){
 				snake.speed_counter = 0;
 				render_movement_flag = 1; //indicating render-routine, that the movement can be drawn to the screen
 	}
+
+	if(child_mode && current_level == 0) delay(1);
 }
