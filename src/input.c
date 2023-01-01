@@ -69,6 +69,11 @@ void mainloop_handle_input(void){
 		input_btn_start();
 		return;
 	}
+
+	if(input&PAD_A){
+		child_mode = 1-child_mode;
+		return;
+	}
 }
 
 

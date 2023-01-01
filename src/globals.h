@@ -66,6 +66,10 @@ static unsigned int k, l;										// universal indexes for lager numbers
 
 /** Global variable, indicating the current level. */
 static unsigned char current_level;
+
+/** Global variable indicating child mode **/
+static unsigned char child_mode;
+
 /** Global variable, indicating the maximum score of the current level. */
 static unsigned char max_score;
 /** Global variable, indicating the pause mode (1= pause, 0= no pause). */
